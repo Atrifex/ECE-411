@@ -8,9 +8,8 @@ module datapath
     input pcmux_sel,
     input load_pc,
 
-	 input storemux_sel
-	 
-    /* declare more ports here */
+	input storemux_sel
+
 );
 
 /* declare internal signals */
@@ -36,22 +35,24 @@ mux2 pcmux
     .f(pcmux_out)
 );
 
-// name-to-name instantiation of module
-//mux2 #(.width(3)) storemux
-//(
-//	.sel(storemux_sel),
-//	.a(sr1),
-//	.b(dest),
-//	.f(storemux_out)
-//);
-
-// alternate instantiation of storemux using positional mapping
+/*
+ * Register file store mux instantiation using positional mapping
+ */
 mux2 #(3) storemux
 (
 	storemux_sel,
 	sr1,
 	dest,
 	storemux_out
+);
+
+
+/***** Registers in the data path *****/
+register IR
+(
+
+
+
 );
 
 
@@ -62,5 +63,29 @@ register pc
     .in(pcmux_out),
     .out(pc_out)
 );
+
+register MAR
+(
+
+
+);
+
+
+register MDR
+(
+
+
+
+);
+
+register #(3) cc
+(
+
+
+
+
+);
+
+
 
 endmodule : datapath
