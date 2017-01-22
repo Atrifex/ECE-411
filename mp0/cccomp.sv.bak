@@ -1,0 +1,15 @@
+
+import lc3b_types::*;
+
+module cccomp
+(
+	input logic 
+
+
+);
+
+
+
+
+
+endmodule
