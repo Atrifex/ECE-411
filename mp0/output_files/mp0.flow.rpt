@@ -1,5 +1,5 @@
 Flow report for mp0
-Sun Jan 22 12:57:45 2017
+Sun Jan 22 16:05:06 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -40,19 +40,19 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Flow Summary                                                                ;
 +-------------------------------+---------------------------------------------+
-; Flow Status                   ; Successful - Sun Jan 22 12:57:45 2017       ;
+; Flow Status                   ; Successful - Sun Jan 22 16:05:06 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp0                                         ;
-; Top-level Entity Name         ; datapath                                    ;
+; Top-level Entity Name         ; mp0                                         ;
 ; Family                        ; Stratix III                                 ;
 ; Device                        ; EP3SE50F780C2                               ;
 ; Timing Models                 ; Final                                       ;
 ; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 0                                           ;
+;     Combinational ALUTs       ; 220                                         ;
 ;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 0                                           ;
-; Total registers               ; 0                                           ;
-; Total pins                    ; 67                                          ;
+;     Dedicated logic registers ; 208                                         ;
+; Total registers               ; 208                                         ;
+; Total pins                    ; 54                                          ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 0                                           ;
 ; DSP block 18-bit elements     ; 0                                           ;
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/22/2017 12:57:43 ;
+; Start date & time ; 01/22/2017 16:05:03 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mp0                 ;
 +-------------------+---------------------+
@@ -77,17 +77,16 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 71094329882796.148511146321584  ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 71094329882796.148512270331389  ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl               ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog) ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.1V                            ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; datapath    ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; datapath    ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; datapath    ; Top            ;
+; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top            ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; datapath                        ; mp0           ; --          ; --             ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 
 
@@ -96,7 +95,7 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 399 MB              ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 443 MB              ; 00:00:01                           ;
 ; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:01                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 

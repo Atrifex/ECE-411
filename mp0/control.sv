@@ -50,22 +50,22 @@ enum int unsigned {
 always_comb
 begin : state_actions
     /* Default output assignments */
-    load_pc = 1’b0
-    load_ir = 1’b0
-    load_regfile = 1’b0
-    load_mar = 1’b0
-    load_mdr = 1’b0
-    load_cc = 1’b0
-    pcmux_sel =  1’b0
-    storemux_sel = 1’b0
-    alumux_sel = 1’b0
-    regfilemux_sel = 1’b0
-    marmux_sel = 1’b0
-    mdrmux_sel = 1’b0
-    aluop = alu_add
-    mem_read = 1’b0
-    mem_write = 1’b0
-    mem_byte_enable = 2’b11
+    load_pc = 1'b0;
+    load_ir = 1'b0;
+    load_regfile = 1'b0;
+    load_mar = 1'b0;
+    load_mdr = 1'b0;
+    load_cc = 1'b0;
+    pcmux_sel =  1'b0;
+    storemux_sel = 1'b0;
+    alumux_sel = 1'b0;
+    regfilemux_sel = 1'b0;
+    marmux_sel = 1'b0;
+    mdrmux_sel = 1'b0;
+    aluop = alu_add;
+    mem_read = 1'b0;
+    mem_write = 1'b0;
+    mem_byte_enable = 2'b11;
 
     case (state)
         fetch1: begin
@@ -132,7 +132,7 @@ begin : state_actions
             aluop = alu_pass;
             load_mdr = 1;
         end
-        str: begin
+        str2: begin
             mem_write = 1;
         end
         default : /* Do nothing and transition back to fetch1 */;
@@ -203,7 +203,7 @@ begin : next_state_logic
         str1: begin
             next_state = str2;
         end
-        str: begin
+        str2: begin
             if(mem_resp == 1)
                 next_state = fetch1;
         end

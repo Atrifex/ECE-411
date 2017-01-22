@@ -1,23 +1,155 @@
-|datapath
+|mp0
+clk => control:control_inst.clk
+clk => datapath:datapath_inst.clk
+mem_resp => control:control_inst.mem_resp
+mem_rdata[0] => datapath:datapath_inst.mem_rdata[0]
+mem_rdata[1] => datapath:datapath_inst.mem_rdata[1]
+mem_rdata[2] => datapath:datapath_inst.mem_rdata[2]
+mem_rdata[3] => datapath:datapath_inst.mem_rdata[3]
+mem_rdata[4] => datapath:datapath_inst.mem_rdata[4]
+mem_rdata[5] => datapath:datapath_inst.mem_rdata[5]
+mem_rdata[6] => datapath:datapath_inst.mem_rdata[6]
+mem_rdata[7] => datapath:datapath_inst.mem_rdata[7]
+mem_rdata[8] => datapath:datapath_inst.mem_rdata[8]
+mem_rdata[9] => datapath:datapath_inst.mem_rdata[9]
+mem_rdata[10] => datapath:datapath_inst.mem_rdata[10]
+mem_rdata[11] => datapath:datapath_inst.mem_rdata[11]
+mem_rdata[12] => datapath:datapath_inst.mem_rdata[12]
+mem_rdata[13] => datapath:datapath_inst.mem_rdata[13]
+mem_rdata[14] => datapath:datapath_inst.mem_rdata[14]
+mem_rdata[15] => datapath:datapath_inst.mem_rdata[15]
+mem_read <= control:control_inst.mem_read
+mem_write <= control:control_inst.mem_write
+mem_byte_enable[0] <= control:control_inst.mem_byte_enable[0]
+mem_byte_enable[1] <= control:control_inst.mem_byte_enable[1]
+mem_address[0] <= datapath:datapath_inst.mem_address[0]
+mem_address[1] <= datapath:datapath_inst.mem_address[1]
+mem_address[2] <= datapath:datapath_inst.mem_address[2]
+mem_address[3] <= datapath:datapath_inst.mem_address[3]
+mem_address[4] <= datapath:datapath_inst.mem_address[4]
+mem_address[5] <= datapath:datapath_inst.mem_address[5]
+mem_address[6] <= datapath:datapath_inst.mem_address[6]
+mem_address[7] <= datapath:datapath_inst.mem_address[7]
+mem_address[8] <= datapath:datapath_inst.mem_address[8]
+mem_address[9] <= datapath:datapath_inst.mem_address[9]
+mem_address[10] <= datapath:datapath_inst.mem_address[10]
+mem_address[11] <= datapath:datapath_inst.mem_address[11]
+mem_address[12] <= datapath:datapath_inst.mem_address[12]
+mem_address[13] <= datapath:datapath_inst.mem_address[13]
+mem_address[14] <= datapath:datapath_inst.mem_address[14]
+mem_address[15] <= datapath:datapath_inst.mem_address[15]
+mem_wdata[0] <= datapath:datapath_inst.mem_wdata[0]
+mem_wdata[1] <= datapath:datapath_inst.mem_wdata[1]
+mem_wdata[2] <= datapath:datapath_inst.mem_wdata[2]
+mem_wdata[3] <= datapath:datapath_inst.mem_wdata[3]
+mem_wdata[4] <= datapath:datapath_inst.mem_wdata[4]
+mem_wdata[5] <= datapath:datapath_inst.mem_wdata[5]
+mem_wdata[6] <= datapath:datapath_inst.mem_wdata[6]
+mem_wdata[7] <= datapath:datapath_inst.mem_wdata[7]
+mem_wdata[8] <= datapath:datapath_inst.mem_wdata[8]
+mem_wdata[9] <= datapath:datapath_inst.mem_wdata[9]
+mem_wdata[10] <= datapath:datapath_inst.mem_wdata[10]
+mem_wdata[11] <= datapath:datapath_inst.mem_wdata[11]
+mem_wdata[12] <= datapath:datapath_inst.mem_wdata[12]
+mem_wdata[13] <= datapath:datapath_inst.mem_wdata[13]
+mem_wdata[14] <= datapath:datapath_inst.mem_wdata[14]
+mem_wdata[15] <= datapath:datapath_inst.mem_wdata[15]
+
+
+|mp0|control:control_inst
+clk => state~1.DATAIN
+opcode[0] => Equal0.IN7
+opcode[0] => Equal1.IN7
+opcode[0] => Equal2.IN7
+opcode[0] => Equal3.IN7
+opcode[0] => Equal4.IN7
+opcode[0] => Equal5.IN7
+opcode[0] => Equal6.IN1
+opcode[1] => Equal0.IN6
+opcode[1] => Equal1.IN6
+opcode[1] => Equal2.IN6
+opcode[1] => Equal3.IN6
+opcode[1] => Equal4.IN6
+opcode[1] => Equal5.IN6
+opcode[1] => Equal6.IN3
+opcode[2] => Equal0.IN5
+opcode[2] => Equal1.IN5
+opcode[2] => Equal2.IN5
+opcode[2] => Equal3.IN5
+opcode[2] => Equal4.IN5
+opcode[2] => Equal5.IN5
+opcode[2] => Equal6.IN2
+opcode[3] => Equal0.IN4
+opcode[3] => Equal1.IN4
+opcode[3] => Equal2.IN4
+opcode[3] => Equal3.IN4
+opcode[3] => Equal4.IN4
+opcode[3] => Equal5.IN4
+opcode[3] => Equal6.IN0
+br_enable => Selector8.IN5
+br_enable => Selector0.IN5
+load_pc <= load_pc.DB_MAX_OUTPUT_PORT_TYPE
+load_ir <= load_ir.DB_MAX_OUTPUT_PORT_TYPE
+load_regfile <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+load_mar <= load_mar.DB_MAX_OUTPUT_PORT_TYPE
+load_mdr <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+load_cc <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+pcmux_sel <= pcmux_sel.DB_MAX_OUTPUT_PORT_TYPE
+storemux_sel <= storemux_sel.DB_MAX_OUTPUT_PORT_TYPE
+alumux_sel <= alumux_sel.DB_MAX_OUTPUT_PORT_TYPE
+regfilemux_sel <= regfilemux_sel.DB_MAX_OUTPUT_PORT_TYPE
+marmux_sel <= marmux_sel.DB_MAX_OUTPUT_PORT_TYPE
+mdrmux_sel <= mdrmux_sel.DB_MAX_OUTPUT_PORT_TYPE
+aluop[0] <= aluop.DB_MAX_OUTPUT_PORT_TYPE
+aluop[1] <= aluop.DB_MAX_OUTPUT_PORT_TYPE
+aluop[2] <= <GND>
+aluop[3] <= <GND>
+mem_resp => next_state.OUTPUTSELECT
+mem_resp => next_state.OUTPUTSELECT
+mem_resp => next_state.OUTPUTSELECT
+mem_resp => next_state.OUTPUTSELECT
+mem_resp => next_state.OUTPUTSELECT
+mem_resp => next_state.OUTPUTSELECT
+mem_resp => next_state.OUTPUTSELECT
+mem_resp => next_state.OUTPUTSELECT
+mem_resp => next_state.OUTPUTSELECT
+mem_resp => next_state.OUTPUTSELECT
+mem_resp => next_state.OUTPUTSELECT
+mem_resp => next_state.OUTPUTSELECT
+mem_resp => next_state.OUTPUTSELECT
+mem_resp => next_state.OUTPUTSELECT
+mem_resp => next_state.OUTPUTSELECT
+mem_resp => next_state.OUTPUTSELECT
+mem_resp => next_state.OUTPUTSELECT
+mem_read <= mdrmux_sel.DB_MAX_OUTPUT_PORT_TYPE
+mem_write <= mem_write.DB_MAX_OUTPUT_PORT_TYPE
+mem_byte_enable[0] <= <VCC>
+mem_byte_enable[1] <= <VCC>
+
+
+|mp0|datapath:datapath_inst
 clk => register:pc.clk
 clk => ir:IR.clk
 clk => regfile:regfile_inst.clk
 clk => register:cc.clk
 clk => register:MAR.clk
 clk => register:MDR.clk
-pcmux_sel => pcmux_sel.IN1
 load_pc => register:pc.load
-storemux_sel => storemux_sel.IN1
 load_ir => ir:IR.load
 load_regfile => regfile:regfile_inst.load
+load_mar => register:MAR.load
+load_mdr => register:MDR.load
+load_cc => register:cc.load
+pcmux_sel => pcmux_sel.IN1
+storemux_sel => storemux_sel.IN1
 alumux_sel => alumux_sel.IN1
+regfilemux_sel => regfilemux_sel.IN1
+marmux_sel => marmux_sel.IN1
+mdrmux_sel => mdrmux_sel.IN1
 aluop[0] => alu:alu_inst.aluop[0]
 aluop[1] => alu:alu_inst.aluop[1]
 aluop[2] => alu:alu_inst.aluop[2]
 aluop[3] => alu:alu_inst.aluop[3]
-load_cc => register:cc.load
-marmux_sel => marmux_sel.IN1
-mdrmux_sel => mdrmux_sel.IN1
 opcode[0] <= ir:IR.opcode[0]
 opcode[1] <= ir:IR.opcode[1]
 opcode[2] <= ir:IR.opcode[2]
@@ -73,7 +205,7 @@ mem_wdata[14] <= mdr_out[14].DB_MAX_OUTPUT_PORT_TYPE
 mem_wdata[15] <= mdr_out[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|register:pc
+|mp0|datapath:datapath_inst|register:pc
 clk => data[0].CLK
 clk => data[1].CLK
 clk => data[2].CLK
@@ -140,7 +272,7 @@ out[14] <= data[14].DB_MAX_OUTPUT_PORT_TYPE
 out[15] <= data[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|mux2:pcmux
+|mp0|datapath:datapath_inst|mux2:pcmux
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
@@ -207,7 +339,7 @@ f[14] <= f.DB_MAX_OUTPUT_PORT_TYPE
 f[15] <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|plus2:pcPlus2
+|mp0|datapath:datapath_inst|plus2:pcPlus2
 in[0] => out[0].DATAIN
 in[1] => Add0.IN30
 in[2] => Add0.IN29
@@ -242,7 +374,7 @@ out[14] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 out[15] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|adder:br_adder
+|mp0|datapath:datapath_inst|adder:br_adder
 a[0] => Add0.IN16
 a[1] => Add0.IN15
 a[2] => Add0.IN14
@@ -293,7 +425,7 @@ c[14] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 c[15] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|adj:offset9_adjuster
+|mp0|datapath:datapath_inst|adj:offset9_adjuster
 in[0] => out[1].DATAIN
 in[1] => out[2].DATAIN
 in[2] => out[3].DATAIN
@@ -327,7 +459,7 @@ out[14] <= in[8].DB_MAX_OUTPUT_PORT_TYPE
 out[15] <= in[8].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|ir:IR
+|mp0|datapath:datapath_inst|ir:IR
 clk => data[0].CLK
 clk => data[1].CLK
 clk => data[2].CLK
@@ -406,7 +538,7 @@ offset9[7] <= data[7].DB_MAX_OUTPUT_PORT_TYPE
 offset9[8] <= data[8].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|mux2:storemux
+|mp0|datapath:datapath_inst|mux2:storemux
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
@@ -421,7 +553,7 @@ f[1] <= f.DB_MAX_OUTPUT_PORT_TYPE
 f[2] <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|adj:offset6_adjuster
+|mp0|datapath:datapath_inst|adj:offset6_adjuster
 in[0] => out[1].DATAIN
 in[1] => out[2].DATAIN
 in[2] => out[3].DATAIN
@@ -455,7 +587,7 @@ out[14] <= in[5].DB_MAX_OUTPUT_PORT_TYPE
 out[15] <= in[5].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|regfile:regfile_inst
+|mp0|datapath:datapath_inst|regfile:regfile_inst
 clk => data.we_a.CLK
 clk => data.waddr_a[2].CLK
 clk => data.waddr_a[1].CLK
@@ -557,7 +689,7 @@ reg_b[14] <= reg_b[14].DB_MAX_OUTPUT_PORT_TYPE
 reg_b[15] <= reg_b[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|mux2:regfilemux
+|mp0|datapath:datapath_inst|mux2:regfilemux
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
@@ -624,7 +756,7 @@ f[14] <= f.DB_MAX_OUTPUT_PORT_TYPE
 f[15] <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|mux2:alumux
+|mp0|datapath:datapath_inst|mux2:alumux
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
@@ -691,7 +823,7 @@ f[14] <= f.DB_MAX_OUTPUT_PORT_TYPE
 f[15] <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|alu:alu_inst
+|mp0|datapath:datapath_inst|alu:alu_inst
 aluop[0] => Equal0.IN7
 aluop[0] => Equal1.IN7
 aluop[0] => Equal2.IN7
@@ -931,7 +1063,7 @@ f[14] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
 f[15] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|gencc:gencc_inst
+|mp0|datapath:datapath_inst|gencc:gencc_inst
 in[0] => WideOr0.IN0
 in[1] => WideOr0.IN1
 in[2] => WideOr0.IN2
@@ -956,7 +1088,7 @@ out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= in[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|register:cc
+|mp0|datapath:datapath_inst|register:cc
 clk => data[0].CLK
 clk => data[1].CLK
 clk => data[2].CLK
@@ -971,7 +1103,7 @@ out[1] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= data[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|cccomp:cccomp_inst
+|mp0|datapath:datapath_inst|cccomp:cccomp_inst
 cur_cc[0] => always0.IN0
 cur_cc[1] => always0.IN0
 cur_cc[2] => always0.IN0
@@ -981,7 +1113,7 @@ br_cc[2] => always0.IN1
 br_enable <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|mux2:marmux
+|mp0|datapath:datapath_inst|mux2:marmux
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
@@ -1048,7 +1180,7 @@ f[14] <= f.DB_MAX_OUTPUT_PORT_TYPE
 f[15] <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|register:MAR
+|mp0|datapath:datapath_inst|register:MAR
 clk => data[0].CLK
 clk => data[1].CLK
 clk => data[2].CLK
@@ -1115,7 +1247,7 @@ out[14] <= data[14].DB_MAX_OUTPUT_PORT_TYPE
 out[15] <= data[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|mux2:mdrmux
+|mp0|datapath:datapath_inst|mux2:mdrmux
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
@@ -1182,7 +1314,7 @@ f[14] <= f.DB_MAX_OUTPUT_PORT_TYPE
 f[15] <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|datapath|register:MDR
+|mp0|datapath:datapath_inst|register:MDR
 clk => data[0].CLK
 clk => data[1].CLK
 clk => data[2].CLK

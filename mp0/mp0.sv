@@ -14,6 +14,13 @@ module mp0
     output lc3b_word mem_wdata
 );
 
+/* Internal connections */
+logic load_pc, load_ir, load_regfile, load_mar, load_mdr, load_cc, pcmux_sel, storemux_sel;
+logic alumux_sel, regfilemux_sel, marmux_sel, mdrmux_sel, br_enable;
+lc3b_aluop aluop;
+lc3b_opcode opcode;
+
+
 control control_inst
 (
     .clk,
