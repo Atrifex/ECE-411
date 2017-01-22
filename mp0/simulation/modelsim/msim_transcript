@@ -9,37 +9,37 @@
 # ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -sv -work work +incdir+/home/rrthakk2/ECE-411/mp0 {/home/rrthakk2/ECE-411/mp0/lc3b_types.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/lc3b_types.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package lc3b_types
 # 
 # Top level modules:
 # 	--none--
-# vlog -sv -work work +incdir+/home/rrthakk2/ECE-411/mp0 {/home/rrthakk2/ECE-411/mp0/plus2.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/plus2.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module plus2
 # 
 # Top level modules:
 # 	plus2
-# vlog -sv -work work +incdir+/home/rrthakk2/ECE-411/mp0 {/home/rrthakk2/ECE-411/mp0/register.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/register.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# vlog -sv -work work +incdir+/home/rrthakk2/ECE-411/mp0 {/home/rrthakk2/ECE-411/mp0/mux2.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/mux2.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux2
 # 
 # Top level modules:
 # 	mux2
-# vlog -sv -work work +incdir+/home/rrthakk2/ECE-411/mp0 {/home/rrthakk2/ECE-411/mp0/adder.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/adder.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module adder
 # 
 # Top level modules:
 # 	adder
-# vlog -sv -work work +incdir+/home/rrthakk2/ECE-411/mp0 {/home/rrthakk2/ECE-411/mp0/adj.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/adj.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package adj_sv_unit
 # -- Importing package lc3b_types
@@ -47,7 +47,7 @@
 # 
 # Top level modules:
 # 	adj
-# vlog -sv -work work +incdir+/home/rrthakk2/ECE-411/mp0 {/home/rrthakk2/ECE-411/mp0/alu.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/alu.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package alu_sv_unit
 # -- Importing package lc3b_types
@@ -55,7 +55,7 @@
 # 
 # Top level modules:
 # 	alu
-# vlog -sv -work work +incdir+/home/rrthakk2/ECE-411/mp0 {/home/rrthakk2/ECE-411/mp0/control.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/control.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package control_sv_unit
 # -- Importing package lc3b_types
@@ -63,7 +63,7 @@
 # 
 # Top level modules:
 # 	control
-# vlog -sv -work work +incdir+/home/rrthakk2/ECE-411/mp0 {/home/rrthakk2/ECE-411/mp0/gencc.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/gencc.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package gencc_sv_unit
 # -- Importing package lc3b_types
@@ -71,7 +71,7 @@
 # 
 # Top level modules:
 # 	gencc
-# vlog -sv -work work +incdir+/home/rrthakk2/ECE-411/mp0 {/home/rrthakk2/ECE-411/mp0/ir.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/ir.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package ir_sv_unit
 # -- Importing package lc3b_types
@@ -79,7 +79,7 @@
 # 
 # Top level modules:
 # 	ir
-# vlog -sv -work work +incdir+/home/rrthakk2/ECE-411/mp0 {/home/rrthakk2/ECE-411/mp0/regfile.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/regfile.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package regfile_sv_unit
 # -- Importing package lc3b_types
@@ -87,7 +87,7 @@
 # 
 # Top level modules:
 # 	regfile
-# vlog -sv -work work +incdir+/home/rrthakk2/ECE-411/mp0 {/home/rrthakk2/ECE-411/mp0/cccomp.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/cccomp.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cccomp_sv_unit
 # -- Importing package lc3b_types
@@ -95,7 +95,7 @@
 # 
 # Top level modules:
 # 	cccomp
-# vlog -sv -work work +incdir+/home/rrthakk2/ECE-411/mp0 {/home/rrthakk2/ECE-411/mp0/datapath.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package datapath_sv_unit
 # -- Importing package lc3b_types
@@ -103,7 +103,7 @@
 # 
 # Top level modules:
 # 	datapath
-# vlog -sv -work work +incdir+/home/rrthakk2/ECE-411/mp0 {/home/rrthakk2/ECE-411/mp0/mp0.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/mp0.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package mp0_sv_unit
 # -- Importing package lc3b_types
@@ -112,13 +112,13 @@
 # Top level modules:
 # 	mp0
 # 
-# vlog -sv -work work +incdir+/home/rrthakk2/ECE-411/mp0 {/home/rrthakk2/ECE-411/mp0/mp0_tb.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/mp0_tb.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mp0_tb
 # 
 # Top level modules:
 # 	mp0_tb
-# vlog -sv -work work +incdir+/home/rrthakk2/ECE-411/mp0 {/home/rrthakk2/ECE-411/mp0/magic_memory.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/magic_memory.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module magic_memory
 # 
@@ -160,6 +160,31 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 200 ns
-# ** Warning: (vsim-7) Failed to open readmem file "memory.lst" in read mode.
-# No such file or directory. (errno = ENOENT)    : /home/rrthakk2/ECE-411/mp0/magic_memory.sv(27)
-#    Time: 0 ps  Iteration: 0  Instance: /mp0_tb/memory
+add wave -position end  sim:/mp0_tb/dut/datapath_inst/regfile_inst/data
+restart -f; run 20000ns
+# Loading sv_std.std
+# Loading work.mp0_tb
+# Loading work.lc3b_types
+# Loading work.mp0_sv_unit
+# Loading work.mp0
+# Loading work.control_sv_unit
+# Loading work.control
+# Loading work.datapath_sv_unit
+# Loading work.datapath
+# Loading work.register
+# Loading work.mux2
+# Loading work.plus2
+# Loading work.adder
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.magic_memory

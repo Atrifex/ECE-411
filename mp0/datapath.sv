@@ -76,13 +76,13 @@ mux2 pcmux
 // increments PC value to access next instruction
 plus2 pcPlus2
 (
-	.in(pcmux_out), 
+	.in(pc_out), 
 	.out(pc_plus2_out)
 );
 
 adder br_adder
 (
-	.a(pcmux_out), 
+	.a(pc_out), 
 	.b(adj9_offset),
 	.c(br_add_out)
 );

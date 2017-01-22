@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp0
-Sun Jan 22 16:05:06 2017
+Sun Jan 22 17:47:45 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -14,26 +14,25 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |mp0|control:control_inst|state
-  9. Logic Cells Representing Combinational Loops
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: datapath:datapath_inst|register:pc
- 14. Parameter Settings for User Entity Instance: datapath:datapath_inst|mux2:pcmux
- 15. Parameter Settings for User Entity Instance: datapath:datapath_inst|plus2:pcPlus2
- 16. Parameter Settings for User Entity Instance: datapath:datapath_inst|adder:br_adder
- 17. Parameter Settings for User Entity Instance: datapath:datapath_inst|adj:offset9_adjuster
- 18. Parameter Settings for User Entity Instance: datapath:datapath_inst|mux2:storemux
- 19. Parameter Settings for User Entity Instance: datapath:datapath_inst|adj:offset6_adjuster
- 20. Parameter Settings for User Entity Instance: datapath:datapath_inst|mux2:regfilemux
- 21. Parameter Settings for User Entity Instance: datapath:datapath_inst|mux2:alumux
- 22. Parameter Settings for User Entity Instance: datapath:datapath_inst|register:cc
- 23. Parameter Settings for User Entity Instance: datapath:datapath_inst|mux2:marmux
- 24. Parameter Settings for User Entity Instance: datapath:datapath_inst|register:MAR
- 25. Parameter Settings for User Entity Instance: datapath:datapath_inst|mux2:mdrmux
- 26. Parameter Settings for User Entity Instance: datapath:datapath_inst|register:MDR
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: datapath:datapath_inst|register:pc
+ 13. Parameter Settings for User Entity Instance: datapath:datapath_inst|mux2:pcmux
+ 14. Parameter Settings for User Entity Instance: datapath:datapath_inst|plus2:pcPlus2
+ 15. Parameter Settings for User Entity Instance: datapath:datapath_inst|adder:br_adder
+ 16. Parameter Settings for User Entity Instance: datapath:datapath_inst|adj:offset9_adjuster
+ 17. Parameter Settings for User Entity Instance: datapath:datapath_inst|mux2:storemux
+ 18. Parameter Settings for User Entity Instance: datapath:datapath_inst|adj:offset6_adjuster
+ 19. Parameter Settings for User Entity Instance: datapath:datapath_inst|mux2:regfilemux
+ 20. Parameter Settings for User Entity Instance: datapath:datapath_inst|mux2:alumux
+ 21. Parameter Settings for User Entity Instance: datapath:datapath_inst|register:cc
+ 22. Parameter Settings for User Entity Instance: datapath:datapath_inst|mux2:marmux
+ 23. Parameter Settings for User Entity Instance: datapath:datapath_inst|register:MAR
+ 24. Parameter Settings for User Entity Instance: datapath:datapath_inst|mux2:mdrmux
+ 25. Parameter Settings for User Entity Instance: datapath:datapath_inst|register:MDR
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
 
 
 
@@ -59,13 +58,13 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Sun Jan 22 16:05:06 2017       ;
+; Analysis & Synthesis Status   ; Successful - Sun Jan 22 17:47:45 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp0                                         ;
 ; Top-level Entity Name         ; mp0                                         ;
 ; Family                        ; Stratix III                                 ;
 ; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 220                                         ;
+;     Combinational ALUTs       ; 190                                         ;
 ;     Memory ALUTs              ; 0                                           ;
 ;     Dedicated logic registers ; 208                                         ;
 ; Total registers               ; 208                                         ;
@@ -184,26 +183,26 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                 ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path             ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------+---------+
-; lc3b_types.sv                    ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ECE-411/mp0/lc3b_types.sv ;         ;
-; adj.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ECE-411/mp0/adj.sv        ;         ;
-; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ECE-411/mp0/alu.sv        ;         ;
-; control.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ECE-411/mp0/control.sv    ;         ;
-; datapath.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ECE-411/mp0/datapath.sv   ;         ;
-; gencc.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ECE-411/mp0/gencc.sv      ;         ;
-; ir.sv                            ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ECE-411/mp0/ir.sv         ;         ;
-; mp0.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ECE-411/mp0/mp0.sv        ;         ;
-; plus2.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ECE-411/mp0/plus2.sv      ;         ;
-; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ECE-411/mp0/regfile.sv    ;         ;
-; register.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ECE-411/mp0/register.sv   ;         ;
-; mux2.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ECE-411/mp0/mux2.sv       ;         ;
-; adder.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ECE-411/mp0/adder.sv      ;         ;
-; cccomp.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ECE-411/mp0/cccomp.sv     ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path            ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------+---------+
+; lc3b_types.sv                    ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp0/lc3b_types.sv ;         ;
+; adj.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp0/adj.sv        ;         ;
+; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp0/alu.sv        ;         ;
+; control.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp0/control.sv    ;         ;
+; datapath.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp0/datapath.sv   ;         ;
+; gencc.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp0/gencc.sv      ;         ;
+; ir.sv                            ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp0/ir.sv         ;         ;
+; mp0.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp0/mp0.sv        ;         ;
+; plus2.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp0/plus2.sv      ;         ;
+; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp0/regfile.sv    ;         ;
+; register.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp0/register.sv   ;         ;
+; mux2.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp0/mux2.sv       ;         ;
+; adder.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp0/adder.sv      ;         ;
+; cccomp.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp0/cccomp.sv     ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -211,8 +210,8 @@ applicable agreement for further details.
 +-----------------------------------------------+-----------+
 ; Resource                                      ; Usage     ;
 +-----------------------------------------------+-----------+
-; Estimated ALUTs Used                          ; 220       ;
-;     -- Combinational ALUTs                    ; 220       ;
+; Estimated ALUTs Used                          ; 190       ;
+;     -- Combinational ALUTs                    ; 190       ;
 ;     -- Memory ALUTs                           ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
 ; Dedicated logic registers                     ; 208       ;
@@ -221,21 +220,21 @@ applicable agreement for further details.
 ;     -- Due to unpartnered combinational logic ; 64        ;
 ;     -- Due to Memory ALUTs                    ; 0         ;
 ;                                               ;           ;
-; Total combinational functions                 ; 220       ;
+; Total combinational functions                 ; 190       ;
 ; Combinational ALUT usage by number of inputs  ;           ;
 ;     -- 7 input functions                      ; 64        ;
 ;     -- 6 input functions                      ; 26        ;
-;     -- 5 input functions                      ; 21        ;
-;     -- 4 input functions                      ; 45        ;
-;     -- <=3 input functions                    ; 64        ;
+;     -- 5 input functions                      ; 20        ;
+;     -- 4 input functions                      ; 31        ;
+;     -- <=3 input functions                    ; 49        ;
 ;                                               ;           ;
 ; Combinational ALUTs by mode                   ;           ;
-;     -- normal mode                            ; 111       ;
+;     -- normal mode                            ; 95        ;
 ;     -- extended LUT mode                      ; 64        ;
-;     -- arithmetic mode                        ; 45        ;
+;     -- arithmetic mode                        ; 31        ;
 ;     -- shared arithmetic mode                 ; 0         ;
 ;                                               ;           ;
-; Estimated ALUT/register pairs used            ; 383       ;
+; Estimated ALUT/register pairs used            ; 372       ;
 ;                                               ;           ;
 ; Total registers                               ; 208       ;
 ;     -- Dedicated logic registers              ; 208       ;
@@ -247,8 +246,8 @@ applicable agreement for further details.
 ; DSP block 18-bit elements                     ; 0         ;
 ; Maximum fan-out node                          ; clk~input ;
 ; Maximum fan-out                               ; 208       ;
-; Total fan-out                                 ; 1866      ;
-; Average fan-out                               ; 3.48      ;
+; Total fan-out                                 ; 1752      ;
+; Average fan-out                               ; 3.46      ;
 +-----------------------------------------------+-----------+
 
 
@@ -257,18 +256,16 @@ applicable agreement for further details.
 +------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+--------------------------------------------------+--------------+
 ; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Library Name ;
 +------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+--------------------------------------------------+--------------+
-; |mp0                         ; 220 (0)           ; 208 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 54   ; 0            ; |mp0                                             ; work         ;
+; |mp0                         ; 190 (0)           ; 208 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 54   ; 0            ; |mp0                                             ; work         ;
 ;    |control:control_inst|    ; 28 (28)           ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp0|control:control_inst                        ; work         ;
-;    |datapath:datapath_inst|  ; 192 (0)           ; 194 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp0|datapath:datapath_inst                      ; work         ;
-;       |adder:br_adder|       ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp0|datapath:datapath_inst|adder:br_adder       ; work         ;
+;    |datapath:datapath_inst|  ; 162 (0)           ; 194 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp0|datapath:datapath_inst                      ; work         ;
 ;       |alu:alu_inst|         ; 49 (49)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp0|datapath:datapath_inst|alu:alu_inst         ; work         ;
 ;       |cccomp:cccomp_inst|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp0|datapath:datapath_inst|cccomp:cccomp_inst   ; work         ;
 ;       |gencc:gencc_inst|     ; 5 (5)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp0|datapath:datapath_inst|gencc:gencc_inst     ; work         ;
 ;       |ir:IR|                ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp0|datapath:datapath_inst|ir:IR                ; work         ;
-;       |mux2:pcmux|           ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp0|datapath:datapath_inst|mux2:pcmux           ; work         ;
 ;       |mux2:regfilemux|      ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp0|datapath:datapath_inst|mux2:regfilemux      ; work         ;
 ;       |mux2:storemux|        ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp0|datapath:datapath_inst|mux2:storemux        ; work         ;
-;       |plus2:pcPlus2|        ; 14 (14)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp0|datapath:datapath_inst|plus2:pcPlus2        ; work         ;
+;       |plus2:pcPlus2|        ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp0|datapath:datapath_inst|plus2:pcPlus2        ; work         ;
 ;       |regfile:regfile_inst| ; 72 (72)           ; 128 (128)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp0|datapath:datapath_inst|regfile:regfile_inst ; work         ;
 ;       |register:MAR|         ; 1 (1)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp0|datapath:datapath_inst|register:MAR         ; work         ;
 ;       |register:MDR|         ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp0|datapath:datapath_inst|register:MDR         ; work         ;
@@ -299,45 +296,6 @@ Encoding Type:  One-Hot
 ; state.str1      ; 0          ; 1          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
 ; state.str2      ; 1          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
 +-----------------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
-
-
-+-------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops                ;
-+--------------------------------------------------------+----+
-; Logic Cell Name                                        ;    ;
-+--------------------------------------------------------+----+
-; datapath:datapath_inst|plus2:pcPlus2|out[1]~13         ;    ;
-; datapath:datapath_inst|adder:br_adder|c[1]~14          ;    ;
-; datapath:datapath_inst|plus2:pcPlus2|out[2]~12         ;    ;
-; datapath:datapath_inst|adder:br_adder|c[2]~13          ;    ;
-; datapath:datapath_inst|plus2:pcPlus2|out[3]~11         ;    ;
-; datapath:datapath_inst|adder:br_adder|c[3]~12          ;    ;
-; datapath:datapath_inst|plus2:pcPlus2|out[4]~10         ;    ;
-; datapath:datapath_inst|adder:br_adder|c[4]~11          ;    ;
-; datapath:datapath_inst|plus2:pcPlus2|out[5]~9          ;    ;
-; datapath:datapath_inst|adder:br_adder|c[5]~10          ;    ;
-; datapath:datapath_inst|plus2:pcPlus2|out[6]~8          ;    ;
-; datapath:datapath_inst|adder:br_adder|c[6]~9           ;    ;
-; datapath:datapath_inst|plus2:pcPlus2|out[7]~7          ;    ;
-; datapath:datapath_inst|adder:br_adder|c[7]~8           ;    ;
-; datapath:datapath_inst|plus2:pcPlus2|out[8]~6          ;    ;
-; datapath:datapath_inst|adder:br_adder|c[8]~7           ;    ;
-; datapath:datapath_inst|plus2:pcPlus2|out[9]~5          ;    ;
-; datapath:datapath_inst|adder:br_adder|c[9]~6           ;    ;
-; datapath:datapath_inst|plus2:pcPlus2|out[10]~4         ;    ;
-; datapath:datapath_inst|adder:br_adder|c[10]~5          ;    ;
-; datapath:datapath_inst|plus2:pcPlus2|out[11]~3         ;    ;
-; datapath:datapath_inst|adder:br_adder|c[11]~4          ;    ;
-; datapath:datapath_inst|plus2:pcPlus2|out[12]~2         ;    ;
-; datapath:datapath_inst|adder:br_adder|c[12]~3          ;    ;
-; datapath:datapath_inst|plus2:pcPlus2|out[13]~1         ;    ;
-; datapath:datapath_inst|adder:br_adder|c[13]~2          ;    ;
-; datapath:datapath_inst|plus2:pcPlus2|out[14]~0         ;    ;
-; datapath:datapath_inst|adder:br_adder|c[14]~1          ;    ;
-; datapath:datapath_inst|mux2:pcmux|f[15]~0              ;    ;
-; Number of logic cells representing combinational loops ; 29 ;
-+--------------------------------------------------------+----+
-Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +-------------------------------------------------------------------------------------+
@@ -397,15 +355,15 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
-; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp0|datapath:datapath_inst|alu:alu_inst|Selector4 ;
-; 4:1                ; 5 bits    ; 10 ALUTs      ; 10 ALUTs             ; 0 ALUTs                ; No         ; |mp0|control:control_inst|Selector9                ;
-; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp0|control:control_inst|Selector10               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp0|datapath:datapath_inst|alu:alu_inst|Selector15 ;
+; 4:1                ; 5 bits    ; 10 ALUTs      ; 10 ALUTs             ; 0 ALUTs                ; No         ; |mp0|control:control_inst|Selector9                 ;
+; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp0|control:control_inst|Selector12                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------+
@@ -563,7 +521,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Sun Jan 22 16:05:03 2017
+    Info: Processing started: Sun Jan 22 17:47:42 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp0 -c mp0
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 0 entities, in source file lc3b_types.sv
@@ -619,13 +577,13 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 32 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 452 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 421 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 36 output pins
-    Info (21061): Implemented 398 logic cells
+    Info (21061): Implemented 367 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 447 megabytes
-    Info: Processing ended: Sun Jan 22 16:05:06 2017
+    Info: Peak virtual memory: 444 megabytes
+    Info: Processing ended: Sun Jan 22 17:47:45 2017
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
