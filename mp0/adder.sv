@@ -7,7 +7,7 @@ module adder #(parameter width = 16)
 
 always_comb
 begin
-	c = a + b
+	c = a + b;
 end
 
 endmodule : adder

@@ -1,17 +1,25 @@
-lc3b_types::*;
+import lc3b_types::*;
 
 module datapath
 (
     input clk,
 
     /* control signals */
-    input pcmux_sel,
-    input load_pc,
-	 input storemux_sel,
+	 input load_pc,
 	 input load_ir,
 	 input load_regfile,
-	 
+	 input load_mar,
+	 input load_mdr,
+	 input load_cc,
+	 input pcmux_sel,
+	 input storemux_sel,
+	 input alumux_sel,
+	 input regfilemux_sel,
+	 input marmux_sel,
+	 input mdrmux_sel,
+	 input lc3b_aluop aluop,
 	 output lc3b_opcode opcode,
+	 output br_enable,
 	 
 	 /* Memory signals */
 	 input lc3b_word mem_rdata,
@@ -20,9 +28,10 @@ module datapath
 );
 
 /***** declare internal signals *****/
-// General Signals
-lc3b_word bus;
-assign bus = mem_wdata;
+// MDR and MAR Signals
+lc3b_word marmux_out, mdrmux_out; 
+lc3b_word mdr_out;
+assign mem_wdata = mdr_out;
 
 // Signals related to PC
 lc3b_word pcmux_out, pc_out;
@@ -32,11 +41,18 @@ lc3b_offset9 offset9;
 lc3b_offset6 offset6;
 
 // Signals related to IR
-
-
 lc3b_reg sr1, sr2, dest;
 lc3b_reg storemux_out;
 
+// signals related to regfile
+lc3b_word regfilemux_out;
+lc3b_word sr1_out, sr2_out, alumux_out;
+
+// signals related to alu
+lc3b_word alu_out;
+
+// signals related to branch
+lc3b_nzp gencc_out, cc_out;
 
 /***** PC *****/
 // register that stores the current PC value
@@ -73,7 +89,7 @@ adder br_adder
 
 adj #(9) offset9_adjuster
 (
-	.in(offset9)
+	.in(offset9),
 	.out(adj9_offset)
 );
 
@@ -83,7 +99,7 @@ ir IR
 	 // inputs
     .clk,
     .load(load_ir),
-    .in(bus),
+    .in(mdr_out),
 	 
 	 // outputs
     .opcode(opcode),
@@ -105,18 +121,102 @@ mux2 #(3) storemux
 
 adj #(6) offset6_adjuster
 (
-	.in(offset6)
+	.in(offset6),
 	.out(adj6_offset)
 );
 
+/***** Regfile *****/
 regfile regfile_inst
 (
 	.clk,
 	.load(load_regfile),
-	input lc3b_word in,
-	input lc3b_reg src_a, src_b, dest,
-	output lc3b_word reg_a, reg_b
+	.in(regfilemux_out),
+	.src_a(storemux_out),
+	.src_b(sr2), 
+	.dest(dest),
+	.reg_a(sr1_out), 
+	.reg_b(sr2_out)
 );
 
+mux2 regfilemux
+(
+	.sel(regfilemux_sel),
+	.a(alu_out),
+	.b(mdr_out),
+	.f(regfilemux_out)
+);
+
+mux2 alumux
+(
+	.sel(alumux_sel),
+	.a(sr2_out),
+	.b(adj6_offset),
+	.f(alumux_out)
+);
+
+/***** ALU *****/
+alu alu_inst
+(
+	.aluop(aluop),
+   .a(sr1_out),
+	.b(alumux_out),
+   .f(alu_out)
+);
+
+/***** Branch Related Modules *****/
+gencc gencc_inst
+(
+	.in(regfilemux_out),
+	.out(gencc_out)
+);
+
+register #(3) cc
+(
+    .clk,
+    .load(load_cc),
+    .in(gencc_out),
+    .out(cc_out)
+);
+
+cccomp cccomp_inst
+(
+	.cur_cc(cc_out),
+	.br_cc(dest),
+	.br_enable(br_enable)
+);
+
+/***** MAR *****/
+mux2 marmux
+(
+    .sel(marmux_sel),
+    .a(alu_out),
+    .b(pc_out),
+    .f(marmux_out)
+);
+
+register MAR
+(
+    .clk,
+    .load(load_mar),
+    .in(marmux_out),
+    .out(mem_address)
+);
+
+/***** MDR *****/
+mux2 mdrmux
+(
+    .sel(mdrmux_sel),
+    .a(alu_out),
+    .b(mem_rdata),
+    .f(mdrmux_out)
+);
+
+register MDR
+(
+    .clk,
+    .load(load_mdr),
+    .in(mdrmux_out),
+    .out(mdr_out)
+);
 
 endmodule : datapath

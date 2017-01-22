@@ -9,7 +9,7 @@ module cccomp
 
 	always_comb
 	begin
-			if ( cur_cc | br_cc ) begin
+			if (cur_cc & br_cc) begin
 				br_enable = 1'b1;
 			end else begin
 				br_enable = 1'b0;
