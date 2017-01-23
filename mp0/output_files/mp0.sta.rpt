@@ -1,0 +1,1141 @@
+TimeQuest Timing Analyzer report for mp0
+Sun Jan 22 18:21:19 2017
+Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow 1100mV 85C Model Fmax Summary
+  7. Timing Closure Recommendations
+  8. Slow 1100mV 85C Model Setup Summary
+  9. Slow 1100mV 85C Model Hold Summary
+ 10. Slow 1100mV 85C Model Recovery Summary
+ 11. Slow 1100mV 85C Model Removal Summary
+ 12. Slow 1100mV 85C Model Minimum Pulse Width Summary
+ 13. Setup Times
+ 14. Hold Times
+ 15. Clock to Output Times
+ 16. Minimum Clock to Output Times
+ 17. Slow 1100mV 85C Model Metastability Report
+ 18. Slow 1100mV 0C Model Fmax Summary
+ 19. Slow 1100mV 0C Model Setup Summary
+ 20. Slow 1100mV 0C Model Hold Summary
+ 21. Slow 1100mV 0C Model Recovery Summary
+ 22. Slow 1100mV 0C Model Removal Summary
+ 23. Slow 1100mV 0C Model Minimum Pulse Width Summary
+ 24. Setup Times
+ 25. Hold Times
+ 26. Clock to Output Times
+ 27. Minimum Clock to Output Times
+ 28. Slow 1100mV 0C Model Metastability Report
+ 29. Fast 1100mV 0C Model Setup Summary
+ 30. Fast 1100mV 0C Model Hold Summary
+ 31. Fast 1100mV 0C Model Recovery Summary
+ 32. Fast 1100mV 0C Model Removal Summary
+ 33. Fast 1100mV 0C Model Minimum Pulse Width Summary
+ 34. Setup Times
+ 35. Hold Times
+ 36. Clock to Output Times
+ 37. Minimum Clock to Output Times
+ 38. Fast 1100mV 0C Model Metastability Report
+ 39. Multicorner Timing Analysis Summary
+ 40. Setup Times
+ 41. Hold Times
+ 42. Clock to Output Times
+ 43. Minimum Clock to Output Times
+ 44. Board Trace Model Assignments
+ 45. Input Transition Times
+ 46. Slow Corner Signal Integrity Metrics
+ 47. Fast Corner Signal Integrity Metrics
+ 48. Setup Transfers
+ 49. Hold Transfers
+ 50. Report TCCS
+ 51. Report RSKM
+ 52. Unconstrained Paths
+ 53. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                        ;
++--------------------+-----------------------------------------------------+
+; Quartus II Version ; Version 13.1.4 Build 182 03/12/2014 SJ Full Version ;
+; Revision Name      ; mp0                                                 ;
+; Device Family      ; Stratix III                                         ;
+; Device Name        ; EP3SE50F780C2                                       ;
+; Timing Models      ; Final                                               ;
+; Delay Model        ; Combined                                            ;
+; Rise/Fall Delays   ; Enabled                                             ;
++--------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
+;     Processors 5-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; mp0.sdc       ; OK     ; Sun Jan 22 18:21:17 2017 ;
++---------------+--------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                         ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 10.000 ; 100.0 MHz ; 0.000 ; 5.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 137.21 MHz ; 137.21 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1100mV 85C Model Setup Summary ;
++-------+-------+---------------------+
+; Clock ; Slack ; End Point TNS       ;
++-------+-------+---------------------+
+; clk   ; 2.712 ; 0.000               ;
++-------+-------+---------------------+
+
+
++------------------------------------+
+; Slow 1100mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.302 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1100mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1100mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1100mV 85C Model Minimum Pulse Width Summary ;
++-------+-------+-----------------------------------+
+; Clock ; Slack ; End Point TNS                     ;
++-------+-------+-----------------------------------+
+; clk   ; 4.377 ; 0.000                             ;
++-------+-------+-----------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; mem_rdata[*]   ; clk        ; 3.569 ; 3.368 ; Rise       ; clk             ;
+;  mem_rdata[0]  ; clk        ; 3.081 ; 2.939 ; Rise       ; clk             ;
+;  mem_rdata[1]  ; clk        ; 3.555 ; 3.368 ; Rise       ; clk             ;
+;  mem_rdata[2]  ; clk        ; 2.869 ; 2.745 ; Rise       ; clk             ;
+;  mem_rdata[3]  ; clk        ; 2.957 ; 2.788 ; Rise       ; clk             ;
+;  mem_rdata[4]  ; clk        ; 3.261 ; 3.098 ; Rise       ; clk             ;
+;  mem_rdata[5]  ; clk        ; 3.569 ; 3.363 ; Rise       ; clk             ;
+;  mem_rdata[6]  ; clk        ; 3.443 ; 3.247 ; Rise       ; clk             ;
+;  mem_rdata[7]  ; clk        ; 3.563 ; 3.330 ; Rise       ; clk             ;
+;  mem_rdata[8]  ; clk        ; 3.537 ; 3.298 ; Rise       ; clk             ;
+;  mem_rdata[9]  ; clk        ; 2.866 ; 2.715 ; Rise       ; clk             ;
+;  mem_rdata[10] ; clk        ; 3.228 ; 3.021 ; Rise       ; clk             ;
+;  mem_rdata[11] ; clk        ; 3.054 ; 2.885 ; Rise       ; clk             ;
+;  mem_rdata[12] ; clk        ; 3.388 ; 3.171 ; Rise       ; clk             ;
+;  mem_rdata[13] ; clk        ; 3.386 ; 3.202 ; Rise       ; clk             ;
+;  mem_rdata[14] ; clk        ; 3.343 ; 3.182 ; Rise       ; clk             ;
+;  mem_rdata[15] ; clk        ; 3.454 ; 3.260 ; Rise       ; clk             ;
+; mem_resp       ; clk        ; 3.330 ; 3.084 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; mem_rdata[*]   ; clk        ; -2.326 ; -2.176 ; Rise       ; clk             ;
+;  mem_rdata[0]  ; clk        ; -2.527 ; -2.360 ; Rise       ; clk             ;
+;  mem_rdata[1]  ; clk        ; -2.979 ; -2.769 ; Rise       ; clk             ;
+;  mem_rdata[2]  ; clk        ; -2.326 ; -2.176 ; Rise       ; clk             ;
+;  mem_rdata[3]  ; clk        ; -2.429 ; -2.253 ; Rise       ; clk             ;
+;  mem_rdata[4]  ; clk        ; -2.698 ; -2.511 ; Rise       ; clk             ;
+;  mem_rdata[5]  ; clk        ; -2.993 ; -2.765 ; Rise       ; clk             ;
+;  mem_rdata[6]  ; clk        ; -2.873 ; -2.655 ; Rise       ; clk             ;
+;  mem_rdata[7]  ; clk        ; -2.986 ; -2.732 ; Rise       ; clk             ;
+;  mem_rdata[8]  ; clk        ; -2.962 ; -2.703 ; Rise       ; clk             ;
+;  mem_rdata[9]  ; clk        ; -2.340 ; -2.181 ; Rise       ; clk             ;
+;  mem_rdata[10] ; clk        ; -2.665 ; -2.436 ; Rise       ; clk             ;
+;  mem_rdata[11] ; clk        ; -2.523 ; -2.346 ; Rise       ; clk             ;
+;  mem_rdata[12] ; clk        ; -2.820 ; -2.582 ; Rise       ; clk             ;
+;  mem_rdata[13] ; clk        ; -2.818 ; -2.612 ; Rise       ; clk             ;
+;  mem_rdata[14] ; clk        ; -2.776 ; -2.591 ; Rise       ; clk             ;
+;  mem_rdata[15] ; clk        ; -2.884 ; -2.668 ; Rise       ; clk             ;
+; mem_resp       ; clk        ; -2.493 ; -2.297 ; Rise       ; clk             ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; mem_address[*]   ; clk        ; 6.811 ; 6.761 ; Rise       ; clk             ;
+;  mem_address[0]  ; clk        ; 6.228 ; 6.179 ; Rise       ; clk             ;
+;  mem_address[1]  ; clk        ; 6.734 ; 6.640 ; Rise       ; clk             ;
+;  mem_address[2]  ; clk        ; 6.493 ; 6.485 ; Rise       ; clk             ;
+;  mem_address[3]  ; clk        ; 6.418 ; 6.267 ; Rise       ; clk             ;
+;  mem_address[4]  ; clk        ; 6.654 ; 6.566 ; Rise       ; clk             ;
+;  mem_address[5]  ; clk        ; 6.519 ; 6.483 ; Rise       ; clk             ;
+;  mem_address[6]  ; clk        ; 6.471 ; 6.381 ; Rise       ; clk             ;
+;  mem_address[7]  ; clk        ; 6.026 ; 5.923 ; Rise       ; clk             ;
+;  mem_address[8]  ; clk        ; 6.627 ; 6.538 ; Rise       ; clk             ;
+;  mem_address[9]  ; clk        ; 6.663 ; 6.610 ; Rise       ; clk             ;
+;  mem_address[10] ; clk        ; 6.811 ; 6.761 ; Rise       ; clk             ;
+;  mem_address[11] ; clk        ; 6.498 ; 6.426 ; Rise       ; clk             ;
+;  mem_address[12] ; clk        ; 6.176 ; 6.050 ; Rise       ; clk             ;
+;  mem_address[13] ; clk        ; 6.229 ; 6.110 ; Rise       ; clk             ;
+;  mem_address[14] ; clk        ; 6.079 ; 6.068 ; Rise       ; clk             ;
+;  mem_address[15] ; clk        ; 6.728 ; 6.667 ; Rise       ; clk             ;
+; mem_read         ; clk        ; 7.051 ; 7.062 ; Rise       ; clk             ;
+; mem_wdata[*]     ; clk        ; 6.971 ; 6.926 ; Rise       ; clk             ;
+;  mem_wdata[0]    ; clk        ; 6.680 ; 6.618 ; Rise       ; clk             ;
+;  mem_wdata[1]    ; clk        ; 6.053 ; 5.954 ; Rise       ; clk             ;
+;  mem_wdata[2]    ; clk        ; 6.575 ; 6.512 ; Rise       ; clk             ;
+;  mem_wdata[3]    ; clk        ; 6.421 ; 6.322 ; Rise       ; clk             ;
+;  mem_wdata[4]    ; clk        ; 6.443 ; 6.341 ; Rise       ; clk             ;
+;  mem_wdata[5]    ; clk        ; 6.637 ; 6.525 ; Rise       ; clk             ;
+;  mem_wdata[6]    ; clk        ; 6.168 ; 6.053 ; Rise       ; clk             ;
+;  mem_wdata[7]    ; clk        ; 6.603 ; 6.519 ; Rise       ; clk             ;
+;  mem_wdata[8]    ; clk        ; 6.886 ; 6.821 ; Rise       ; clk             ;
+;  mem_wdata[9]    ; clk        ; 6.648 ; 6.585 ; Rise       ; clk             ;
+;  mem_wdata[10]   ; clk        ; 6.297 ; 6.156 ; Rise       ; clk             ;
+;  mem_wdata[11]   ; clk        ; 6.757 ; 6.730 ; Rise       ; clk             ;
+;  mem_wdata[12]   ; clk        ; 6.638 ; 6.545 ; Rise       ; clk             ;
+;  mem_wdata[13]   ; clk        ; 6.971 ; 6.926 ; Rise       ; clk             ;
+;  mem_wdata[14]   ; clk        ; 6.568 ; 6.517 ; Rise       ; clk             ;
+;  mem_wdata[15]   ; clk        ; 6.593 ; 6.534 ; Rise       ; clk             ;
+; mem_write        ; clk        ; 6.724 ; 6.659 ; Rise       ; clk             ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; mem_address[*]   ; clk        ; 5.724 ; 5.624 ; Rise       ; clk             ;
+;  mem_address[0]  ; clk        ; 5.917 ; 5.868 ; Rise       ; clk             ;
+;  mem_address[1]  ; clk        ; 6.419 ; 6.327 ; Rise       ; clk             ;
+;  mem_address[2]  ; clk        ; 6.169 ; 6.158 ; Rise       ; clk             ;
+;  mem_address[3]  ; clk        ; 6.118 ; 5.972 ; Rise       ; clk             ;
+;  mem_address[4]  ; clk        ; 6.341 ; 6.255 ; Rise       ; clk             ;
+;  mem_address[5]  ; clk        ; 6.192 ; 6.155 ; Rise       ; clk             ;
+;  mem_address[6]  ; clk        ; 6.168 ; 6.080 ; Rise       ; clk             ;
+;  mem_address[7]  ; clk        ; 5.724 ; 5.624 ; Rise       ; clk             ;
+;  mem_address[8]  ; clk        ; 6.315 ; 6.228 ; Rise       ; clk             ;
+;  mem_address[9]  ; clk        ; 6.350 ; 6.297 ; Rise       ; clk             ;
+;  mem_address[10] ; clk        ; 6.489 ; 6.439 ; Rise       ; clk             ;
+;  mem_address[11] ; clk        ; 6.175 ; 6.103 ; Rise       ; clk             ;
+;  mem_address[12] ; clk        ; 5.868 ; 5.745 ; Rise       ; clk             ;
+;  mem_address[13] ; clk        ; 5.919 ; 5.802 ; Rise       ; clk             ;
+;  mem_address[14] ; clk        ; 5.775 ; 5.762 ; Rise       ; clk             ;
+;  mem_address[15] ; clk        ; 6.413 ; 6.353 ; Rise       ; clk             ;
+; mem_read         ; clk        ; 6.632 ; 6.653 ; Rise       ; clk             ;
+; mem_wdata[*]     ; clk        ; 5.750 ; 5.656 ; Rise       ; clk             ;
+;  mem_wdata[0]    ; clk        ; 6.349 ; 6.287 ; Rise       ; clk             ;
+;  mem_wdata[1]    ; clk        ; 5.750 ; 5.656 ; Rise       ; clk             ;
+;  mem_wdata[2]    ; clk        ; 6.267 ; 6.204 ; Rise       ; clk             ;
+;  mem_wdata[3]    ; clk        ; 6.120 ; 6.024 ; Rise       ; clk             ;
+;  mem_wdata[4]    ; clk        ; 6.141 ; 6.042 ; Rise       ; clk             ;
+;  mem_wdata[5]    ; clk        ; 6.325 ; 6.216 ; Rise       ; clk             ;
+;  mem_wdata[6]    ; clk        ; 5.860 ; 5.748 ; Rise       ; clk             ;
+;  mem_wdata[7]    ; clk        ; 6.294 ; 6.211 ; Rise       ; clk             ;
+;  mem_wdata[8]    ; clk        ; 6.561 ; 6.497 ; Rise       ; clk             ;
+;  mem_wdata[9]    ; clk        ; 6.333 ; 6.272 ; Rise       ; clk             ;
+;  mem_wdata[10]   ; clk        ; 5.985 ; 5.848 ; Rise       ; clk             ;
+;  mem_wdata[11]   ; clk        ; 6.438 ; 6.410 ; Rise       ; clk             ;
+;  mem_wdata[12]   ; clk        ; 6.327 ; 6.237 ; Rise       ; clk             ;
+;  mem_wdata[13]   ; clk        ; 6.642 ; 6.598 ; Rise       ; clk             ;
+;  mem_wdata[14]   ; clk        ; 6.257 ; 6.206 ; Rise       ; clk             ;
+;  mem_wdata[15]   ; clk        ; 6.282 ; 6.224 ; Rise       ; clk             ;
+; mem_write        ; clk        ; 6.390 ; 6.324 ; Rise       ; clk             ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1100mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 148.88 MHz ; 148.88 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1100mV 0C Model Setup Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 3.283 ; 0.000              ;
++-------+-------+--------------------+
+
+
++-----------------------------------+
+; Slow 1100mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.276 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1100mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1100mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1100mV 0C Model Minimum Pulse Width Summary ;
++-------+-------+----------------------------------+
+; Clock ; Slack ; End Point TNS                    ;
++-------+-------+----------------------------------+
+; clk   ; 4.375 ; 0.000                            ;
++-------+-------+----------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; mem_rdata[*]   ; clk        ; 3.318 ; 3.130 ; Rise       ; clk             ;
+;  mem_rdata[0]  ; clk        ; 2.849 ; 2.704 ; Rise       ; clk             ;
+;  mem_rdata[1]  ; clk        ; 3.303 ; 3.126 ; Rise       ; clk             ;
+;  mem_rdata[2]  ; clk        ; 2.653 ; 2.541 ; Rise       ; clk             ;
+;  mem_rdata[3]  ; clk        ; 2.749 ; 2.596 ; Rise       ; clk             ;
+;  mem_rdata[4]  ; clk        ; 3.016 ; 2.873 ; Rise       ; clk             ;
+;  mem_rdata[5]  ; clk        ; 3.318 ; 3.130 ; Rise       ; clk             ;
+;  mem_rdata[6]  ; clk        ; 3.187 ; 3.016 ; Rise       ; clk             ;
+;  mem_rdata[7]  ; clk        ; 3.298 ; 3.105 ; Rise       ; clk             ;
+;  mem_rdata[8]  ; clk        ; 3.292 ; 3.081 ; Rise       ; clk             ;
+;  mem_rdata[9]  ; clk        ; 2.667 ; 2.507 ; Rise       ; clk             ;
+;  mem_rdata[10] ; clk        ; 2.993 ; 2.802 ; Rise       ; clk             ;
+;  mem_rdata[11] ; clk        ; 2.842 ; 2.687 ; Rise       ; clk             ;
+;  mem_rdata[12] ; clk        ; 3.145 ; 2.953 ; Rise       ; clk             ;
+;  mem_rdata[13] ; clk        ; 3.137 ; 2.971 ; Rise       ; clk             ;
+;  mem_rdata[14] ; clk        ; 3.105 ; 2.945 ; Rise       ; clk             ;
+;  mem_rdata[15] ; clk        ; 3.200 ; 3.026 ; Rise       ; clk             ;
+; mem_resp       ; clk        ; 3.087 ; 2.871 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; mem_rdata[*]   ; clk        ; -2.189 ; -2.048 ; Rise       ; clk             ;
+;  mem_rdata[0]  ; clk        ; -2.374 ; -2.204 ; Rise       ; clk             ;
+;  mem_rdata[1]  ; clk        ; -2.808 ; -2.606 ; Rise       ; clk             ;
+;  mem_rdata[2]  ; clk        ; -2.189 ; -2.050 ; Rise       ; clk             ;
+;  mem_rdata[3]  ; clk        ; -2.296 ; -2.134 ; Rise       ; clk             ;
+;  mem_rdata[4]  ; clk        ; -2.534 ; -2.364 ; Rise       ; clk             ;
+;  mem_rdata[5]  ; clk        ; -2.822 ; -2.611 ; Rise       ; clk             ;
+;  mem_rdata[6]  ; clk        ; -2.698 ; -2.503 ; Rise       ; clk             ;
+;  mem_rdata[7]  ; clk        ; -2.802 ; -2.587 ; Rise       ; clk             ;
+;  mem_rdata[8]  ; clk        ; -2.798 ; -2.565 ; Rise       ; clk             ;
+;  mem_rdata[9]  ; clk        ; -2.217 ; -2.048 ; Rise       ; clk             ;
+;  mem_rdata[10] ; clk        ; -2.510 ; -2.296 ; Rise       ; clk             ;
+;  mem_rdata[11] ; clk        ; -2.388 ; -2.224 ; Rise       ; clk             ;
+;  mem_rdata[12] ; clk        ; -2.658 ; -2.442 ; Rise       ; clk             ;
+;  mem_rdata[13] ; clk        ; -2.649 ; -2.459 ; Rise       ; clk             ;
+;  mem_rdata[14] ; clk        ; -2.618 ; -2.433 ; Rise       ; clk             ;
+;  mem_rdata[15] ; clk        ; -2.712 ; -2.513 ; Rise       ; clk             ;
+; mem_resp       ; clk        ; -2.351 ; -2.146 ; Rise       ; clk             ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; mem_address[*]   ; clk        ; 6.446 ; 6.396 ; Rise       ; clk             ;
+;  mem_address[0]  ; clk        ; 5.887 ; 5.844 ; Rise       ; clk             ;
+;  mem_address[1]  ; clk        ; 6.379 ; 6.310 ; Rise       ; clk             ;
+;  mem_address[2]  ; clk        ; 6.121 ; 6.083 ; Rise       ; clk             ;
+;  mem_address[3]  ; clk        ; 6.053 ; 5.932 ; Rise       ; clk             ;
+;  mem_address[4]  ; clk        ; 6.299 ; 6.234 ; Rise       ; clk             ;
+;  mem_address[5]  ; clk        ; 6.147 ; 6.087 ; Rise       ; clk             ;
+;  mem_address[6]  ; clk        ; 6.130 ; 6.063 ; Rise       ; clk             ;
+;  mem_address[7]  ; clk        ; 5.697 ; 5.595 ; Rise       ; clk             ;
+;  mem_address[8]  ; clk        ; 6.274 ; 6.209 ; Rise       ; clk             ;
+;  mem_address[9]  ; clk        ; 6.311 ; 6.287 ; Rise       ; clk             ;
+;  mem_address[10] ; clk        ; 6.446 ; 6.396 ; Rise       ; clk             ;
+;  mem_address[11] ; clk        ; 6.124 ; 6.032 ; Rise       ; clk             ;
+;  mem_address[12] ; clk        ; 5.835 ; 5.725 ; Rise       ; clk             ;
+;  mem_address[13] ; clk        ; 5.879 ; 5.780 ; Rise       ; clk             ;
+;  mem_address[14] ; clk        ; 5.738 ; 5.710 ; Rise       ; clk             ;
+;  mem_address[15] ; clk        ; 6.373 ; 6.338 ; Rise       ; clk             ;
+; mem_read         ; clk        ; 6.683 ; 6.697 ; Rise       ; clk             ;
+; mem_wdata[*]     ; clk        ; 6.608 ; 6.578 ; Rise       ; clk             ;
+;  mem_wdata[0]    ; clk        ; 6.310 ; 6.243 ; Rise       ; clk             ;
+;  mem_wdata[1]    ; clk        ; 5.726 ; 5.638 ; Rise       ; clk             ;
+;  mem_wdata[2]    ; clk        ; 6.243 ; 6.186 ; Rise       ; clk             ;
+;  mem_wdata[3]    ; clk        ; 6.079 ; 6.000 ; Rise       ; clk             ;
+;  mem_wdata[4]    ; clk        ; 6.112 ; 6.018 ; Rise       ; clk             ;
+;  mem_wdata[5]    ; clk        ; 6.292 ; 6.189 ; Rise       ; clk             ;
+;  mem_wdata[6]    ; clk        ; 5.825 ; 5.725 ; Rise       ; clk             ;
+;  mem_wdata[7]    ; clk        ; 6.266 ; 6.192 ; Rise       ; clk             ;
+;  mem_wdata[8]    ; clk        ; 6.529 ; 6.476 ; Rise       ; clk             ;
+;  mem_wdata[9]    ; clk        ; 6.305 ; 6.256 ; Rise       ; clk             ;
+;  mem_wdata[10]   ; clk        ; 5.950 ; 5.816 ; Rise       ; clk             ;
+;  mem_wdata[11]   ; clk        ; 6.409 ; 6.375 ; Rise       ; clk             ;
+;  mem_wdata[12]   ; clk        ; 6.304 ; 6.212 ; Rise       ; clk             ;
+;  mem_wdata[13]   ; clk        ; 6.608 ; 6.578 ; Rise       ; clk             ;
+;  mem_wdata[14]   ; clk        ; 6.221 ; 6.184 ; Rise       ; clk             ;
+;  mem_wdata[15]   ; clk        ; 6.250 ; 6.201 ; Rise       ; clk             ;
+; mem_write        ; clk        ; 6.344 ; 6.274 ; Rise       ; clk             ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; mem_address[*]   ; clk        ; 5.422 ; 5.326 ; Rise       ; clk             ;
+;  mem_address[0]  ; clk        ; 5.603 ; 5.562 ; Rise       ; clk             ;
+;  mem_address[1]  ; clk        ; 6.092 ; 6.026 ; Rise       ; clk             ;
+;  mem_address[2]  ; clk        ; 5.825 ; 5.789 ; Rise       ; clk             ;
+;  mem_address[3]  ; clk        ; 5.780 ; 5.666 ; Rise       ; clk             ;
+;  mem_address[4]  ; clk        ; 6.014 ; 5.952 ; Rise       ; clk             ;
+;  mem_address[5]  ; clk        ; 5.849 ; 5.791 ; Rise       ; clk             ;
+;  mem_address[6]  ; clk        ; 5.852 ; 5.789 ; Rise       ; clk             ;
+;  mem_address[7]  ; clk        ; 5.422 ; 5.326 ; Rise       ; clk             ;
+;  mem_address[8]  ; clk        ; 5.989 ; 5.928 ; Rise       ; clk             ;
+;  mem_address[9]  ; clk        ; 6.025 ; 6.002 ; Rise       ; clk             ;
+;  mem_address[10] ; clk        ; 6.151 ; 6.104 ; Rise       ; clk             ;
+;  mem_address[11] ; clk        ; 5.829 ; 5.741 ; Rise       ; clk             ;
+;  mem_address[12] ; clk        ; 5.554 ; 5.449 ; Rise       ; clk             ;
+;  mem_address[13] ; clk        ; 5.596 ; 5.501 ; Rise       ; clk             ;
+;  mem_address[14] ; clk        ; 5.460 ; 5.433 ; Rise       ; clk             ;
+;  mem_address[15] ; clk        ; 6.086 ; 6.054 ; Rise       ; clk             ;
+; mem_read         ; clk        ; 6.286 ; 6.316 ; Rise       ; clk             ;
+; mem_wdata[*]     ; clk        ; 5.453 ; 5.370 ; Rise       ; clk             ;
+;  mem_wdata[0]    ; clk        ; 6.006 ; 5.942 ; Rise       ; clk             ;
+;  mem_wdata[1]    ; clk        ; 5.453 ; 5.370 ; Rise       ; clk             ;
+;  mem_wdata[2]    ; clk        ; 5.959 ; 5.906 ; Rise       ; clk             ;
+;  mem_wdata[3]    ; clk        ; 5.804 ; 5.729 ; Rise       ; clk             ;
+;  mem_wdata[4]    ; clk        ; 5.835 ; 5.747 ; Rise       ; clk             ;
+;  mem_wdata[5]    ; clk        ; 6.006 ; 5.909 ; Rise       ; clk             ;
+;  mem_wdata[6]    ; clk        ; 5.543 ; 5.447 ; Rise       ; clk             ;
+;  mem_wdata[7]    ; clk        ; 5.983 ; 5.912 ; Rise       ; clk             ;
+;  mem_wdata[8]    ; clk        ; 6.232 ; 6.182 ; Rise       ; clk             ;
+;  mem_wdata[9]    ; clk        ; 6.017 ; 5.970 ; Rise       ; clk             ;
+;  mem_wdata[10]   ; clk        ; 5.664 ; 5.536 ; Rise       ; clk             ;
+;  mem_wdata[11]   ; clk        ; 6.116 ; 6.084 ; Rise       ; clk             ;
+;  mem_wdata[12]   ; clk        ; 6.019 ; 5.932 ; Rise       ; clk             ;
+;  mem_wdata[13]   ; clk        ; 6.307 ; 6.279 ; Rise       ; clk             ;
+;  mem_wdata[14]   ; clk        ; 5.936 ; 5.901 ; Rise       ; clk             ;
+;  mem_wdata[15]   ; clk        ; 5.966 ; 5.920 ; Rise       ; clk             ;
+; mem_write        ; clk        ; 6.037 ; 5.971 ; Rise       ; clk             ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Slow 1100mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1100mV 0C Model Setup Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 4.971 ; 0.000              ;
++-------+-------+--------------------+
+
+
++-----------------------------------+
+; Fast 1100mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.180 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1100mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1100mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1100mV 0C Model Minimum Pulse Width Summary ;
++-------+-------+----------------------------------+
+; Clock ; Slack ; End Point TNS                    ;
++-------+-------+----------------------------------+
+; clk   ; 4.655 ; 0.000                            ;
++-------+-------+----------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; mem_rdata[*]   ; clk        ; 2.309 ; 2.298 ; Rise       ; clk             ;
+;  mem_rdata[0]  ; clk        ; 1.947 ; 1.958 ; Rise       ; clk             ;
+;  mem_rdata[1]  ; clk        ; 2.297 ; 2.297 ; Rise       ; clk             ;
+;  mem_rdata[2]  ; clk        ; 1.809 ; 1.825 ; Rise       ; clk             ;
+;  mem_rdata[3]  ; clk        ; 1.903 ; 1.909 ; Rise       ; clk             ;
+;  mem_rdata[4]  ; clk        ; 2.059 ; 2.063 ; Rise       ; clk             ;
+;  mem_rdata[5]  ; clk        ; 2.309 ; 2.298 ; Rise       ; clk             ;
+;  mem_rdata[6]  ; clk        ; 2.193 ; 2.180 ; Rise       ; clk             ;
+;  mem_rdata[7]  ; clk        ; 2.274 ; 2.234 ; Rise       ; clk             ;
+;  mem_rdata[8]  ; clk        ; 2.287 ; 2.271 ; Rise       ; clk             ;
+;  mem_rdata[9]  ; clk        ; 1.834 ; 1.826 ; Rise       ; clk             ;
+;  mem_rdata[10] ; clk        ; 2.042 ; 2.013 ; Rise       ; clk             ;
+;  mem_rdata[11] ; clk        ; 1.977 ; 1.967 ; Rise       ; clk             ;
+;  mem_rdata[12] ; clk        ; 2.175 ; 2.146 ; Rise       ; clk             ;
+;  mem_rdata[13] ; clk        ; 2.166 ; 2.180 ; Rise       ; clk             ;
+;  mem_rdata[14] ; clk        ; 2.138 ; 2.144 ; Rise       ; clk             ;
+;  mem_rdata[15] ; clk        ; 2.218 ; 2.215 ; Rise       ; clk             ;
+; mem_resp       ; clk        ; 2.059 ; 2.026 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; mem_rdata[*]   ; clk        ; -1.495 ; -1.497 ; Rise       ; clk             ;
+;  mem_rdata[0]  ; clk        ; -1.627 ; -1.623 ; Rise       ; clk             ;
+;  mem_rdata[1]  ; clk        ; -1.960 ; -1.946 ; Rise       ; clk             ;
+;  mem_rdata[2]  ; clk        ; -1.495 ; -1.497 ; Rise       ; clk             ;
+;  mem_rdata[3]  ; clk        ; -1.597 ; -1.601 ; Rise       ; clk             ;
+;  mem_rdata[4]  ; clk        ; -1.732 ; -1.723 ; Rise       ; clk             ;
+;  mem_rdata[5]  ; clk        ; -1.972 ; -1.948 ; Rise       ; clk             ;
+;  mem_rdata[6]  ; clk        ; -1.863 ; -1.837 ; Rise       ; clk             ;
+;  mem_rdata[7]  ; clk        ; -1.937 ; -1.886 ; Rise       ; clk             ;
+;  mem_rdata[8]  ; clk        ; -1.951 ; -1.922 ; Rise       ; clk             ;
+;  mem_rdata[9]  ; clk        ; -1.529 ; -1.520 ; Rise       ; clk             ;
+;  mem_rdata[10] ; clk        ; -1.715 ; -1.674 ; Rise       ; clk             ;
+;  mem_rdata[11] ; clk        ; -1.671 ; -1.660 ; Rise       ; clk             ;
+;  mem_rdata[12] ; clk        ; -1.844 ; -1.803 ; Rise       ; clk             ;
+;  mem_rdata[13] ; clk        ; -1.836 ; -1.835 ; Rise       ; clk             ;
+;  mem_rdata[14] ; clk        ; -1.809 ; -1.800 ; Rise       ; clk             ;
+;  mem_rdata[15] ; clk        ; -1.887 ; -1.870 ; Rise       ; clk             ;
+; mem_resp       ; clk        ; -1.604 ; -1.579 ; Rise       ; clk             ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; mem_address[*]   ; clk        ; 4.788 ; 4.846 ; Rise       ; clk             ;
+;  mem_address[0]  ; clk        ; 4.332 ; 4.339 ; Rise       ; clk             ;
+;  mem_address[1]  ; clk        ; 4.695 ; 4.763 ; Rise       ; clk             ;
+;  mem_address[2]  ; clk        ; 4.488 ; 4.534 ; Rise       ; clk             ;
+;  mem_address[3]  ; clk        ; 4.463 ; 4.423 ; Rise       ; clk             ;
+;  mem_address[4]  ; clk        ; 4.678 ; 4.717 ; Rise       ; clk             ;
+;  mem_address[5]  ; clk        ; 4.545 ; 4.571 ; Rise       ; clk             ;
+;  mem_address[6]  ; clk        ; 4.552 ; 4.581 ; Rise       ; clk             ;
+;  mem_address[7]  ; clk        ; 4.155 ; 4.122 ; Rise       ; clk             ;
+;  mem_address[8]  ; clk        ; 4.655 ; 4.693 ; Rise       ; clk             ;
+;  mem_address[9]  ; clk        ; 4.698 ; 4.749 ; Rise       ; clk             ;
+;  mem_address[10] ; clk        ; 4.788 ; 4.846 ; Rise       ; clk             ;
+;  mem_address[11] ; clk        ; 4.460 ; 4.467 ; Rise       ; clk             ;
+;  mem_address[12] ; clk        ; 4.280 ; 4.239 ; Rise       ; clk             ;
+;  mem_address[13] ; clk        ; 4.319 ; 4.301 ; Rise       ; clk             ;
+;  mem_address[14] ; clk        ; 4.239 ; 4.254 ; Rise       ; clk             ;
+;  mem_address[15] ; clk        ; 4.705 ; 4.783 ; Rise       ; clk             ;
+; mem_read         ; clk        ; 5.009 ; 4.954 ; Rise       ; clk             ;
+; mem_wdata[*]     ; clk        ; 4.921 ; 4.968 ; Rise       ; clk             ;
+;  mem_wdata[0]    ; clk        ; 4.625 ; 4.643 ; Rise       ; clk             ;
+;  mem_wdata[1]    ; clk        ; 4.187 ; 4.143 ; Rise       ; clk             ;
+;  mem_wdata[2]    ; clk        ; 4.599 ; 4.630 ; Rise       ; clk             ;
+;  mem_wdata[3]    ; clk        ; 4.506 ; 4.529 ; Rise       ; clk             ;
+;  mem_wdata[4]    ; clk        ; 4.512 ; 4.528 ; Rise       ; clk             ;
+;  mem_wdata[5]    ; clk        ; 4.642 ; 4.655 ; Rise       ; clk             ;
+;  mem_wdata[6]    ; clk        ; 4.312 ; 4.261 ; Rise       ; clk             ;
+;  mem_wdata[7]    ; clk        ; 4.641 ; 4.666 ; Rise       ; clk             ;
+;  mem_wdata[8]    ; clk        ; 4.848 ; 4.891 ; Rise       ; clk             ;
+;  mem_wdata[9]    ; clk        ; 4.664 ; 4.707 ; Rise       ; clk             ;
+;  mem_wdata[10]   ; clk        ; 4.356 ; 4.310 ; Rise       ; clk             ;
+;  mem_wdata[11]   ; clk        ; 4.741 ; 4.802 ; Rise       ; clk             ;
+;  mem_wdata[12]   ; clk        ; 4.660 ; 4.682 ; Rise       ; clk             ;
+;  mem_wdata[13]   ; clk        ; 4.921 ; 4.968 ; Rise       ; clk             ;
+;  mem_wdata[14]   ; clk        ; 4.598 ; 4.639 ; Rise       ; clk             ;
+;  mem_wdata[15]   ; clk        ; 4.617 ; 4.654 ; Rise       ; clk             ;
+; mem_write        ; clk        ; 4.670 ; 4.665 ; Rise       ; clk             ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; mem_address[*]   ; clk        ; 3.948 ; 3.918 ; Rise       ; clk             ;
+;  mem_address[0]  ; clk        ; 4.116 ; 4.123 ; Rise       ; clk             ;
+;  mem_address[1]  ; clk        ; 4.479 ; 4.545 ; Rise       ; clk             ;
+;  mem_address[2]  ; clk        ; 4.265 ; 4.308 ; Rise       ; clk             ;
+;  mem_address[3]  ; clk        ; 4.259 ; 4.220 ; Rise       ; clk             ;
+;  mem_address[4]  ; clk        ; 4.464 ; 4.499 ; Rise       ; clk             ;
+;  mem_address[5]  ; clk        ; 4.320 ; 4.343 ; Rise       ; clk             ;
+;  mem_address[6]  ; clk        ; 4.343 ; 4.369 ; Rise       ; clk             ;
+;  mem_address[7]  ; clk        ; 3.948 ; 3.918 ; Rise       ; clk             ;
+;  mem_address[8]  ; clk        ; 4.441 ; 4.476 ; Rise       ; clk             ;
+;  mem_address[9]  ; clk        ; 4.483 ; 4.530 ; Rise       ; clk             ;
+;  mem_address[10] ; clk        ; 4.566 ; 4.620 ; Rise       ; clk             ;
+;  mem_address[11] ; clk        ; 4.239 ; 4.245 ; Rise       ; clk             ;
+;  mem_address[12] ; clk        ; 4.067 ; 4.028 ; Rise       ; clk             ;
+;  mem_address[13] ; clk        ; 4.105 ; 4.087 ; Rise       ; clk             ;
+;  mem_address[14] ; clk        ; 4.029 ; 4.042 ; Rise       ; clk             ;
+;  mem_address[15] ; clk        ; 4.489 ; 4.564 ; Rise       ; clk             ;
+; mem_read         ; clk        ; 4.718 ; 4.678 ; Rise       ; clk             ;
+; mem_wdata[*]     ; clk        ; 3.981 ; 3.939 ; Rise       ; clk             ;
+;  mem_wdata[0]    ; clk        ; 4.398 ; 4.414 ; Rise       ; clk             ;
+;  mem_wdata[1]    ; clk        ; 3.981 ; 3.939 ; Rise       ; clk             ;
+;  mem_wdata[2]    ; clk        ; 4.388 ; 4.416 ; Rise       ; clk             ;
+;  mem_wdata[3]    ; clk        ; 4.299 ; 4.320 ; Rise       ; clk             ;
+;  mem_wdata[4]    ; clk        ; 4.305 ; 4.319 ; Rise       ; clk             ;
+;  mem_wdata[5]    ; clk        ; 4.428 ; 4.440 ; Rise       ; clk             ;
+;  mem_wdata[6]    ; clk        ; 4.099 ; 4.050 ; Rise       ; clk             ;
+;  mem_wdata[7]    ; clk        ; 4.428 ; 4.451 ; Rise       ; clk             ;
+;  mem_wdata[8]    ; clk        ; 4.624 ; 4.665 ; Rise       ; clk             ;
+;  mem_wdata[9]    ; clk        ; 4.448 ; 4.488 ; Rise       ; clk             ;
+;  mem_wdata[10]   ; clk        ; 4.141 ; 4.096 ; Rise       ; clk             ;
+;  mem_wdata[11]   ; clk        ; 4.522 ; 4.579 ; Rise       ; clk             ;
+;  mem_wdata[12]   ; clk        ; 4.446 ; 4.466 ; Rise       ; clk             ;
+;  mem_wdata[13]   ; clk        ; 4.695 ; 4.739 ; Rise       ; clk             ;
+;  mem_wdata[14]   ; clk        ; 4.385 ; 4.423 ; Rise       ; clk             ;
+;  mem_wdata[15]   ; clk        ; 4.405 ; 4.439 ; Rise       ; clk             ;
+; mem_write        ; clk        ; 4.440 ; 4.434 ; Rise       ; clk             ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Fast 1100mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                         ;
++------------------+-------+-------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 2.712 ; 0.180 ; N/A      ; N/A     ; 4.375               ;
+;  clk             ; 2.712 ; 0.180 ; N/A      ; N/A     ; 4.375               ;
+; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clk             ; 0.000 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+-------+-------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------+
+; Setup Times                                                                ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; mem_rdata[*]   ; clk        ; 3.569 ; 3.368 ; Rise       ; clk             ;
+;  mem_rdata[0]  ; clk        ; 3.081 ; 2.939 ; Rise       ; clk             ;
+;  mem_rdata[1]  ; clk        ; 3.555 ; 3.368 ; Rise       ; clk             ;
+;  mem_rdata[2]  ; clk        ; 2.869 ; 2.745 ; Rise       ; clk             ;
+;  mem_rdata[3]  ; clk        ; 2.957 ; 2.788 ; Rise       ; clk             ;
+;  mem_rdata[4]  ; clk        ; 3.261 ; 3.098 ; Rise       ; clk             ;
+;  mem_rdata[5]  ; clk        ; 3.569 ; 3.363 ; Rise       ; clk             ;
+;  mem_rdata[6]  ; clk        ; 3.443 ; 3.247 ; Rise       ; clk             ;
+;  mem_rdata[7]  ; clk        ; 3.563 ; 3.330 ; Rise       ; clk             ;
+;  mem_rdata[8]  ; clk        ; 3.537 ; 3.298 ; Rise       ; clk             ;
+;  mem_rdata[9]  ; clk        ; 2.866 ; 2.715 ; Rise       ; clk             ;
+;  mem_rdata[10] ; clk        ; 3.228 ; 3.021 ; Rise       ; clk             ;
+;  mem_rdata[11] ; clk        ; 3.054 ; 2.885 ; Rise       ; clk             ;
+;  mem_rdata[12] ; clk        ; 3.388 ; 3.171 ; Rise       ; clk             ;
+;  mem_rdata[13] ; clk        ; 3.386 ; 3.202 ; Rise       ; clk             ;
+;  mem_rdata[14] ; clk        ; 3.343 ; 3.182 ; Rise       ; clk             ;
+;  mem_rdata[15] ; clk        ; 3.454 ; 3.260 ; Rise       ; clk             ;
+; mem_resp       ; clk        ; 3.330 ; 3.084 ; Rise       ; clk             ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; mem_rdata[*]   ; clk        ; -1.495 ; -1.497 ; Rise       ; clk             ;
+;  mem_rdata[0]  ; clk        ; -1.627 ; -1.623 ; Rise       ; clk             ;
+;  mem_rdata[1]  ; clk        ; -1.960 ; -1.946 ; Rise       ; clk             ;
+;  mem_rdata[2]  ; clk        ; -1.495 ; -1.497 ; Rise       ; clk             ;
+;  mem_rdata[3]  ; clk        ; -1.597 ; -1.601 ; Rise       ; clk             ;
+;  mem_rdata[4]  ; clk        ; -1.732 ; -1.723 ; Rise       ; clk             ;
+;  mem_rdata[5]  ; clk        ; -1.972 ; -1.948 ; Rise       ; clk             ;
+;  mem_rdata[6]  ; clk        ; -1.863 ; -1.837 ; Rise       ; clk             ;
+;  mem_rdata[7]  ; clk        ; -1.937 ; -1.886 ; Rise       ; clk             ;
+;  mem_rdata[8]  ; clk        ; -1.951 ; -1.922 ; Rise       ; clk             ;
+;  mem_rdata[9]  ; clk        ; -1.529 ; -1.520 ; Rise       ; clk             ;
+;  mem_rdata[10] ; clk        ; -1.715 ; -1.674 ; Rise       ; clk             ;
+;  mem_rdata[11] ; clk        ; -1.671 ; -1.660 ; Rise       ; clk             ;
+;  mem_rdata[12] ; clk        ; -1.844 ; -1.803 ; Rise       ; clk             ;
+;  mem_rdata[13] ; clk        ; -1.836 ; -1.835 ; Rise       ; clk             ;
+;  mem_rdata[14] ; clk        ; -1.809 ; -1.800 ; Rise       ; clk             ;
+;  mem_rdata[15] ; clk        ; -1.887 ; -1.870 ; Rise       ; clk             ;
+; mem_resp       ; clk        ; -1.604 ; -1.579 ; Rise       ; clk             ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; mem_address[*]   ; clk        ; 6.811 ; 6.761 ; Rise       ; clk             ;
+;  mem_address[0]  ; clk        ; 6.228 ; 6.179 ; Rise       ; clk             ;
+;  mem_address[1]  ; clk        ; 6.734 ; 6.640 ; Rise       ; clk             ;
+;  mem_address[2]  ; clk        ; 6.493 ; 6.485 ; Rise       ; clk             ;
+;  mem_address[3]  ; clk        ; 6.418 ; 6.267 ; Rise       ; clk             ;
+;  mem_address[4]  ; clk        ; 6.654 ; 6.566 ; Rise       ; clk             ;
+;  mem_address[5]  ; clk        ; 6.519 ; 6.483 ; Rise       ; clk             ;
+;  mem_address[6]  ; clk        ; 6.471 ; 6.381 ; Rise       ; clk             ;
+;  mem_address[7]  ; clk        ; 6.026 ; 5.923 ; Rise       ; clk             ;
+;  mem_address[8]  ; clk        ; 6.627 ; 6.538 ; Rise       ; clk             ;
+;  mem_address[9]  ; clk        ; 6.663 ; 6.610 ; Rise       ; clk             ;
+;  mem_address[10] ; clk        ; 6.811 ; 6.761 ; Rise       ; clk             ;
+;  mem_address[11] ; clk        ; 6.498 ; 6.426 ; Rise       ; clk             ;
+;  mem_address[12] ; clk        ; 6.176 ; 6.050 ; Rise       ; clk             ;
+;  mem_address[13] ; clk        ; 6.229 ; 6.110 ; Rise       ; clk             ;
+;  mem_address[14] ; clk        ; 6.079 ; 6.068 ; Rise       ; clk             ;
+;  mem_address[15] ; clk        ; 6.728 ; 6.667 ; Rise       ; clk             ;
+; mem_read         ; clk        ; 7.051 ; 7.062 ; Rise       ; clk             ;
+; mem_wdata[*]     ; clk        ; 6.971 ; 6.926 ; Rise       ; clk             ;
+;  mem_wdata[0]    ; clk        ; 6.680 ; 6.618 ; Rise       ; clk             ;
+;  mem_wdata[1]    ; clk        ; 6.053 ; 5.954 ; Rise       ; clk             ;
+;  mem_wdata[2]    ; clk        ; 6.575 ; 6.512 ; Rise       ; clk             ;
+;  mem_wdata[3]    ; clk        ; 6.421 ; 6.322 ; Rise       ; clk             ;
+;  mem_wdata[4]    ; clk        ; 6.443 ; 6.341 ; Rise       ; clk             ;
+;  mem_wdata[5]    ; clk        ; 6.637 ; 6.525 ; Rise       ; clk             ;
+;  mem_wdata[6]    ; clk        ; 6.168 ; 6.053 ; Rise       ; clk             ;
+;  mem_wdata[7]    ; clk        ; 6.603 ; 6.519 ; Rise       ; clk             ;
+;  mem_wdata[8]    ; clk        ; 6.886 ; 6.821 ; Rise       ; clk             ;
+;  mem_wdata[9]    ; clk        ; 6.648 ; 6.585 ; Rise       ; clk             ;
+;  mem_wdata[10]   ; clk        ; 6.297 ; 6.156 ; Rise       ; clk             ;
+;  mem_wdata[11]   ; clk        ; 6.757 ; 6.730 ; Rise       ; clk             ;
+;  mem_wdata[12]   ; clk        ; 6.638 ; 6.545 ; Rise       ; clk             ;
+;  mem_wdata[13]   ; clk        ; 6.971 ; 6.926 ; Rise       ; clk             ;
+;  mem_wdata[14]   ; clk        ; 6.568 ; 6.517 ; Rise       ; clk             ;
+;  mem_wdata[15]   ; clk        ; 6.593 ; 6.534 ; Rise       ; clk             ;
+; mem_write        ; clk        ; 6.724 ; 6.659 ; Rise       ; clk             ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; mem_address[*]   ; clk        ; 3.948 ; 3.918 ; Rise       ; clk             ;
+;  mem_address[0]  ; clk        ; 4.116 ; 4.123 ; Rise       ; clk             ;
+;  mem_address[1]  ; clk        ; 4.479 ; 4.545 ; Rise       ; clk             ;
+;  mem_address[2]  ; clk        ; 4.265 ; 4.308 ; Rise       ; clk             ;
+;  mem_address[3]  ; clk        ; 4.259 ; 4.220 ; Rise       ; clk             ;
+;  mem_address[4]  ; clk        ; 4.464 ; 4.499 ; Rise       ; clk             ;
+;  mem_address[5]  ; clk        ; 4.320 ; 4.343 ; Rise       ; clk             ;
+;  mem_address[6]  ; clk        ; 4.343 ; 4.369 ; Rise       ; clk             ;
+;  mem_address[7]  ; clk        ; 3.948 ; 3.918 ; Rise       ; clk             ;
+;  mem_address[8]  ; clk        ; 4.441 ; 4.476 ; Rise       ; clk             ;
+;  mem_address[9]  ; clk        ; 4.483 ; 4.530 ; Rise       ; clk             ;
+;  mem_address[10] ; clk        ; 4.566 ; 4.620 ; Rise       ; clk             ;
+;  mem_address[11] ; clk        ; 4.239 ; 4.245 ; Rise       ; clk             ;
+;  mem_address[12] ; clk        ; 4.067 ; 4.028 ; Rise       ; clk             ;
+;  mem_address[13] ; clk        ; 4.105 ; 4.087 ; Rise       ; clk             ;
+;  mem_address[14] ; clk        ; 4.029 ; 4.042 ; Rise       ; clk             ;
+;  mem_address[15] ; clk        ; 4.489 ; 4.564 ; Rise       ; clk             ;
+; mem_read         ; clk        ; 4.718 ; 4.678 ; Rise       ; clk             ;
+; mem_wdata[*]     ; clk        ; 3.981 ; 3.939 ; Rise       ; clk             ;
+;  mem_wdata[0]    ; clk        ; 4.398 ; 4.414 ; Rise       ; clk             ;
+;  mem_wdata[1]    ; clk        ; 3.981 ; 3.939 ; Rise       ; clk             ;
+;  mem_wdata[2]    ; clk        ; 4.388 ; 4.416 ; Rise       ; clk             ;
+;  mem_wdata[3]    ; clk        ; 4.299 ; 4.320 ; Rise       ; clk             ;
+;  mem_wdata[4]    ; clk        ; 4.305 ; 4.319 ; Rise       ; clk             ;
+;  mem_wdata[5]    ; clk        ; 4.428 ; 4.440 ; Rise       ; clk             ;
+;  mem_wdata[6]    ; clk        ; 4.099 ; 4.050 ; Rise       ; clk             ;
+;  mem_wdata[7]    ; clk        ; 4.428 ; 4.451 ; Rise       ; clk             ;
+;  mem_wdata[8]    ; clk        ; 4.624 ; 4.665 ; Rise       ; clk             ;
+;  mem_wdata[9]    ; clk        ; 4.448 ; 4.488 ; Rise       ; clk             ;
+;  mem_wdata[10]   ; clk        ; 4.141 ; 4.096 ; Rise       ; clk             ;
+;  mem_wdata[11]   ; clk        ; 4.522 ; 4.579 ; Rise       ; clk             ;
+;  mem_wdata[12]   ; clk        ; 4.446 ; 4.466 ; Rise       ; clk             ;
+;  mem_wdata[13]   ; clk        ; 4.695 ; 4.739 ; Rise       ; clk             ;
+;  mem_wdata[14]   ; clk        ; 4.385 ; 4.423 ; Rise       ; clk             ;
+;  mem_wdata[15]   ; clk        ; 4.405 ; 4.439 ; Rise       ; clk             ;
+; mem_write        ; clk        ; 4.440 ; 4.434 ; Rise       ; clk             ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                         ;
++--------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin                ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++--------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; mem_read           ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_write          ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_byte_enable[0] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_byte_enable[1] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_address[0]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_address[1]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_address[2]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_address[3]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_address[4]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_address[5]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_address[6]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_address[7]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_address[8]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_address[9]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_address[10]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_address[11]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_address[12]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_address[13]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_address[14]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_address[15]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_wdata[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_wdata[1]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_wdata[2]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_wdata[3]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_wdata[4]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_wdata[5]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_wdata[6]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_wdata[7]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_wdata[8]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_wdata[9]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_wdata[10]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_wdata[11]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_wdata[12]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_wdata[13]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_wdata[14]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; mem_wdata[15]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++--------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++-------------------------------------------------------------------+
+; Input Transition Times                                            ;
++----------------+--------------+-----------------+-----------------+
+; Pin            ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++----------------+--------------+-----------------+-----------------+
+; mem_resp       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; mem_rdata[0]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; mem_rdata[1]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; mem_rdata[2]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; mem_rdata[3]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; mem_rdata[4]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; mem_rdata[5]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; mem_rdata[6]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; mem_rdata[7]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; mem_rdata[8]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; mem_rdata[9]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; mem_rdata[10]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; mem_rdata[11]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; mem_rdata[12]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; mem_rdata[13]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; mem_rdata[14]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; mem_rdata[15]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~ ; 1.8 V        ; 1440 ps         ; 1440 ps         ;
++----------------+--------------+-----------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++--------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin                ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++--------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; mem_read           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.00313 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.00313 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
+; mem_write          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-06 V                    ; 2.38 V              ; -0.00321 V          ; 0.162 V                              ; 0.052 V                              ; 4.72e-10 s                  ; 4.46e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-06 V                   ; 2.38 V             ; -0.00321 V         ; 0.162 V                             ; 0.052 V                             ; 4.72e-10 s                 ; 4.46e-10 s                 ; Yes                       ; Yes                       ;
+; mem_byte_enable[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.00313 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.00313 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
+; mem_byte_enable[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-06 V                   ; 2.38 V              ; -0.00587 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-10 s                  ; 5.69e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-06 V                  ; 2.38 V             ; -0.00587 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-10 s                 ; 5.69e-10 s                 ; Yes                       ; Yes                       ;
+; mem_address[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-06 V                   ; 2.38 V              ; -0.00587 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-10 s                  ; 5.69e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-06 V                  ; 2.38 V             ; -0.00587 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-10 s                 ; 5.69e-10 s                 ; Yes                       ; Yes                       ;
+; mem_address[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.22e-06 V                   ; 2.38 V              ; -0.00511 V          ; 0.16 V                               ; 0.053 V                              ; 7.15e-10 s                  ; 6.33e-10 s                  ; No                         ; Yes                        ; 2.37 V                      ; 2.22e-06 V                  ; 2.38 V             ; -0.00511 V         ; 0.16 V                              ; 0.053 V                             ; 7.15e-10 s                 ; 6.33e-10 s                 ; No                        ; Yes                       ;
+; mem_address[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-06 V                   ; 2.38 V              ; -0.00587 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-10 s                  ; 5.69e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-06 V                  ; 2.38 V             ; -0.00587 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-10 s                 ; 5.69e-10 s                 ; Yes                       ; Yes                       ;
+; mem_address[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-06 V                    ; 2.38 V              ; -0.00321 V          ; 0.162 V                              ; 0.052 V                              ; 4.72e-10 s                  ; 4.46e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-06 V                   ; 2.38 V             ; -0.00321 V         ; 0.162 V                             ; 0.052 V                             ; 4.72e-10 s                 ; 4.46e-10 s                 ; Yes                       ; Yes                       ;
+; mem_address[4]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.003 V            ; 0.164 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.003 V           ; 0.164 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
+; mem_address[5]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-06 V                    ; 2.38 V              ; -0.00321 V          ; 0.162 V                              ; 0.052 V                              ; 4.72e-10 s                  ; 4.46e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-06 V                   ; 2.38 V             ; -0.00321 V         ; 0.162 V                             ; 0.052 V                             ; 4.72e-10 s                 ; 4.46e-10 s                 ; Yes                       ; Yes                       ;
+; mem_address[6]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.00313 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.00313 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
+; mem_address[7]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-06 V                   ; 2.38 V              ; -0.00587 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-10 s                  ; 5.69e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-06 V                  ; 2.38 V             ; -0.00587 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-10 s                 ; 5.69e-10 s                 ; Yes                       ; Yes                       ;
+; mem_address[8]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.00313 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.00313 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
+; mem_address[9]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.00313 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.00313 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
+; mem_address[10]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.00313 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.00313 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
+; mem_address[11]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-06 V                   ; 2.38 V              ; -0.00587 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-10 s                  ; 5.69e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-06 V                  ; 2.38 V             ; -0.00587 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-10 s                 ; 5.69e-10 s                 ; Yes                       ; Yes                       ;
+; mem_address[12]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-06 V                   ; 2.38 V              ; -0.00587 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-10 s                  ; 5.69e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-06 V                  ; 2.38 V             ; -0.00587 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-10 s                 ; 5.69e-10 s                 ; Yes                       ; Yes                       ;
+; mem_address[13]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-06 V                   ; 2.38 V              ; -0.00587 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-10 s                  ; 5.69e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-06 V                  ; 2.38 V             ; -0.00587 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-10 s                 ; 5.69e-10 s                 ; Yes                       ; Yes                       ;
+; mem_address[14]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-06 V                    ; 2.38 V              ; -0.00321 V          ; 0.162 V                              ; 0.052 V                              ; 4.72e-10 s                  ; 4.46e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-06 V                   ; 2.38 V             ; -0.00321 V         ; 0.162 V                             ; 0.052 V                             ; 4.72e-10 s                 ; 4.46e-10 s                 ; Yes                       ; Yes                       ;
+; mem_address[15]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.22e-06 V                   ; 2.38 V              ; -0.00511 V          ; 0.16 V                               ; 0.053 V                              ; 7.15e-10 s                  ; 6.33e-10 s                  ; No                         ; Yes                        ; 2.37 V                      ; 2.22e-06 V                  ; 2.38 V             ; -0.00511 V         ; 0.16 V                              ; 0.053 V                             ; 7.15e-10 s                 ; 6.33e-10 s                 ; No                        ; Yes                       ;
+; mem_wdata[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-06 V                   ; 2.38 V              ; -0.00587 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-10 s                  ; 5.69e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-06 V                  ; 2.38 V             ; -0.00587 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-10 s                 ; 5.69e-10 s                 ; Yes                       ; Yes                       ;
+; mem_wdata[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-06 V                   ; 2.38 V              ; -0.00587 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-10 s                  ; 5.69e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-06 V                  ; 2.38 V             ; -0.00587 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-10 s                 ; 5.69e-10 s                 ; Yes                       ; Yes                       ;
+; mem_wdata[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.00313 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.00313 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
+; mem_wdata[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.00313 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.00313 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
+; mem_wdata[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.00313 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.00313 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
+; mem_wdata[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.00313 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.00313 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
+; mem_wdata[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.2e-06 V                    ; 2.38 V              ; -0.00321 V          ; 0.162 V                              ; 0.052 V                              ; 4.72e-10 s                  ; 4.46e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 2.2e-06 V                   ; 2.38 V             ; -0.00321 V         ; 0.162 V                             ; 0.052 V                             ; 4.72e-10 s                 ; 4.46e-10 s                 ; Yes                       ; Yes                       ;
+; mem_wdata[7]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.00313 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.00313 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
+; mem_wdata[8]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.00313 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.00313 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
+; mem_wdata[9]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.00313 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.00313 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
+; mem_wdata[10]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 2.21e-06 V                   ; 2.38 V              ; -0.00587 V          ; 0.177 V                              ; 0.064 V                              ; 6.08e-10 s                  ; 5.69e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 2.21e-06 V                  ; 2.38 V             ; -0.00587 V         ; 0.177 V                             ; 0.064 V                             ; 6.08e-10 s                 ; 5.69e-10 s                 ; Yes                       ; Yes                       ;
+; mem_wdata[11]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.00313 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.00313 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
+; mem_wdata[12]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.00313 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.00313 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
+; mem_wdata[13]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.00313 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.00313 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
+; mem_wdata[14]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.00313 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.00313 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
+; mem_wdata[15]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.37 V                       ; 4.13e-06 V                   ; 2.38 V              ; -0.00313 V          ; 0.163 V                              ; 0.05 V                               ; 4.73e-10 s                  ; 4.44e-10 s                  ; Yes                        ; Yes                        ; 2.37 V                      ; 4.13e-06 V                  ; 2.38 V             ; -0.00313 V         ; 0.163 V                             ; 0.05 V                              ; 4.73e-10 s                 ; 4.44e-10 s                 ; Yes                       ; Yes                       ;
++--------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++--------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin                ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++--------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; mem_read           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0167 V           ; 0.147 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0167 V          ; 0.147 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
+; mem_write          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-07 V                   ; 2.64 V              ; -0.0188 V           ; 0.148 V                              ; 0.264 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; No                         ; 2.62 V                      ; 5.38e-07 V                  ; 2.64 V             ; -0.0188 V          ; 0.148 V                             ; 0.264 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; No                        ;
+; mem_byte_enable[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0167 V           ; 0.147 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0167 V          ; 0.147 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
+; mem_byte_enable[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-07 V                    ; 2.66 V              ; -0.025 V            ; 0.258 V                              ; 0.201 V                              ; 3.9e-10 s                   ; 3.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-07 V                   ; 2.66 V             ; -0.025 V           ; 0.258 V                             ; 0.201 V                             ; 3.9e-10 s                  ; 3.75e-10 s                 ; No                        ; Yes                       ;
+; mem_address[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-07 V                    ; 2.66 V              ; -0.025 V            ; 0.258 V                              ; 0.201 V                              ; 3.9e-10 s                   ; 3.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-07 V                   ; 2.66 V             ; -0.025 V           ; 0.258 V                             ; 0.201 V                             ; 3.9e-10 s                  ; 3.75e-10 s                 ; No                        ; Yes                       ;
+; mem_address[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.46e-07 V                   ; 2.66 V              ; -0.0268 V           ; 0.198 V                              ; 0.136 V                              ; 4.94e-10 s                  ; 4.7e-10 s                   ; No                         ; No                         ; 2.62 V                      ; 5.46e-07 V                  ; 2.66 V             ; -0.0268 V          ; 0.198 V                             ; 0.136 V                             ; 4.94e-10 s                 ; 4.7e-10 s                  ; No                        ; No                        ;
+; mem_address[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-07 V                    ; 2.66 V              ; -0.025 V            ; 0.258 V                              ; 0.201 V                              ; 3.9e-10 s                   ; 3.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-07 V                   ; 2.66 V             ; -0.025 V           ; 0.258 V                             ; 0.201 V                             ; 3.9e-10 s                  ; 3.75e-10 s                 ; No                        ; Yes                       ;
+; mem_address[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-07 V                   ; 2.64 V              ; -0.0188 V           ; 0.148 V                              ; 0.264 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; No                         ; 2.62 V                      ; 5.38e-07 V                  ; 2.64 V             ; -0.0188 V          ; 0.148 V                             ; 0.264 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; No                        ;
+; mem_address[4]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0165 V           ; 0.148 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0165 V          ; 0.148 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
+; mem_address[5]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-07 V                   ; 2.64 V              ; -0.0188 V           ; 0.148 V                              ; 0.264 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; No                         ; 2.62 V                      ; 5.38e-07 V                  ; 2.64 V             ; -0.0188 V          ; 0.148 V                             ; 0.264 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; No                        ;
+; mem_address[6]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0167 V           ; 0.147 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0167 V          ; 0.147 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
+; mem_address[7]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-07 V                    ; 2.66 V              ; -0.025 V            ; 0.258 V                              ; 0.201 V                              ; 3.9e-10 s                   ; 3.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-07 V                   ; 2.66 V             ; -0.025 V           ; 0.258 V                             ; 0.201 V                             ; 3.9e-10 s                  ; 3.75e-10 s                 ; No                        ; Yes                       ;
+; mem_address[8]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0167 V           ; 0.147 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0167 V          ; 0.147 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
+; mem_address[9]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0167 V           ; 0.147 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0167 V          ; 0.147 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
+; mem_address[10]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0167 V           ; 0.147 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0167 V          ; 0.147 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
+; mem_address[11]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-07 V                    ; 2.66 V              ; -0.025 V            ; 0.258 V                              ; 0.201 V                              ; 3.9e-10 s                   ; 3.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-07 V                   ; 2.66 V             ; -0.025 V           ; 0.258 V                             ; 0.201 V                             ; 3.9e-10 s                  ; 3.75e-10 s                 ; No                        ; Yes                       ;
+; mem_address[12]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-07 V                    ; 2.66 V              ; -0.025 V            ; 0.258 V                              ; 0.201 V                              ; 3.9e-10 s                   ; 3.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-07 V                   ; 2.66 V             ; -0.025 V           ; 0.258 V                             ; 0.201 V                             ; 3.9e-10 s                  ; 3.75e-10 s                 ; No                        ; Yes                       ;
+; mem_address[13]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-07 V                    ; 2.66 V              ; -0.025 V            ; 0.258 V                              ; 0.201 V                              ; 3.9e-10 s                   ; 3.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-07 V                   ; 2.66 V             ; -0.025 V           ; 0.258 V                             ; 0.201 V                             ; 3.9e-10 s                  ; 3.75e-10 s                 ; No                        ; Yes                       ;
+; mem_address[14]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-07 V                   ; 2.64 V              ; -0.0188 V           ; 0.148 V                              ; 0.264 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; No                         ; 2.62 V                      ; 5.38e-07 V                  ; 2.64 V             ; -0.0188 V          ; 0.148 V                             ; 0.264 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; No                        ;
+; mem_address[15]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.46e-07 V                   ; 2.66 V              ; -0.0268 V           ; 0.198 V                              ; 0.136 V                              ; 4.94e-10 s                  ; 4.7e-10 s                   ; No                         ; No                         ; 2.62 V                      ; 5.46e-07 V                  ; 2.66 V             ; -0.0268 V          ; 0.198 V                             ; 0.136 V                             ; 4.94e-10 s                 ; 4.7e-10 s                  ; No                        ; No                        ;
+; mem_wdata[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-07 V                    ; 2.66 V              ; -0.025 V            ; 0.258 V                              ; 0.201 V                              ; 3.9e-10 s                   ; 3.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-07 V                   ; 2.66 V             ; -0.025 V           ; 0.258 V                             ; 0.201 V                             ; 3.9e-10 s                  ; 3.75e-10 s                 ; No                        ; Yes                       ;
+; mem_wdata[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-07 V                    ; 2.66 V              ; -0.025 V            ; 0.258 V                              ; 0.201 V                              ; 3.9e-10 s                   ; 3.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-07 V                   ; 2.66 V             ; -0.025 V           ; 0.258 V                             ; 0.201 V                             ; 3.9e-10 s                  ; 3.75e-10 s                 ; No                        ; Yes                       ;
+; mem_wdata[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0167 V           ; 0.147 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0167 V          ; 0.147 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
+; mem_wdata[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0167 V           ; 0.147 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0167 V          ; 0.147 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
+; mem_wdata[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0167 V           ; 0.147 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0167 V          ; 0.147 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
+; mem_wdata[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0167 V           ; 0.147 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0167 V          ; 0.147 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
+; mem_wdata[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.38e-07 V                   ; 2.64 V              ; -0.0188 V           ; 0.148 V                              ; 0.264 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; No                         ; 2.62 V                      ; 5.38e-07 V                  ; 2.64 V             ; -0.0188 V          ; 0.148 V                             ; 0.264 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; No                        ;
+; mem_wdata[7]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0167 V           ; 0.147 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0167 V          ; 0.147 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
+; mem_wdata[8]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0167 V           ; 0.147 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0167 V          ; 0.147 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
+; mem_wdata[9]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0167 V           ; 0.147 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0167 V          ; 0.147 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
+; mem_wdata[10]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 5.4e-07 V                    ; 2.66 V              ; -0.025 V            ; 0.258 V                              ; 0.201 V                              ; 3.9e-10 s                   ; 3.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 5.4e-07 V                   ; 2.66 V             ; -0.025 V           ; 0.258 V                             ; 0.201 V                             ; 3.9e-10 s                  ; 3.75e-10 s                 ; No                        ; Yes                       ;
+; mem_wdata[11]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0167 V           ; 0.147 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0167 V          ; 0.147 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
+; mem_wdata[12]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0167 V           ; 0.147 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0167 V          ; 0.147 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
+; mem_wdata[13]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0167 V           ; 0.147 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0167 V          ; 0.147 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
+; mem_wdata[14]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0167 V           ; 0.147 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0167 V          ; 0.147 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
+; mem_wdata[15]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 8.9e-07 V                    ; 2.64 V              ; -0.0167 V           ; 0.147 V                              ; 0.258 V                              ; 3.49e-10 s                  ; 2.77e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 8.9e-07 V                   ; 2.64 V             ; -0.0167 V          ; 0.147 V                             ; 0.258 V                             ; 3.49e-10 s                 ; 2.77e-10 s                 ; No                        ; Yes                       ;
++--------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 73247    ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 73247    ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+    Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
+    Info: Processing started: Sun Jan 22 18:21:16 2017
+Info: Command: quartus_sta mp0 -c mp0
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (21077): Core supply voltage is 1.1V
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'mp0.sdc'
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1100mV 85C Model
+Info (332146): Worst-case setup slack is 2.712
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.712               0.000 clk 
+Info (332146): Worst-case hold slack is 0.302
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.302               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 4.377
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.377               0.000 clk 
+Info: Analyzing Slow 1100mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332146): Worst-case setup slack is 3.283
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     3.283               0.000 clk 
+Info (332146): Worst-case hold slack is 0.276
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.276               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 4.375
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.375               0.000 clk 
+Info: Analyzing Fast 1100mV 0C Model
+Info (332146): Worst-case setup slack is 4.971
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.971               0.000 clk 
+Info (332146): Worst-case hold slack is 0.180
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.180               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 4.655
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.655               0.000 clk 
+Info (332101): Design is fully constrained for setup requirements
+Info (332101): Design is fully constrained for hold requirements
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 503 megabytes
+    Info: Processing ended: Sun Jan 22 18:21:19 2017
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+
