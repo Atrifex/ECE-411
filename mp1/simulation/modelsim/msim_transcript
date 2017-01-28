@@ -1,4 +1,4 @@
-# do mp0_run_msim_rtl_verilog.do 
+# do mp1_run_msim_rtl_verilog.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
@@ -9,37 +9,37 @@
 # ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/lc3b_types.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp1 {/home/rrthakk2/ece411/mp1/lc3b_types.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package lc3b_types
 # 
 # Top level modules:
 # 	--none--
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/plus2.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp1 {/home/rrthakk2/ece411/mp1/plus2.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module plus2
 # 
 # Top level modules:
 # 	plus2
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/register.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp1 {/home/rrthakk2/ece411/mp1/register.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/mux2.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp1 {/home/rrthakk2/ece411/mp1/mux2.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mux2
 # 
 # Top level modules:
 # 	mux2
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/adder.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp1 {/home/rrthakk2/ece411/mp1/adder.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module adder
 # 
 # Top level modules:
 # 	adder
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/adj.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp1 {/home/rrthakk2/ece411/mp1/adj.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package adj_sv_unit
 # -- Importing package lc3b_types
@@ -47,7 +47,7 @@
 # 
 # Top level modules:
 # 	adj
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/alu.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp1 {/home/rrthakk2/ece411/mp1/alu.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package alu_sv_unit
 # -- Importing package lc3b_types
@@ -55,7 +55,7 @@
 # 
 # Top level modules:
 # 	alu
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/control.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp1 {/home/rrthakk2/ece411/mp1/control.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package control_sv_unit
 # -- Importing package lc3b_types
@@ -63,7 +63,7 @@
 # 
 # Top level modules:
 # 	control
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/gencc.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp1 {/home/rrthakk2/ece411/mp1/gencc.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package gencc_sv_unit
 # -- Importing package lc3b_types
@@ -71,7 +71,7 @@
 # 
 # Top level modules:
 # 	gencc
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/ir.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp1 {/home/rrthakk2/ece411/mp1/ir.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package ir_sv_unit
 # -- Importing package lc3b_types
@@ -79,7 +79,7 @@
 # 
 # Top level modules:
 # 	ir
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/regfile.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp1 {/home/rrthakk2/ece411/mp1/regfile.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package regfile_sv_unit
 # -- Importing package lc3b_types
@@ -87,7 +87,7 @@
 # 
 # Top level modules:
 # 	regfile
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/cccomp.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp1 {/home/rrthakk2/ece411/mp1/cccomp.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package cccomp_sv_unit
 # -- Importing package lc3b_types
@@ -95,7 +95,7 @@
 # 
 # Top level modules:
 # 	cccomp
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/datapath.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp1 {/home/rrthakk2/ece411/mp1/datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package datapath_sv_unit
 # -- Importing package lc3b_types
@@ -103,35 +103,35 @@
 # 
 # Top level modules:
 # 	datapath
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/mp0.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp1 {/home/rrthakk2/ece411/mp1/mp1.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package mp0_sv_unit
+# -- Compiling package mp1_sv_unit
 # -- Importing package lc3b_types
-# -- Compiling module mp0
+# -- Compiling module mp1
 # 
 # Top level modules:
-# 	mp0
+# 	mp1
 # 
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/mp0_tb.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp1 {/home/rrthakk2/ece411/mp1/mp1_tb.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module mp0_tb
+# -- Compiling module mp1_tb
 # 
 # Top level modules:
-# 	mp0_tb
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp0 {/home/rrthakk2/ece411/mp0/magic_memory.sv}
+# 	mp1_tb
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp1 {/home/rrthakk2/ece411/mp1/memory.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module magic_memory
+# -- Compiling module memory
 # 
 # Top level modules:
-# 	magic_memory
+# 	memory
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp0_tb
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mp0_tb 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp1_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mp1_tb 
 # Loading sv_std.std
-# Loading work.mp0_tb
+# Loading work.mp1_tb
 # Loading work.lc3b_types
-# Loading work.mp0_sv_unit
-# Loading work.mp0
+# Loading work.mp1_sv_unit
+# Loading work.mp1
 # Loading work.control_sv_unit
 # Loading work.control
 # Loading work.datapath_sv_unit
@@ -152,7 +152,7 @@
 # Loading work.gencc
 # Loading work.cccomp_sv_unit
 # Loading work.cccomp
-# Loading work.magic_memory
+# Loading work.memory
 # 
 # add wave *
 # view structure
@@ -160,15 +160,12 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 200 ns
-add wave -position 1  sim:/mp0_tb/dut/datapath_inst/pc/out
-add wave -position end  sim:/mp0_tb/dut/datapath_inst/regfile_inst/data
-add wave -position 1  sim:/mp0_tb/dut/datapath_inst/pc_out
-restart -f; run 1000ns
+restart -f; 20000ns
 # Loading sv_std.std
-# Loading work.mp0_tb
+# Loading work.mp1_tb
 # Loading work.lc3b_types
-# Loading work.mp0_sv_unit
-# Loading work.mp0
+# Loading work.mp1_sv_unit
+# Loading work.mp1
 # Loading work.control_sv_unit
 # Loading work.control
 # Loading work.datapath_sv_unit
@@ -189,13 +186,14 @@ restart -f; run 1000ns
 # Loading work.gencc
 # Loading work.cccomp_sv_unit
 # Loading work.cccomp
-# Loading work.magic_memory
-restart -f; run 10000ns
+# Loading work.memory
+# invalid command name "20000ns"
+restart -f; run 20000ns
 # Loading sv_std.std
-# Loading work.mp0_tb
+# Loading work.mp1_tb
 # Loading work.lc3b_types
-# Loading work.mp0_sv_unit
-# Loading work.mp0
+# Loading work.mp1_sv_unit
+# Loading work.mp1
 # Loading work.control_sv_unit
 # Loading work.control
 # Loading work.datapath_sv_unit
@@ -216,13 +214,14 @@ restart -f; run 10000ns
 # Loading work.gencc
 # Loading work.cccomp_sv_unit
 # Loading work.cccomp
-# Loading work.magic_memory
-restart -f; run 1000ns
+# Loading work.memory
+add wave -position end  sim:/mp1_tb/dut/datapath_inst/regfile_inst/data
+restart -f; run 20000ns
 # Loading sv_std.std
-# Loading work.mp0_tb
+# Loading work.mp1_tb
 # Loading work.lc3b_types
-# Loading work.mp0_sv_unit
-# Loading work.mp0
+# Loading work.mp1_sv_unit
+# Loading work.mp1
 # Loading work.control_sv_unit
 # Loading work.control
 # Loading work.datapath_sv_unit
@@ -243,32 +242,4 @@ restart -f; run 1000ns
 # Loading work.gencc
 # Loading work.cccomp_sv_unit
 # Loading work.cccomp
-# Loading work.magic_memory
-restart -f; run 10000ns
-# Loading sv_std.std
-# Loading work.mp0_tb
-# Loading work.lc3b_types
-# Loading work.mp0_sv_unit
-# Loading work.mp0
-# Loading work.control_sv_unit
-# Loading work.control
-# Loading work.datapath_sv_unit
-# Loading work.datapath
-# Loading work.register
-# Loading work.mux2
-# Loading work.plus2
-# Loading work.adder
-# Loading work.adj_sv_unit
-# Loading work.adj
-# Loading work.ir_sv_unit
-# Loading work.ir
-# Loading work.regfile_sv_unit
-# Loading work.regfile
-# Loading work.alu_sv_unit
-# Loading work.alu
-# Loading work.gencc_sv_unit
-# Loading work.gencc
-# Loading work.cccomp_sv_unit
-# Loading work.cccomp
-# Loading work.magic_memory
-# Window cannot be closed because the modal window "Quit Vsim" is still open.
+# Loading work.memory
