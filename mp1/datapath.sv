@@ -72,7 +72,7 @@ mux4 pcmux
     .a(pc_plus2_out),
     .b(br_add_out),
     .c(alu_out),
-    .d(16'hZZZZ),
+    .d(16'h0000),
     .f(pcmux_out)
 );
 
@@ -148,7 +148,7 @@ mux4 regfilemux
 	.a(alu_out),
 	.b(mdr_out),
     .c(br_add_out),
-    .d(16'hZZZZ),
+    .d(16'h0000),
 	.f(regfilemux_out)
 );
 
@@ -158,7 +158,7 @@ mux4 alumux
 	.a(sr2_out),
 	.b(adj6_offset),
     .c($signed(imm5)),
-    .d(16'hZZZZ),
+    .d(16'h0000),
 	.f(alumux_out)
 );
 

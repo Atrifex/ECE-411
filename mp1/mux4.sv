@@ -1,7 +1,7 @@
 module mux4 #(parameter width = 16) // creates a modular module so that yo can have variable size inputs
 (
 	input [1:0] sel, 							// selection bit
-	input [width - 1:0] a,b,c,d	// the inputs to select from
+	input [width - 1:0] a,b,c,d,	// the inputs to select from
 	output logic [width - 1:0] f 	// selected output
 );
 
