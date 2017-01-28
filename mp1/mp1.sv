@@ -17,7 +17,7 @@ module mp1
 /* Internal connections */
 logic load_pc, load_ir, load_regfile, load_mar, load_mdr, load_cc, storemux_sel;
 logic [1:0] pcmux_sel, regfilemux_sel, alumux_sel;
-logic marmux_sel, mdrmux_sel, br_enable;
+logic marmux_sel, mdrmux_sel, br_enable, ir_5;
 lc3b_aluop aluop;
 lc3b_opcode opcode;
 
@@ -27,7 +27,7 @@ control control_inst
     .clk,
 
     /* Datapath controls */
-    .opcode, .br_enable, .load_pc, .load_ir, .load_regfile, .load_mar,
+    .opcode, .ir_5, .br_enable, .load_pc, .load_ir, .load_regfile, .load_mar,
     .load_mdr, .load_cc, .pcmux_sel, .storemux_sel, .alumux_sel,
     .regfilemux_sel, .marmux_sel, .mdrmux_sel, .aluop,
 
@@ -42,7 +42,7 @@ datapath datapath_inst
     /* control signals */
 	.load_pc, .load_ir, .load_regfile, .load_mar, .load_mdr, .load_cc,
 	.pcmux_sel, .storemux_sel, .alumux_sel, .regfilemux_sel, .marmux_sel,
-	.mdrmux_sel, .aluop, .opcode, .br_enable,
+	.mdrmux_sel, .aluop, .opcode, .ir_5, .br_enable,
 
 	 /* Memory signals */
 	.mem_rdata, .mem_address, .mem_wdata

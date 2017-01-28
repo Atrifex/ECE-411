@@ -7,6 +7,7 @@ module control
 
     /* Datapath controls */
     input lc3b_opcode opcode,
+    input ir_5,
     input br_enable,
     output logic load_pc,
     output logic load_ir,
@@ -44,7 +45,9 @@ enum int unsigned {
     ldr1,
     ldr2,
     str1,
-    str2
+    str2,
+    jmp,
+    lea
 } state, next_state;
 
 always_comb
@@ -74,7 +77,7 @@ begin : state_actions
             load_mar = 1;
 
             /* PC <= PC + 2 */
-            pcmux_sel = 0;
+            pcmux_sel = 2'b00;
             load_pc = 1;
         end
         fetch2: begin
@@ -91,11 +94,13 @@ begin : state_actions
             /* Do nothing ---> Opcode is being decoded */
         end
         s_add: begin
+            alumux_sel = (ir_5 == 1)? 2'b10: 2'b00;
             aluop = alu_add;
             load_regfile = 1;
             load_cc = 1;
         end
         s_and: begin
+            alumux_sel = (ir_5 == 1)? 2'b10: 2'b00;
             aluop = alu_and;
             load_regfile = 1;
             load_cc = 1;
@@ -109,11 +114,11 @@ begin : state_actions
             /* Check for if BEN is high in state transition */
         end
         br_taken: begin
-            pcmux_sel = 1;
+            pcmux_sel = 2'b01;
             load_pc = 1;
         end
         calc_addr: begin
-            alumux_sel = 1;
+            alumux_sel = 2'b01;
             aluop = alu_add;
             load_mar = 1;
         end
@@ -123,7 +128,7 @@ begin : state_actions
             mem_read = 1;
         end
         ldr2: begin
-            regfilemux_sel = 1;
+            regfilemux_sel = 2'b01;
             load_regfile = 1;
             load_cc = 1;
         end
@@ -134,6 +139,16 @@ begin : state_actions
         end
         str2: begin
             mem_write = 1;
+        end
+        jmp: begin
+            aluop = alu_pass;
+            pcmux_sel = 2'b10;
+            load_pc = 1;
+        end
+        lea: begin
+            regfilemux_sel = 2'b10;
+            load_regfile = 1;
+            load_cc = 1;
         end
         default : /* Do nothing and transition back to fetch1 */;
     endcase
@@ -166,6 +181,7 @@ begin : next_state_logic
                 op_ldr: next_state = calc_addr;
                 op_str: next_state = calc_addr;
                 op_br: next_state = br;
+                op_jmp: next_state = jmp;
                 default : next_state = fetch1;
             endcase
         end
@@ -206,6 +222,12 @@ begin : next_state_logic
         str2: begin
             if(mem_resp == 1)
                 next_state = fetch1;
+        end
+        jmp: begin
+            next_state = fetch1;
+        end
+        lea: begin
+            next_state = fetch1;
         end
         default : next_state = fetch1;
     endcase

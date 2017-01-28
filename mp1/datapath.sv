@@ -5,26 +5,27 @@ module datapath
     input clk,
 
     /* control signals */
-	 input load_pc,
-	 input load_ir,
-	 input load_regfile,
-	 input load_mar,
-	 input load_mdr,
-	 input load_cc,
-	 input [1:0] pcmux_sel,
-	 input storemux_sel,
-	 input [1:0] alumux_sel,
-	 input [1:0] regfilemux_sel,
-	 input marmux_sel,
-	 input mdrmux_sel,
-	 input lc3b_aluop aluop,
-	 output lc3b_opcode opcode,
-	 output br_enable,
+    input load_pc,
+    input load_ir,
+    input load_regfile,
+    input load_mar,
+    input load_mdr,
+    input load_cc,
+    input [1:0] pcmux_sel,
+    input storemux_sel,
+    input [1:0] alumux_sel,
+    input [1:0] regfilemux_sel,
+    input marmux_sel,
+    input mdrmux_sel,
+    input lc3b_aluop aluop,
+    output lc3b_opcode opcode,
+    output ir_5,
+    output br_enable,
 
-	 /* Memory signals */
-	 input lc3b_word mem_rdata,
+    /* Memory signals */
+    input lc3b_word mem_rdata,
     output lc3b_word mem_address,
-	 output lc3b_word mem_wdata
+    output lc3b_word mem_wdata
 );
 
 /***** declare internal signals *****/
@@ -99,19 +100,20 @@ adj #(9) offset9_adjuster
 /*****  IR *****/
 ir IR
 (
-	 // inputs
+	// inputs
     .clk,
     .load(load_ir),
     .in(mdr_out),
 
-	 // outputs
+	// outputs
     .opcode(opcode),
     .dest(dest),
 	.src1(sr1),
 	.src2(sr2),
     .offset6(offset6),
     .offset9(offset9),
-    .imm5(imm5)
+    .imm5(imm5),
+    .ir_5(ir_5)
 );
 
 mux2 #(3) storemux
