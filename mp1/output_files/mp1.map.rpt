@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp1
-Fri Jan 27 22:20:39 2017
+Fri Jan 27 23:29:50 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -61,16 +61,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Fri Jan 27 22:20:39 2017       ;
+; Analysis & Synthesis Status   ; Successful - Fri Jan 27 23:29:50 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp1                                         ;
 ; Top-level Entity Name         ; mp1                                         ;
 ; Family                        ; Stratix III                                 ;
 ; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 190                                         ;
+;     Combinational ALUTs       ; 252                                         ;
 ;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 208                                         ;
-; Total registers               ; 208                                         ;
+;     Dedicated logic registers ; 211                                         ;
+; Total registers               ; 211                                         ;
 ; Total pins                    ; 54                                          ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 0                                           ;
@@ -214,34 +214,34 @@ applicable agreement for further details.
 +-----------------------------------------------+-----------+
 ; Resource                                      ; Usage     ;
 +-----------------------------------------------+-----------+
-; Estimated ALUTs Used                          ; 190       ;
-;     -- Combinational ALUTs                    ; 190       ;
+; Estimated ALUTs Used                          ; 252       ;
+;     -- Combinational ALUTs                    ; 252       ;
 ;     -- Memory ALUTs                           ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
-; Dedicated logic registers                     ; 208       ;
+; Dedicated logic registers                     ; 211       ;
 ;                                               ;           ;
-; Estimated ALUTs Unavailable                   ; 64        ;
-;     -- Due to unpartnered combinational logic ; 64        ;
+; Estimated ALUTs Unavailable                   ; 75        ;
+;     -- Due to unpartnered combinational logic ; 75        ;
 ;     -- Due to Memory ALUTs                    ; 0         ;
 ;                                               ;           ;
-; Total combinational functions                 ; 190       ;
+; Total combinational functions                 ; 252       ;
 ; Combinational ALUT usage by number of inputs  ;           ;
-;     -- 7 input functions                      ; 64        ;
-;     -- 6 input functions                      ; 26        ;
-;     -- 5 input functions                      ; 20        ;
+;     -- 7 input functions                      ; 75        ;
+;     -- 6 input functions                      ; 24        ;
+;     -- 5 input functions                      ; 39        ;
 ;     -- 4 input functions                      ; 31        ;
-;     -- <=3 input functions                    ; 49        ;
+;     -- <=3 input functions                    ; 83        ;
 ;                                               ;           ;
 ; Combinational ALUTs by mode                   ;           ;
-;     -- normal mode                            ; 95        ;
-;     -- extended LUT mode                      ; 64        ;
-;     -- arithmetic mode                        ; 31        ;
+;     -- normal mode                            ; 131       ;
+;     -- extended LUT mode                      ; 75        ;
+;     -- arithmetic mode                        ; 46        ;
 ;     -- shared arithmetic mode                 ; 0         ;
 ;                                               ;           ;
-; Estimated ALUT/register pairs used            ; 372       ;
+; Estimated ALUT/register pairs used            ; 413       ;
 ;                                               ;           ;
-; Total registers                               ; 208       ;
-;     -- Dedicated logic registers              ; 208       ;
+; Total registers                               ; 211       ;
+;     -- Dedicated logic registers              ; 211       ;
 ;     -- I/O registers                          ; 0         ;
 ;     -- LUT_REGs                               ; 0         ;
 ;                                               ;           ;
@@ -249,9 +249,9 @@ applicable agreement for further details.
 ; I/O pins                                      ; 54        ;
 ; DSP block 18-bit elements                     ; 0         ;
 ; Maximum fan-out node                          ; clk~input ;
-; Maximum fan-out                               ; 208       ;
-; Total fan-out                                 ; 1752      ;
-; Average fan-out                               ; 3.46      ;
+; Maximum fan-out                               ; 211       ;
+; Total fan-out                                 ; 1991      ;
+; Average fan-out                               ; 3.49      ;
 +-----------------------------------------------+-----------+
 
 
@@ -260,88 +260,92 @@ applicable agreement for further details.
 +------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+--------------------------------------------------+--------------+
 ; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Library Name ;
 +------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+--------------------------------------------------+--------------+
-; |mp1                         ; 190 (0)           ; 208 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 54   ; 0            ; |mp1                                             ; work         ;
-;    |control:control_inst|    ; 28 (28)           ; 14 (14)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|control:control_inst                        ; work         ;
-;    |datapath:datapath_inst|  ; 162 (0)           ; 194 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst                      ; work         ;
-;       |alu:alu_inst|         ; 49 (49)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|alu:alu_inst         ; work         ;
+; |mp1                         ; 252 (0)           ; 211 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 54   ; 0            ; |mp1                                             ; work         ;
+;    |control:control_inst|    ; 34 (34)           ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|control:control_inst                        ; work         ;
+;    |datapath:datapath_inst|  ; 218 (0)           ; 195 (0)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst                      ; work         ;
+;       |adder:br_adder|       ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|adder:br_adder       ; work         ;
+;       |alu:alu_inst|         ; 55 (55)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|alu:alu_inst         ; work         ;
 ;       |cccomp:cccomp_inst|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|cccomp:cccomp_inst   ; work         ;
 ;       |gencc:gencc_inst|     ; 5 (5)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|gencc:gencc_inst     ; work         ;
 ;       |ir:IR|                ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|ir:IR                ; work         ;
 ;       |mux2:storemux|        ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|mux2:storemux        ; work         ;
-;       |mux4:regfilemux|      ; 16 (16)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|mux4:regfilemux      ; work         ;
+;       |mux4:alumux|          ; 14 (14)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|mux4:alumux          ; work         ;
+;       |mux4:pcmux|           ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|mux4:pcmux           ; work         ;
+;       |mux4:regfilemux|      ; 22 (22)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|mux4:regfilemux      ; work         ;
 ;       |plus2:pcPlus2|        ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|plus2:pcPlus2        ; work         ;
 ;       |regfile:regfile_inst| ; 72 (72)           ; 128 (128)    ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|regfile:regfile_inst ; work         ;
-;       |register:MAR|         ; 1 (1)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|register:MAR         ; work         ;
+;       |register:MAR|         ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|register:MAR         ; work         ;
 ;       |register:MDR|         ; 0 (0)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|register:MDR         ; work         ;
 ;       |register:cc|          ; 0 (0)             ; 3 (3)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|register:cc          ; work         ;
-;       |register:pc|          ; 0 (0)             ; 15 (15)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|register:pc          ; work         ;
+;       |register:pc|          ; 1 (1)             ; 16 (16)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |mp1|datapath:datapath_inst|register:pc          ; work         ;
 +------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+--------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |mp1|control:control_inst|state                                                                                                                                                                         ;
-+-----------------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
-; Name            ; state.str2 ; state.str1 ; state.ldr2 ; state.ldr1 ; state.calc_addr ; state.br_taken ; state.br ; state.s_not ; state.s_and ; state.s_add ; state.decode ; state.fetch3 ; state.fetch2 ; state.fetch1 ;
-+-----------------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
-; state.fetch1    ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ;
-; state.fetch2    ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 1            ; 1            ;
-; state.fetch3    ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 1            ; 0            ; 1            ;
-; state.decode    ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 1            ; 0            ; 0            ; 1            ;
-; state.s_add     ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 1           ; 0            ; 0            ; 0            ; 1            ;
-; state.s_and     ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 1           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.s_not     ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 1           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.br        ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 1        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.br_taken  ; 0          ; 0          ; 0          ; 0          ; 0               ; 1              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.calc_addr ; 0          ; 0          ; 0          ; 0          ; 1               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldr1      ; 0          ; 0          ; 0          ; 1          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldr2      ; 0          ; 0          ; 1          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.str1      ; 0          ; 1          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.str2      ; 1          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-+-----------------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |mp1|control:control_inst|state                                                                                                                                                                                                 ;
++-----------------+-----------+-----------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
+; Name            ; state.lea ; state.jmp ; state.str2 ; state.str1 ; state.ldr2 ; state.ldr1 ; state.calc_addr ; state.br_taken ; state.br ; state.s_not ; state.s_and ; state.s_add ; state.decode ; state.fetch3 ; state.fetch2 ; state.fetch1 ;
++-----------------+-----------+-----------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
+; state.fetch1    ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ;
+; state.fetch2    ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 1            ; 1            ;
+; state.fetch3    ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 1            ; 0            ; 1            ;
+; state.decode    ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 1            ; 0            ; 0            ; 1            ;
+; state.s_add     ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 1           ; 0            ; 0            ; 0            ; 1            ;
+; state.s_and     ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 1           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.s_not     ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 1           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.br        ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 1        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.br_taken  ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 1              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.calc_addr ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 1               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldr1      ; 0         ; 0         ; 0          ; 0          ; 0          ; 1          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.ldr2      ; 0         ; 0         ; 0          ; 0          ; 1          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.str1      ; 0         ; 0         ; 0          ; 1          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.str2      ; 0         ; 0         ; 1          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.jmp       ; 0         ; 1         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
+; state.lea       ; 1         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
++-----------------+-----------+-----------+------------+------------+------------+------------+-----------------+----------------+----------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
 
 
-+-------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                  ;
-+--------------------------------------------+----------------------------------------+
-; Register name                              ; Reason for Removal                     ;
-+--------------------------------------------+----------------------------------------+
-; datapath:datapath_inst|register:pc|data[0] ; Stuck at GND due to stuck port data_in ;
-; control:control_inst|state~2               ; Lost fanout                            ;
-; control:control_inst|state~3               ; Lost fanout                            ;
-; control:control_inst|state~4               ; Lost fanout                            ;
-; control:control_inst|state~5               ; Lost fanout                            ;
-; control:control_inst|state~6               ; Lost fanout                            ;
-; control:control_inst|state~7               ; Lost fanout                            ;
-; control:control_inst|state~8               ; Lost fanout                            ;
-; control:control_inst|state~9               ; Lost fanout                            ;
-; control:control_inst|state~10              ; Lost fanout                            ;
-; control:control_inst|state~11              ; Lost fanout                            ;
-; control:control_inst|state~12              ; Lost fanout                            ;
-; control:control_inst|state~13              ; Lost fanout                            ;
-; control:control_inst|state~14              ; Lost fanout                            ;
-; control:control_inst|state~15              ; Lost fanout                            ;
-; control:control_inst|state~16              ; Lost fanout                            ;
-; control:control_inst|state~17              ; Lost fanout                            ;
-; control:control_inst|state~18              ; Lost fanout                            ;
-; control:control_inst|state~19              ; Lost fanout                            ;
-; control:control_inst|state~20              ; Lost fanout                            ;
-; control:control_inst|state~21              ; Lost fanout                            ;
-; control:control_inst|state~22              ; Lost fanout                            ;
-; control:control_inst|state~23              ; Lost fanout                            ;
-; control:control_inst|state~24              ; Lost fanout                            ;
-; control:control_inst|state~25              ; Lost fanout                            ;
-; control:control_inst|state~26              ; Lost fanout                            ;
-; control:control_inst|state~27              ; Lost fanout                            ;
-; control:control_inst|state~28              ; Lost fanout                            ;
-; control:control_inst|state~29              ; Lost fanout                            ;
-; control:control_inst|state~30              ; Lost fanout                            ;
-; control:control_inst|state~31              ; Lost fanout                            ;
-; control:control_inst|state~32              ; Lost fanout                            ;
-; control:control_inst|state~33              ; Lost fanout                            ;
-; Total Number of Removed Registers = 33     ;                                        ;
-+--------------------------------------------+----------------------------------------+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; control:control_inst|state~2           ; Lost fanout        ;
+; control:control_inst|state~3           ; Lost fanout        ;
+; control:control_inst|state~4           ; Lost fanout        ;
+; control:control_inst|state~5           ; Lost fanout        ;
+; control:control_inst|state~6           ; Lost fanout        ;
+; control:control_inst|state~7           ; Lost fanout        ;
+; control:control_inst|state~8           ; Lost fanout        ;
+; control:control_inst|state~9           ; Lost fanout        ;
+; control:control_inst|state~10          ; Lost fanout        ;
+; control:control_inst|state~11          ; Lost fanout        ;
+; control:control_inst|state~12          ; Lost fanout        ;
+; control:control_inst|state~13          ; Lost fanout        ;
+; control:control_inst|state~14          ; Lost fanout        ;
+; control:control_inst|state~15          ; Lost fanout        ;
+; control:control_inst|state~16          ; Lost fanout        ;
+; control:control_inst|state~17          ; Lost fanout        ;
+; control:control_inst|state~18          ; Lost fanout        ;
+; control:control_inst|state~19          ; Lost fanout        ;
+; control:control_inst|state~20          ; Lost fanout        ;
+; control:control_inst|state~21          ; Lost fanout        ;
+; control:control_inst|state~22          ; Lost fanout        ;
+; control:control_inst|state~23          ; Lost fanout        ;
+; control:control_inst|state~24          ; Lost fanout        ;
+; control:control_inst|state~25          ; Lost fanout        ;
+; control:control_inst|state~26          ; Lost fanout        ;
+; control:control_inst|state~27          ; Lost fanout        ;
+; control:control_inst|state~28          ; Lost fanout        ;
+; control:control_inst|state~29          ; Lost fanout        ;
+; control:control_inst|state~30          ; Lost fanout        ;
+; control:control_inst|state~31          ; Lost fanout        ;
+; control:control_inst|state~32          ; Lost fanout        ;
+; control:control_inst|state~33          ; Lost fanout        ;
+; Total Number of Removed Registers = 32 ;                    ;
++----------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -349,12 +353,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 208   ;
+; Total registers                              ; 211   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 31    ;
+; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 193   ;
+; Number of registers using Clock Enable       ; 194   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -364,9 +368,13 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp1|datapath:datapath_inst|alu:alu_inst|Selector12 ;
-; 4:1                ; 5 bits    ; 10 ALUTs      ; 10 ALUTs             ; 0 ALUTs                ; No         ; |mp1|control:control_inst|Selector5                 ;
-; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp1|control:control_inst|Selector12                ;
+; 4:1                ; 15 bits   ; 30 ALUTs      ; 30 ALUTs             ; 0 ALUTs                ; Yes        ; |mp1|datapath:datapath_inst|register:pc|data[6]     ;
+; 3:1                ; 12 bits   ; 24 ALUTs      ; 24 ALUTs             ; 0 ALUTs                ; No         ; |mp1|datapath:datapath_inst|mux4:alumux|Mux2        ;
+; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp1|datapath:datapath_inst|mux4:regfilemux|Mux11   ;
+; 4:1                ; 3 bits    ; 6 ALUTs       ; 6 ALUTs              ; 0 ALUTs                ; No         ; |mp1|datapath:datapath_inst|mux4:alumux|Mux13       ;
+; 4:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mp1|datapath:datapath_inst|alu:alu_inst|Selector14 ;
+; 4:1                ; 7 bits    ; 14 ALUTs      ; 14 ALUTs             ; 0 ALUTs                ; No         ; |mp1|control:control_inst|Selector15                ;
+; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp1|control:control_inst|Selector13                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
@@ -510,14 +518,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:datapath_inst|mux4:alumux"                                                                                                        ;
-+------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                     ;
-+------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
-; c    ; Input ; Warning  ; Input port expression (5 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "c[15..5]" will be connected to GND. ;
-; d    ; Input ; Info     ; Stuck at GND                                                                                                                                ;
-+------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:datapath_inst|mux4:alumux" ;
++------+-------+----------+--------------------------------------+
+; Port ; Type  ; Severity ; Details                              ;
++------+-------+----------+--------------------------------------+
+; d    ; Input ; Info     ; Stuck at GND                         ;
++------+-------+----------+--------------------------------------+
 
 
 +--------------------------------------------------------------------+
@@ -553,7 +560,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Fri Jan 27 22:20:36 2017
+    Info: Processing started: Fri Jan 27 23:29:47 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp1 -c mp1
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 0 entities, in source file lc3b_types.sv
@@ -605,7 +612,6 @@ Info (12128): Elaborating entity "cccomp" for hierarchy "datapath:datapath_inst|
 Info (12128): Elaborating entity "mux2" for hierarchy "datapath:datapath_inst|mux2:marmux"
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276006): RAM logic "datapath:datapath_inst|regfile:regfile_inst|data" is uninferred due to "logic" being set as ramstyle synthesis attribute
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "mem_byte_enable[0]" is stuck at VCC
     Warning (13410): Pin "mem_byte_enable[1]" is stuck at VCC
@@ -613,13 +619,13 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 32 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 421 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 484 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 36 output pins
-    Info (21061): Implemented 367 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 443 megabytes
-    Info: Processing ended: Fri Jan 27 22:20:39 2017
+    Info (21061): Implemented 430 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 444 megabytes
+    Info: Processing ended: Fri Jan 27 23:29:50 2017
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 

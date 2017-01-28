@@ -10,7 +10,7 @@ module ir
     output lc3b_offset6 offset6,
     output lc3b_offset9 offset9,
     output lc3b_imm5 imm5,
-    output ir_5
+    output logic ir_5
 );
 
 lc3b_word data;

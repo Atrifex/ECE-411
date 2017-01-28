@@ -22,13 +22,13 @@ Z6 !s92 -sv -work work +incdir+/home/rrthakk2/ece411/mp1 -O0
 !s100 J9MeF]CgVeAhK^Mz9k`HY0
 !s105 adder_sv_unit
 !s85 0
-!s108 1485571935.542131
+!s108 1485581399.965581
 !s107 /home/rrthakk2/ece411/mp1/adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/adder.sv|
 !s101 -O0
 vadj
 R1
-Z7 DXx4 work 10 lc3b_types 0 22 DAd;_zE;m7Rd6^el0JiF00
+Z7 DXx4 work 10 lc3b_types 0 22 lc4P4h3N]^4]S7VSW[cP10
 DXx4 work 11 adj_sv_unit 0 22 ^j[F=T10lCVKgzoLNm<GU0
 VE;zLPZ?c`8[LaP1M[Ui<V1
 r1
@@ -41,7 +41,7 @@ Z9 8/home/rrthakk2/ece411/mp1/adj.sv
 Z10 F/home/rrthakk2/ece411/mp1/adj.sv
 L0 6
 R4
-Z11 !s108 1485571935.585794
+Z11 !s108 1485581400.146348
 Z12 !s107 /home/rrthakk2/ece411/mp1/adj.sv|
 Z13 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/adj.sv|
 R5
@@ -90,7 +90,7 @@ Z14 8/home/rrthakk2/ece411/mp1/alu.sv
 Z15 F/home/rrthakk2/ece411/mp1/alu.sv
 L0 3
 R4
-Z16 !s108 1485571935.650171
+Z16 !s108 1485581400.279884
 Z17 !s107 /home/rrthakk2/ece411/mp1/alu.sv|
 Z18 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/alu.sv|
 R5
@@ -139,7 +139,7 @@ Z20 8/home/rrthakk2/ece411/mp1/cccomp.sv
 Z21 F/home/rrthakk2/ece411/mp1/cccomp.sv
 L0 4
 R4
-Z22 !s108 1485571935.999820
+Z22 !s108 1485581400.984881
 Z23 !s107 /home/rrthakk2/ece411/mp1/cccomp.sv|
 Z24 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/cccomp.sv|
 R5
@@ -177,25 +177,25 @@ vcontrol
 R1
 R7
 DXx4 work 15 control_sv_unit 0 22 mAkP5<E3QHj?36B`cmQ0m3
-VF7n^JQF38BHBl9Zl@6FVl3
+VbAiU?Z?DJhgXC262[bO8T0
 r1
 31
-IiN6QeHlU9ifdzdII252fA2
+IJI@eRaAVTdEL9iD_YeP:i1
 S1
 R2
-R8
-Z25 8/home/rrthakk2/ece411/mp1/control.sv
-Z26 F/home/rrthakk2/ece411/mp1/control.sv
+Z25 w1485581380
+Z26 8/home/rrthakk2/ece411/mp1/control.sv
+Z27 F/home/rrthakk2/ece411/mp1/control.sv
 L0 3
 R4
-Z27 !s108 1485571935.716127
-Z28 !s107 /home/rrthakk2/ece411/mp1/control.sv|
-Z29 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/control.sv|
+Z28 !s108 1485581400.448484
+Z29 !s107 /home/rrthakk2/ece411/mp1/control.sv|
+Z30 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/control.sv|
 R5
 R6
 !s85 0
 !i10b 1
-!s100 Y>M6:ogo[<2b<<m:chMYO0
+!s100 O[TbVAJ:ZVzYEGiOWe]<33
 !s105 control_sv_unit
 !s101 -O0
 Xcontrol_sv_unit
@@ -207,14 +207,14 @@ r1
 ImAkP5<E3QHj?36B`cmQ0m3
 S1
 R2
-R8
 R25
 R26
+R27
 L0 1
 R4
-R27
 R28
 R29
+R30
 R5
 R6
 !s85 0
@@ -226,25 +226,25 @@ vdatapath
 R1
 R7
 DXx4 work 16 datapath_sv_unit 0 22 Hh_^5JWD1G]X4gVibTKL53
-V5Ca=:YdLG1o^bfC1N3gF01
+V?ai16M@^aaA>o0`GQi5<Q0
 r1
 31
-Ij>RdDT>Y0ZKlzXK7<NTZ01
+IOKhABK7I=:l`3mm5Eg^Yd1
 S1
 R2
-R8
-Z30 8/home/rrthakk2/ece411/mp1/datapath.sv
-Z31 F/home/rrthakk2/ece411/mp1/datapath.sv
+Z31 w1485580464
+Z32 8/home/rrthakk2/ece411/mp1/datapath.sv
+Z33 F/home/rrthakk2/ece411/mp1/datapath.sv
 L0 3
 R4
-Z32 !s108 1485571936.059703
-Z33 !s107 /home/rrthakk2/ece411/mp1/datapath.sv|
-Z34 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/datapath.sv|
+Z34 !s108 1485581401.132617
+Z35 !s107 /home/rrthakk2/ece411/mp1/datapath.sv|
+Z36 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/datapath.sv|
 R5
 R6
 !s85 0
 !i10b 1
-!s100 bT4^H]S2V=MBcg]3]hCl61
+!s100 3]K>CTYcJS5h[mTUVni7h3
 !s105 datapath_sv_unit
 !s101 -O0
 Xdatapath_sv_unit
@@ -256,14 +256,14 @@ r1
 IHh_^5JWD1G]X4gVibTKL53
 S1
 R2
-R8
-R30
 R31
-L0 1
-R4
 R32
 R33
+L0 1
+R4
 R34
+R35
+R36
 R5
 R6
 !s85 0
@@ -282,13 +282,13 @@ Ij[V?UY55Ik=VLIR5XPm@c1
 S1
 R2
 R8
-Z35 8/home/rrthakk2/ece411/mp1/gencc.sv
-Z36 F/home/rrthakk2/ece411/mp1/gencc.sv
+Z37 8/home/rrthakk2/ece411/mp1/gencc.sv
+Z38 F/home/rrthakk2/ece411/mp1/gencc.sv
 L0 3
 R4
-Z37 !s108 1485571935.781163
-Z38 !s107 /home/rrthakk2/ece411/mp1/gencc.sv|
-Z39 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/gencc.sv|
+Z39 !s108 1485581400.578662
+Z40 !s107 /home/rrthakk2/ece411/mp1/gencc.sv|
+Z41 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/gencc.sv|
 R5
 R6
 !s85 0
@@ -306,13 +306,13 @@ Im5m9OodYbHM[d>M9ThU[o0
 S1
 R2
 R8
-R35
-R36
-L0 1
-R4
 R37
 R38
+L0 1
+R4
 R39
+R40
+R41
 R5
 R6
 !s85 0
@@ -324,25 +324,25 @@ vir
 R1
 R7
 DXx4 work 10 ir_sv_unit 0 22 TS2@61BDELSUf[H>`^_d<3
-Vn5IlH6W?5_^fYXjCz=Tl<1
+VaNWAP[V]D38zGHi>[3KmO2
 r1
 31
-Ib7d>jnbhQ46J@Q3;3K:8T1
+I<QEo=TC:SPUUW8m7C?J1m2
 S1
 R2
-R8
-Z40 8/home/rrthakk2/ece411/mp1/ir.sv
-Z41 F/home/rrthakk2/ece411/mp1/ir.sv
+Z42 w1485579975
+Z43 8/home/rrthakk2/ece411/mp1/ir.sv
+Z44 F/home/rrthakk2/ece411/mp1/ir.sv
 L0 3
 R4
-Z42 !s108 1485571935.868845
-Z43 !s107 /home/rrthakk2/ece411/mp1/ir.sv|
-Z44 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/ir.sv|
+Z45 !s108 1485581400.710177
+Z46 !s107 /home/rrthakk2/ece411/mp1/ir.sv|
+Z47 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/ir.sv|
 R5
 R6
 !s85 0
 !i10b 1
-!s100 96CmOBO?XPY<IiQZFJLAY2
+!s100 ]LfR^HF;D7d_:Q@j16`_b3
 !s105 ir_sv_unit
 !s101 -O0
 Xir_sv_unit
@@ -354,14 +354,14 @@ r1
 ITS2@61BDELSUf[H>`^_d<3
 S1
 R2
-R8
-R40
-R41
-L0 1
-R4
 R42
 R43
 R44
+L0 1
+R4
+R45
+R46
+R47
 R5
 R6
 !s85 0
@@ -371,11 +371,11 @@ R6
 !s101 -O0
 Xlc3b_types
 R1
-IDAd;_zE;m7Rd6^el0JiF00
-VDAd;_zE;m7Rd6^el0JiF00
+Ilc4P4h3N]^4]S7VSW[cP10
+Vlc4P4h3N]^4]S7VSW[cP10
 S1
 R2
-R8
+Z48 w1485579554
 8/home/rrthakk2/ece411/mp1/lc3b_types.sv
 F/home/rrthakk2/ece411/mp1/lc3b_types.sv
 L0 1
@@ -385,9 +385,9 @@ r1
 R5
 R6
 !i10b 1
-!s100 <Me8ma7OWLPHQJ3Neda7k2
+!s100 LP3gRTXEnoYf[<`ni@l^F2
 !s85 0
-!s108 1485571935.365543
+!s108 1485581399.512582
 !s107 /home/rrthakk2/ece411/mp1/lc3b_types.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/lc3b_types.sv|
 !s101 -O0
@@ -408,7 +408,7 @@ R4
 r1
 !s85 0
 31
-!s108 1485571936.225062
+!s108 1485581401.478110
 !s107 /home/rrthakk2/ece411/mp1/memory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/memory.sv|
 !s101 -O0
@@ -421,22 +421,22 @@ DXx4 work 11 mp1_sv_unit 0 22 iJJQ4:ZCUB?YeaoPQ3F=E2
 Vl?`i9MP@<MbHRYAOa9CDF0
 r1
 31
-I3>0O79zf]B7_hFL;IW>0;2
+IY@IoRONIRzziKj;Q[VFM=2
 S1
 R2
-Z45 w1485570793
-Z46 8/home/rrthakk2/ece411/mp1/mp1.sv
-Z47 F/home/rrthakk2/ece411/mp1/mp1.sv
+R48
+Z49 8/home/rrthakk2/ece411/mp1/mp1.sv
+Z50 F/home/rrthakk2/ece411/mp1/mp1.sv
 L0 3
 R4
-Z48 !s108 1485571936.120894
-Z49 !s107 /home/rrthakk2/ece411/mp1/mp1.sv|
-Z50 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/mp1.sv|
+Z51 !s108 1485581401.262220
+Z52 !s107 /home/rrthakk2/ece411/mp1/mp1.sv|
+Z53 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/mp1.sv|
 R5
 R6
 !s85 0
 !i10b 1
-!s100 B1kaNDVE3CdZ=IYY7;W^X0
+!s100 F2C:hW@D]^<j>f]B^j^4J1
 !s105 mp1_sv_unit
 !s101 -O0
 Xmp1_sv_unit
@@ -448,14 +448,14 @@ r1
 IiJJQ4:ZCUB?YeaoPQ3F=E2
 S1
 R2
-R45
-R46
-R47
-L0 1
-R4
 R48
 R49
 R50
+L0 1
+R4
+R51
+R52
+R53
 R5
 R6
 !s85 0
@@ -482,7 +482,7 @@ R6
 !s100 j[3LEQdbIF4kSnQA]189P2
 !s105 mp1_tb_sv_unit
 !s85 0
-!s108 1485571936.183942
+!s108 1485581401.401120
 !s107 /home/rrthakk2/ece411/mp1/mp1_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/mp1_tb.sv|
 !s101 -O0
@@ -505,9 +505,32 @@ R6
 !s100 F<FmEeG[]>l]zc3DkJDH;0
 !s105 mux2_sv_unit
 !s85 0
-!s108 1485571935.496566
+!s108 1485581399.854537
 !s107 /home/rrthakk2/ece411/mp1/mux2.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/mux2.sv|
+!s101 -O0
+vmux4
+R1
+I<07_T[lz7jzX6LPF8EWB;0
+VYCkK`QGYSnR6BP^DhRdne0
+S1
+R2
+w1485577091
+8/home/rrthakk2/ece411/mp1/mux4.sv
+F/home/rrthakk2/ece411/mp1/mux4.sv
+L0 1
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 kbH0BMgE>_`@DMjzPR^B[3
+!s105 mux4_sv_unit
+!s85 0
+!s108 1485581400.058867
+!s107 /home/rrthakk2/ece411/mp1/mux4.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/mux4.sv|
 !s101 -O0
 vplus2
 R1
@@ -528,7 +551,7 @@ R6
 !s100 [LkB;>0P6>5;Z3B6Kg:BD0
 !s105 plus2_sv_unit
 !s85 0
-!s108 1485571935.410995
+!s108 1485581399.593372
 !s107 /home/rrthakk2/ece411/mp1/plus2.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/plus2.sv|
 !s101 -O0
@@ -543,13 +566,13 @@ IQ`onnAPVa[emjBA4MCKFc0
 S1
 R2
 R8
-Z51 8/home/rrthakk2/ece411/mp1/regfile.sv
-Z52 F/home/rrthakk2/ece411/mp1/regfile.sv
+Z54 8/home/rrthakk2/ece411/mp1/regfile.sv
+Z55 F/home/rrthakk2/ece411/mp1/regfile.sv
 L0 3
 R4
-Z53 !s108 1485571935.933738
-Z54 !s107 /home/rrthakk2/ece411/mp1/regfile.sv|
-Z55 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/regfile.sv|
+Z56 !s108 1485581400.834485
+Z57 !s107 /home/rrthakk2/ece411/mp1/regfile.sv|
+Z58 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/regfile.sv|
 R5
 R6
 !s85 0
@@ -567,13 +590,13 @@ I?1mSc=h4zNzG6Dz]lhkS@2
 S1
 R2
 R8
-R51
-R52
-L0 1
-R4
-R53
 R54
 R55
+L0 1
+R4
+R56
+R57
+R58
 R5
 R6
 !s85 0
@@ -600,7 +623,7 @@ R6
 !s100 l187m?jknE`hjgiJ>3YGI1
 !s105 register_sv_unit
 !s85 0
-!s108 1485571935.453137
+!s108 1485581399.673908
 !s107 /home/rrthakk2/ece411/mp1/register.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp1|/home/rrthakk2/ece411/mp1/register.sv|
 !s101 -O0

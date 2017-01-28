@@ -5,6 +5,7 @@ entity control is
     port(
         clk             : in     vl_logic;
         opcode          : in     work.lc3b_types.lc3b_opcode;
+        ir_5            : in     vl_logic;
         br_enable       : in     vl_logic;
         load_pc         : out    vl_logic;
         load_ir         : out    vl_logic;
@@ -12,10 +13,10 @@ entity control is
         load_mar        : out    vl_logic;
         load_mdr        : out    vl_logic;
         load_cc         : out    vl_logic;
-        pcmux_sel       : out    vl_logic;
+        pcmux_sel       : out    vl_logic_vector(1 downto 0);
         storemux_sel    : out    vl_logic;
-        alumux_sel      : out    vl_logic;
-        regfilemux_sel  : out    vl_logic;
+        alumux_sel      : out    vl_logic_vector(1 downto 0);
+        regfilemux_sel  : out    vl_logic_vector(1 downto 0);
         marmux_sel      : out    vl_logic;
         mdrmux_sel      : out    vl_logic;
         aluop           : out    work.lc3b_types.lc3b_aluop;

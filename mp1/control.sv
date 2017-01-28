@@ -182,6 +182,7 @@ begin : next_state_logic
                 op_str: next_state = calc_addr;
                 op_br: next_state = br;
                 op_jmp: next_state = jmp;
+					 op_lea: next_state = lea;
                 default : next_state = fetch1;
             endcase
         end

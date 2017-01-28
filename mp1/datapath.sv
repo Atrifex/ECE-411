@@ -159,7 +159,7 @@ mux4 alumux
 	.sel(alumux_sel),
 	.a(sr2_out),
 	.b(adj6_offset),
-    .c($signed(imm5)),
+    .c({{11{imm5[4]}},imm5}),
     .d(16'h0000),
 	.f(alumux_out)
 );

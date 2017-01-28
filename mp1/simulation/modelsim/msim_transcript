@@ -39,6 +39,12 @@
 # 
 # Top level modules:
 # 	adder
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp1 {/home/rrthakk2/ece411/mp1/mux4.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux4
+# 
+# Top level modules:
+# 	mux4
 # vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp1 {/home/rrthakk2/ece411/mp1/adj.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package adj_sv_unit
@@ -137,13 +143,14 @@
 # Loading work.datapath_sv_unit
 # Loading work.datapath
 # Loading work.register
-# Loading work.mux2
+# Loading work.mux4
 # Loading work.plus2
 # Loading work.adder
 # Loading work.adj_sv_unit
 # Loading work.adj
 # Loading work.ir_sv_unit
 # Loading work.ir
+# Loading work.mux2
 # Loading work.regfile_sv_unit
 # Loading work.regfile
 # Loading work.alu_sv_unit
@@ -160,34 +167,6 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 200 ns
-restart -f; 20000ns
-# Loading sv_std.std
-# Loading work.mp1_tb
-# Loading work.lc3b_types
-# Loading work.mp1_sv_unit
-# Loading work.mp1
-# Loading work.control_sv_unit
-# Loading work.control
-# Loading work.datapath_sv_unit
-# Loading work.datapath
-# Loading work.register
-# Loading work.mux2
-# Loading work.plus2
-# Loading work.adder
-# Loading work.adj_sv_unit
-# Loading work.adj
-# Loading work.ir_sv_unit
-# Loading work.ir
-# Loading work.regfile_sv_unit
-# Loading work.regfile
-# Loading work.alu_sv_unit
-# Loading work.alu
-# Loading work.gencc_sv_unit
-# Loading work.gencc
-# Loading work.cccomp_sv_unit
-# Loading work.cccomp
-# Loading work.memory
-# invalid command name "20000ns"
 restart -f; run 20000ns
 # Loading sv_std.std
 # Loading work.mp1_tb
@@ -199,13 +178,14 @@ restart -f; run 20000ns
 # Loading work.datapath_sv_unit
 # Loading work.datapath
 # Loading work.register
-# Loading work.mux2
+# Loading work.mux4
 # Loading work.plus2
 # Loading work.adder
 # Loading work.adj_sv_unit
 # Loading work.adj
 # Loading work.ir_sv_unit
 # Loading work.ir
+# Loading work.mux2
 # Loading work.regfile_sv_unit
 # Loading work.regfile
 # Loading work.alu_sv_unit
@@ -227,13 +207,14 @@ restart -f; run 20000ns
 # Loading work.datapath_sv_unit
 # Loading work.datapath
 # Loading work.register
-# Loading work.mux2
+# Loading work.mux4
 # Loading work.plus2
 # Loading work.adder
 # Loading work.adj_sv_unit
 # Loading work.adj
 # Loading work.ir_sv_unit
 # Loading work.ir
+# Loading work.mux2
 # Loading work.regfile_sv_unit
 # Loading work.regfile
 # Loading work.alu_sv_unit
