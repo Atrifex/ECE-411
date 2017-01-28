@@ -14,10 +14,10 @@ module control
     output logic load_mar,
     output logic load_mdr,
     output logic load_cc,
-    output logic pcmux_sel,
+    output logic [1:0] pcmux_sel,
     output logic storemux_sel,
-    output logic alumux_sel,
-    output logic regfilemux_sel,
+    output logic [1:0] alumux_sel,
+    output logic [1:0] regfilemux_sel,
     output logic marmux_sel,
     output logic mdrmux_sel,
     output lc3b_aluop aluop,
@@ -56,10 +56,10 @@ begin : state_actions
     load_mar = 1'b0;
     load_mdr = 1'b0;
     load_cc = 1'b0;
-    pcmux_sel =  1'b0;
+    pcmux_sel =  2'b00;
     storemux_sel = 1'b0;
-    alumux_sel = 1'b0;
-    regfilemux_sel = 1'b0;
+    alumux_sel = 2'b00;
+    regfilemux_sel = 2'b00;
     marmux_sel = 1'b0;
     mdrmux_sel = 1'b0;
     aluop = alu_add;

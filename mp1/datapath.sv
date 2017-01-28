@@ -11,25 +11,25 @@ module datapath
 	 input load_mar,
 	 input load_mdr,
 	 input load_cc,
-	 input pcmux_sel,
+	 input [1:0] pcmux_sel,
 	 input storemux_sel,
-	 input alumux_sel,
-	 input regfilemux_sel,
+	 input [1:0] alumux_sel,
+	 input [1:0] regfilemux_sel,
 	 input marmux_sel,
 	 input mdrmux_sel,
 	 input lc3b_aluop aluop,
 	 output lc3b_opcode opcode,
 	 output br_enable,
-	 
+
 	 /* Memory signals */
 	 input lc3b_word mem_rdata,
     output lc3b_word mem_address,
-	 output lc3b_word mem_wdata	 
+	 output lc3b_word mem_wdata
 );
 
 /***** declare internal signals *****/
 // MDR and MAR Signals
-lc3b_word marmux_out, mdrmux_out; 
+lc3b_word marmux_out, mdrmux_out;
 lc3b_word mdr_out;
 assign mem_wdata = mdr_out;
 
@@ -43,6 +43,7 @@ lc3b_offset6 offset6;
 // Signals related to IR
 lc3b_reg sr1, sr2, dest;
 lc3b_reg storemux_out;
+lc3b_imm5 imm5;
 
 // signals related to regfile
 lc3b_word regfilemux_out;
@@ -65,24 +66,26 @@ register pc
 );
 
 // Mux used to select the value that will be placed into the PC register
-mux2 pcmux
+mux4 pcmux
 (
     .sel(pcmux_sel),
     .a(pc_plus2_out),
     .b(br_add_out),
+    .c(alu_out),
+    .d(16'hZZZZ),
     .f(pcmux_out)
 );
 
 // increments PC value to access next instruction
 plus2 pcPlus2
 (
-	.in(pc_out), 
+	.in(pc_out),
 	.out(pc_plus2_out)
 );
 
 adder br_adder
 (
-	.a(pc_out), 
+	.a(pc_out),
 	.b(adj9_offset),
 	.c(br_add_out)
 );
@@ -100,14 +103,15 @@ ir IR
     .clk,
     .load(load_ir),
     .in(mdr_out),
-	 
+
 	 // outputs
     .opcode(opcode),
-    .dest(dest), 
-	 .src1(sr1), 
-	 .src2(sr2),
+    .dest(dest),
+	.src1(sr1),
+	.src2(sr2),
     .offset6(offset6),
-    .offset9(offset9)
+    .offset9(offset9),
+    .imm5(imm5)
 );
 
 mux2 #(3) storemux
@@ -132,35 +136,39 @@ regfile regfile_inst
 	.load(load_regfile),
 	.in(regfilemux_out),
 	.src_a(storemux_out),
-	.src_b(sr2), 
+	.src_b(sr2),
 	.dest(dest),
-	.reg_a(sr1_out), 
+	.reg_a(sr1_out),
 	.reg_b(sr2_out)
 );
 
-mux2 regfilemux
+mux4 regfilemux
 (
 	.sel(regfilemux_sel),
 	.a(alu_out),
 	.b(mdr_out),
+    .c(br_add_out),
+    .d(16'hZZZZ),
 	.f(regfilemux_out)
 );
 
-mux2 alumux
+mux4 alumux
 (
 	.sel(alumux_sel),
 	.a(sr2_out),
 	.b(adj6_offset),
+    .c($signed(imm5)),
+    .d(16'hZZZZ),
 	.f(alumux_out)
 );
 
 /***** ALU *****/
 alu alu_inst
 (
-	.aluop(aluop),
-   .a(sr1_out),
-	.b(alumux_out),
-   .f(alu_out)
+    .aluop(aluop),
+    .a(sr1_out),
+    .b(alumux_out),
+    .f(alu_out)
 );
 
 /***** Branch Related Modules *****/
