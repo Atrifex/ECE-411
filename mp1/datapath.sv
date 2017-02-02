@@ -17,9 +17,15 @@ module datapath
     input [1:0] regfilemux_sel,
     input marmux_sel,
     input mdrmux_sel,
+	 input addrmux_sel,
+	 input drmux_sel,
+	 input offset6_lsse,
+	 input [1:0] mdrInModifier_sel,
+	 input [1:0] mdrOutModifier_sel,
     input lc3b_aluop aluop,
     output lc3b_opcode opcode,
     output ir_5,
+	 output ir_11,
     output br_enable,
 
     /* Memory signals */
@@ -31,20 +37,23 @@ module datapath
 /***** declare internal signals *****/
 // MDR and MAR Signals
 lc3b_word marmux_out, mdrmux_out;
-lc3b_word mdr_out;
+lc3b_word mdr_out, mdrOutModifier_out, mdrInModifier_out;
 assign mem_wdata = mdr_out;
 
 // Signals related to PC
 lc3b_word pcmux_out, pc_out;
-lc3b_word br_add_out, pc_plus2_out;
-lc3b_word adj9_offset, adj6_offset;
+lc3b_word br_add_out, pc_plus2_out, addrmux_out;
+lc3b_word adj11_offset, adj9_offset, adj6_offset;
 lc3b_offset9 offset9;
 lc3b_offset6 offset6;
+lc3b_offset11 offset11;
 
 // Signals related to IR
 lc3b_reg sr1, sr2, dest;
-lc3b_reg storemux_out;
+lc3b_reg storemux_out, drmux_out;
+lc3b_imm4 imm4;
 lc3b_imm5 imm5;
+
 
 // signals related to regfile
 lc3b_word regfilemux_out;
@@ -87,15 +96,32 @@ plus2 pcPlus2
 adder br_adder
 (
 	.a(pc_out),
-	.b(adj9_offset),
+	.b(addrmux_out),
 	.c(br_add_out)
+);
+
+mux2 addrmux
+(
+    .sel(addrmux_sel),
+    .a(adj9_offset),
+    .b(adj11_offset),
+    .f(addrmux_out)
 );
 
 adj #(9) offset9_adjuster
 (
+	.lsse(1'b1),
 	.in(offset9),
 	.out(adj9_offset)
 );
+
+adj #(11) offset11_adjuster
+(
+	.lsse(1'b1),
+	.in(offset11),
+	.out(adj11_offset)
+);
+
 
 /*****  IR *****/
 ir IR
@@ -103,17 +129,20 @@ ir IR
 	// inputs
     .clk,
     .load(load_ir),
-    .in(mdr_out),
+    .in(mdrOutModifier_out),
 
 	// outputs
     .opcode(opcode),
     .dest(dest),
-	.src1(sr1),
-	.src2(sr2),
+	 .src1(sr1),
+	 .src2(sr2),
     .offset6(offset6),
     .offset9(offset9),
+	 .offset11(offset11),
+	 .imm4(imm4),
     .imm5(imm5),
-    .ir_5(ir_5)
+    .ir_5(ir_5),
+	 .ir_11(ir_11)
 );
 
 mux2 #(3) storemux
@@ -124,9 +153,17 @@ mux2 #(3) storemux
 	.f(storemux_out)
 );
 
+mux2 #(3) drmux
+(
+	.sel(drmux_sel),
+	.a(dest),
+	.b(3'b111),
+	.f(drmux_out)
+);
 
 adj #(6) offset6_adjuster
 (
+	.lsse(offset6_lsse),
 	.in(offset6),
 	.out(adj6_offset)
 );
@@ -139,7 +176,7 @@ regfile regfile_inst
 	.in(regfilemux_out),
 	.src_a(storemux_out),
 	.src_b(sr2),
-	.dest(dest),
+	.dest(drmux_out),
 	.reg_a(sr1_out),
 	.reg_b(sr2_out)
 );
@@ -148,10 +185,17 @@ mux4 regfilemux
 (
 	.sel(regfilemux_sel),
 	.a(alu_out),
-	.b(mdr_out),
+	.b(mdrOutModifier_out),
     .c(br_add_out),
-    .d(16'h0000),
+    .d(pc_out),
 	.f(regfilemux_out)
+);
+
+shfmodifier shfmodifier_inst
+(
+	input A,D, SR_15,
+	input [width-1:0] in,
+	output lc3b_word out
 );
 
 mux4 alumux
@@ -160,7 +204,7 @@ mux4 alumux
 	.a(sr2_out),
 	.b(adj6_offset),
     .c({{11{imm5[4]}},imm5}),
-    .d(16'h0000),
+    .d(NOT THAT SIMPLE ---> Need module),
 	.f(alumux_out)
 );
 
@@ -213,10 +257,21 @@ register MAR
 );
 
 /***** MDR *****/
+mux4 mdrInModifier
+(
+    .sel(mdrInModifier_sel),
+    .a(alu_out),
+    .b({8'h00, alu_out[7:0]}),
+    .c({alu_out[7:0], 8'h00}),
+    .d(16'h0000),
+    .f(mdrInModifier_out)
+);
+
+
 mux2 mdrmux
 (
     .sel(mdrmux_sel),
-    .a(alu_out),
+    .a(mdrInModifier_out),
     .b(mem_rdata),
     .f(mdrmux_out)
 );
@@ -227,6 +282,16 @@ register MDR
     .load(load_mdr),
     .in(mdrmux_out),
     .out(mdr_out)
+);
+
+mux4 mdrOutModifier
+(
+    .sel(mdrOutModifier_sel),
+    .a(mdr_out),
+    .b({8'h00, mdr_out[7:0]}),
+    .c({8'h00, mdr_out[15:8]}),
+    .d(16'h0000),
+    .f(mdrOutModifier_out)
 );
 
 endmodule : datapath
