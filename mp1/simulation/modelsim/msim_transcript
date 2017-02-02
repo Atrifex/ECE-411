@@ -167,6 +167,8 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 200 ns
+add wave -position 1  sim:/mp1_tb/dut/datapath_inst/pc_out
+add wave -position end  sim:/mp1_tb/dut/datapath_inst/regfile_inst/data
 restart -f; run 20000ns
 # Loading sv_std.std
 # Loading work.mp1_tb
@@ -195,7 +197,34 @@ restart -f; run 20000ns
 # Loading work.cccomp_sv_unit
 # Loading work.cccomp
 # Loading work.memory
-add wave -position end  sim:/mp1_tb/dut/datapath_inst/regfile_inst/data
+restart -f; run 1000ns
+# Loading sv_std.std
+# Loading work.mp1_tb
+# Loading work.lc3b_types
+# Loading work.mp1_sv_unit
+# Loading work.mp1
+# Loading work.control_sv_unit
+# Loading work.control
+# Loading work.datapath_sv_unit
+# Loading work.datapath
+# Loading work.register
+# Loading work.mux4
+# Loading work.plus2
+# Loading work.adder
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.mux2
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.memory
 restart -f; run 20000ns
 # Loading sv_std.std
 # Loading work.mp1_tb
