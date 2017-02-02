@@ -17,7 +17,7 @@ module mp1
 /* Internal connections */
 logic load_pc, load_ir, load_regfile, load_mar, load_mdr, load_cc, storemux_sel;
 logic [1:0] pcmux_sel, regfilemux_sel, alumux_sel, mdrInModifier_sel, mdrOutModifier_sel;
-logic marmux_sel, mdrmux_sel, addrmux_sel, drmux_sel, offset6_lsse, br_enable, ir_5, ir_11;
+logic marmux_sel, mdrmux_sel, addrmux_sel, drmux_sel, offset6_lsse, br_enable, ir_4, ir_5, ir_11;
 lc3b_aluop aluop;
 lc3b_opcode opcode;
 
@@ -27,7 +27,7 @@ control control_inst
     .clk,
 
     /* Datapath controls */
-    .opcode, .ir_5, .ir_11, .br_enable, .memparity(mem_address[0]),.load_pc, .load_ir, .load_regfile, .load_mar,
+    .opcode, .ir_4, .ir_5, .ir_11, .br_enable, .memparity(mem_address[0]),.load_pc, .load_ir, .load_regfile, .load_mar,
     .load_mdr, .load_cc, .pcmux_sel, .storemux_sel, .alumux_sel,
     .regfilemux_sel, .marmux_sel, .mdrmux_sel, .addrmux_sel, .drmux_sel, .offset6_lsse, 
 	 .mdrInModifier_sel, .mdrOutModifier_sel, .aluop,
@@ -44,7 +44,7 @@ datapath datapath_inst
 	.load_pc, .load_ir, .load_regfile, .load_mar, .load_mdr, .load_cc,
 	.pcmux_sel, .storemux_sel, .alumux_sel, .regfilemux_sel, .marmux_sel,
 	.mdrmux_sel, .addrmux_sel, .drmux_sel, .offset6_lsse, .mdrInModifier_sel, .mdrOutModifier_sel,
-	.aluop, .opcode, .ir_5, .ir_11, .br_enable,
+	.aluop, .opcode, .ir_4, .ir_5, .ir_11, .br_enable,
 
 	 /* Memory signals */
 	.mem_rdata, .mem_address, .mem_wdata

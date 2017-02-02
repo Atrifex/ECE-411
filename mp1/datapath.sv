@@ -24,6 +24,7 @@ module datapath
 	 input [1:0] mdrOutModifier_sel,
     input lc3b_aluop aluop,
     output lc3b_opcode opcode,
+	 output ir_4;
     output ir_5,
 	 output ir_11,
     output br_enable,
@@ -53,7 +54,6 @@ lc3b_reg sr1, sr2, dest;
 lc3b_reg storemux_out, drmux_out;
 lc3b_imm4 imm4;
 lc3b_imm5 imm5;
-
 
 // signals related to regfile
 lc3b_word regfilemux_out;
@@ -141,6 +141,7 @@ ir IR
 	 .offset11(offset11),
 	 .imm4(imm4),
     .imm5(imm5),
+	 .ir_4(ir_4),
     .ir_5(ir_5),
 	 .ir_11(ir_11)
 );
@@ -191,20 +192,13 @@ mux4 regfilemux
 	.f(regfilemux_out)
 );
 
-shfmodifier shfmodifier_inst
-(
-	input A,D, SR_15,
-	input [width-1:0] in,
-	output lc3b_word out
-);
-
 mux4 alumux
 (
 	.sel(alumux_sel),
 	.a(sr2_out),
 	.b(adj6_offset),
     .c({{11{imm5[4]}},imm5}),
-    .d(NOT THAT SIMPLE ---> Need module),
+    .d({12'h000,imm4}),
 	.f(alumux_out)
 );
 

@@ -7,6 +7,7 @@ module control
 
     /* Datapath controls */
     input lc3b_opcode opcode,
+	 input ir_4,
     input ir_5,
 	 input ir_11,
     input br_enable,
@@ -46,23 +47,22 @@ enum int unsigned {
     s_add,
     s_and,
     s_not,
+	 s_shf,
     br,
     br_taken,
     calc_addr,
     calc_addr_b,
     ldr1,
     ldr2,
+	 ldb1,
+    ldb2,
     str1,
     str2,
+    stb1,
+    stb2,
     jmp,
     lea,
-	 jsr1,
-//	 jsr2,
-//	 jsrr,
-    ldb1,
-    ldb2,
-    stb1,
-    stb2
+	 jsr,
 } state, next_state;
 
 always_comb
@@ -197,7 +197,7 @@ begin : state_actions
             load_regfile = 1;
             load_cc = 1;
         end
-		  jsr1: begin
+		  jsr: begin
 				// load current PC value into R7
 				drmux_sel = 1'b1;
 				regfilemux_sel = 2'b11;
@@ -218,20 +218,20 @@ begin : state_actions
 					
 				end
         end
-//		  jsr2: begin
-//				// PC = PC + PCOffset11
-//				addrmux_sel = 1'b1;
-//				pcmux_sel = 2'b01;
-//				load_pc = 1'b1;
-//        end
-//		  jsrr: begin
-//				// PC = BR
-//				storemux_sel = 1'b0;
-//				aluop = alu_pass;
-//
-//				pcmux_sel = 2'b10;
-//				load_pc = 1'b1;
-//        end
+		  s_shf: begin
+            alumux_sel = 2'b11;
+				if(ir_4 == 1'b0) begin // D
+					aluop = alu_sll;
+				end else begin
+					if(ir_5 == 1'b0) begin // A
+						aluop = alu_srl;
+					end else begin
+						aluop = alu_sra;
+					end	
+				end
+            load_regfile = 1;
+            load_cc = 1;
+        end
         default : /* Do nothing and transition back to fetch1 */;
     endcase
 
@@ -267,7 +267,8 @@ begin : next_state_logic
                 op_br: next_state = br;
                 op_jmp: next_state = jmp;
 					 op_lea: next_state = lea;
-					 op_jsr: next_state = jsr1;
+					 op_jsr: next_state = jsr;
+					 op_shf: next_state = s_shf;
 					 default : next_state = fetch1;
             endcase
         end
@@ -337,20 +338,12 @@ begin : next_state_logic
         lea: begin
             next_state = fetch1;
         end
-		  jsr1: begin
+		  jsr: begin
 				next_state = fetch1;
-//				if(ir_11 == 1'b0) begin
-//					next_state = jsrr;
-//				end else begin
-//					next_state = jsr2;
-//				end
         end
-//		  jsr2: begin
-//            next_state = fetch1;
-//        end
-//		  jsrr: begin
-//            next_state = fetch1;
-//        end
+		  s_shf: begin
+				next_state = fetch1;
+        end
         default : next_state = fetch1;
     endcase
 
