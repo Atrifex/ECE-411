@@ -24,7 +24,7 @@ module datapath
 	 input [1:0] mdrOutModifier_sel,
     input lc3b_aluop aluop,
     output lc3b_opcode opcode,
-	 output ir_4;
+	 output ir_4,
     output ir_5,
 	 output ir_11,
     output br_enable,

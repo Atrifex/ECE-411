@@ -62,7 +62,7 @@ enum int unsigned {
     stb2,
     jmp,
     lea,
-	 jsr,
+	 jsr
 } state, next_state;
 
 always_comb
