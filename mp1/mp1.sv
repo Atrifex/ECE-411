@@ -16,8 +16,8 @@ module mp1
 
 /* Internal connections */
 logic load_pc, load_ir, load_regfile, load_mar, load_mdr, load_cc, storemux_sel;
-logic [1:0] pcmux_sel, regfilemux_sel, alumux_sel, mdrInModifier_sel, mdrOutModifier_sel;
-logic marmux_sel, mdrmux_sel, addrmux_sel, drmux_sel, offset6_lsse, br_enable, ir_4, ir_5, ir_11;
+logic [1:0] marmux_sel, pcmux_sel, regfilemux_sel, alumux_sel, mdrInModifier_sel, mdrOutModifier_sel;
+logic mdrmux_sel, addrmux_sel, drmux_sel, offset6_lsse, br_enable, ir_4, ir_5, ir_11;
 lc3b_aluop aluop;
 lc3b_opcode opcode;
 

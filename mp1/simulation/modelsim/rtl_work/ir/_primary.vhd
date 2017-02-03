@@ -11,6 +11,7 @@ entity ir is
         src1            : out    vl_logic_vector(2 downto 0);
         src2            : out    vl_logic_vector(2 downto 0);
         offset6         : out    vl_logic_vector(5 downto 0);
+        trapVect        : out    vl_logic_vector(7 downto 0);
         offset9         : out    vl_logic_vector(8 downto 0);
         offset11        : out    vl_logic_vector(10 downto 0);
         imm4            : out    vl_logic_vector(3 downto 0);

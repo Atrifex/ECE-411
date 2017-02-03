@@ -15,7 +15,7 @@ module datapath
     input storemux_sel,
     input [1:0] alumux_sel,
     input [1:0] regfilemux_sel,
-    input marmux_sel,
+    input [1:0] marmux_sel,
     input mdrmux_sel,
 	 input addrmux_sel,
 	 input drmux_sel,
@@ -45,13 +45,14 @@ assign mem_wdata = mdr_out;
 lc3b_word pcmux_out, pc_out;
 lc3b_word br_add_out, pc_plus2_out, addrmux_out;
 lc3b_word adj11_offset, adj9_offset, adj6_offset;
-lc3b_offset9 offset9;
-lc3b_offset6 offset6;
-lc3b_offset11 offset11;
 
 // Signals related to IR
 lc3b_reg sr1, sr2, dest;
 lc3b_reg storemux_out, drmux_out;
+lc3b_offset6 offset6;
+lc3b_trapvect8 trapVect;
+lc3b_offset9 offset9;
+lc3b_offset11 offset11;
 lc3b_imm4 imm4;
 lc3b_imm5 imm5;
 
@@ -82,7 +83,7 @@ mux4 pcmux
     .a(pc_plus2_out),
     .b(br_add_out),
     .c(alu_out),
-    .d(16'h0000),
+    .d(mdr_out),
     .f(pcmux_out)
 );
 
@@ -137,6 +138,7 @@ ir IR
 	 .src1(sr1),
 	 .src2(sr2),
     .offset6(offset6),
+	 .trapVect(trapVect),
     .offset9(offset9),
 	 .offset11(offset11),
 	 .imm4(imm4),
@@ -234,11 +236,13 @@ cccomp cccomp_inst
 );
 
 /***** MAR *****/
-mux2 marmux
+mux4 marmux
 (
     .sel(marmux_sel),
     .a(alu_out),
     .b(pc_out),
+	 .c(mdr_out),
+    .d({7'h00,trapVect,1'b0}),
     .f(marmux_out)
 );
 

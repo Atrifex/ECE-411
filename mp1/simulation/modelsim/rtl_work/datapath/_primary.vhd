@@ -14,7 +14,7 @@ entity datapath is
         storemux_sel    : in     vl_logic;
         alumux_sel      : in     vl_logic_vector(1 downto 0);
         regfilemux_sel  : in     vl_logic_vector(1 downto 0);
-        marmux_sel      : in     vl_logic;
+        marmux_sel      : in     vl_logic_vector(1 downto 0);
         mdrmux_sel      : in     vl_logic;
         addrmux_sel     : in     vl_logic;
         drmux_sel       : in     vl_logic;

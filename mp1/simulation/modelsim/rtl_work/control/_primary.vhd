@@ -20,7 +20,7 @@ entity control is
         storemux_sel    : out    vl_logic;
         alumux_sel      : out    vl_logic_vector(1 downto 0);
         regfilemux_sel  : out    vl_logic_vector(1 downto 0);
-        marmux_sel      : out    vl_logic;
+        marmux_sel      : out    vl_logic_vector(1 downto 0);
         mdrmux_sel      : out    vl_logic;
         addrmux_sel     : out    vl_logic;
         drmux_sel       : out    vl_logic;
