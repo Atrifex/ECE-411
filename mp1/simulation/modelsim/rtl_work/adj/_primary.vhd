@@ -5,6 +5,7 @@ entity adj is
         width           : integer := 8
     );
     port(
+        lsse            : in     vl_logic;
         \in\            : in     vl_logic_vector;
         \out\           : out    vl_logic_vector(15 downto 0)
     );

@@ -12,7 +12,11 @@ entity ir is
         src2            : out    vl_logic_vector(2 downto 0);
         offset6         : out    vl_logic_vector(5 downto 0);
         offset9         : out    vl_logic_vector(8 downto 0);
+        offset11        : out    vl_logic_vector(10 downto 0);
+        imm4            : out    vl_logic_vector(3 downto 0);
         imm5            : out    vl_logic_vector(4 downto 0);
-        ir_5            : out    vl_logic
+        ir_4            : out    vl_logic;
+        ir_5            : out    vl_logic;
+        ir_11           : out    vl_logic
     );
 end ir;
