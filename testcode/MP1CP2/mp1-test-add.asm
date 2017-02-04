@@ -16,7 +16,9 @@ SEGMENT
 CODE:
 
 	;; ************* Expected End Results *************
-	;; R0 - R7: Used for many tasks
+	;; R0: 0x0078 
+	;; R1: 0x0024
+	;; R2 - R7: Used for many tasks
 	;;
 	;; To check for correctness, you will need to compare the
 	;; register values after every instruction and that the contents
@@ -42,7 +44,7 @@ CODE:
 	ADD R1, R1, R4
 	ADD R1, R1, R5
 	ADD R1, R1, R6
-	ADD R1, R1, R7 			;; Make sure R1 = 0x0024
+	ADD R1, R1, R7 				;; Make sure R1 = 0x0024
 
 	;; Testing add imm.
 	LEA R0, DATA
@@ -62,7 +64,7 @@ CODE:
 	ADD R0, R0, #12
 	ADD R0, R0, #13
 	ADD R0, R0, #14
-	ADD R0, R0, #15
+	ADD R0, R0, #15				;; Make sure R0 = 0x0078
 
 
 HALT_PROG:

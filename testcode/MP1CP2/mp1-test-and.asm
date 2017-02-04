@@ -1,4 +1,4 @@
-;;
+;;TVAL_2
 ;; This program is a limited test of AND
 ;; An all-encompassing test for this instruction will be performed separately in dedicated programs.
 ;; In the comments you can find the expected end results for each register.
@@ -16,7 +16,9 @@ SEGMENT
 CODE:
 
 	;; ************* Expected End Results *************
-	;; R0 - R7: Used for many tasks
+	;; R0: 0xFFF0
+	;; R1: 0x01FF
+	;; R2 - R7: Used for many tasks
 	;;
 	;; To check for correctness, you will need to compare the
 	;; register values after every instruction and that the contents

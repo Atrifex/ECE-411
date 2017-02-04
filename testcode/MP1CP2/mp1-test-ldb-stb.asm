@@ -28,43 +28,20 @@ CODE:
 	;; the contents of memory in the LC3bSimulator.
 	;;
 
-	LEA R6, TVAL_1
-	LDB R1, R6, 0			;; load byte: TVAL_1 + 0
-	LDB R2, R6, 1			;; load byte: TVAL_1 + 1
-
-	;; Testing JSR
-	JSR ADD_FUNC
-
-	LEA R6, TVAL_2
-	STB R3, R6, 0 			;; store byte: TVAL_2 + 0
-
-	;; Testing JSRR
-	LEA R6, SUB_FUNC
-	JSRR R6
-
-	LEA R6, TVAL_2
-	STB R4, R6, 1 			;; store byte: TVAL_2 + 1
+	LEA R0, DATA
+	LDB R1, R0, 0			;; load byte: TVAL_1 + 0
+	LDB R2, R0, 3			;; load byte: TVAL_1 + 1
 
 HALT_PROG:
 	BRnzp HALT_PROG
 
-;; input: R1, R2
-;; output: R3
-ADD_FUNC:
-	ADD R3, R2, R1
-	RET
-
-;; input: R1, R2
-;; output: R4 = R2 - R1
-SUB_FUNC:
-	;; 2's complement
-	NOT R1, R1
-	ADD R1, R1, 1
-
-	ADD R4,R2, R1
-	RET
-
 SEGMENT
 DATA:
-TVAL_1: 		DATA2 4x0301 ;; Args for testing STB, LDB, JSR, and JSRR
-TVAL_2:  		DATA2 ?
+TVAL_1: 		DATA2 4x0001 ;; Args for testing LDB and STB
+TVAL_2: 		DATA2 4x0002 ;; Args for testing LDB and STB
+TVAL_3: 		DATA2 4x0003 ;; Args for testing LDB and STB
+TVAL_4: 		DATA2 4x0004 ;; Args for testing LDB and STB
+TVAL_5: 		DATA2 4x0005 ;; Args for testing LDB and STB
+TVAL_6: 		DATA2 4x0006 ;; Args for testing LDB and STB
+TVAL_7: 		DATA2 4x0007 ;; Args for testing LDB and STB
+TVAL_8: 		DATA2 4x0008 ;; Args for testing LDB and STB
