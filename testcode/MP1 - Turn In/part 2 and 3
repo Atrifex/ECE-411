@@ -1,0 +1,57 @@
+The MP0 datapath had the ability to support some of the basic instructions such as ADD, AND, STR, LDR, and BR. However, to extend the microarchitecture to support the full ISA, many modules needed to be changed and few new modules also needed to be added. The modules that were either changed or added are all listed below:
+
+IR:
+The instruction register (IR) is used to hold the instruction that is being executed during a given instruction cycle. It has one 16-bit input for the purpose of loading the instruction and a load control signal that tells it when it is time to load the register with the input. During the fetch phase, the control unit activates the load signal and this allows the IR to grab an instruction specified by the PC and use it to control what happens during a given instruction cycle. The outputs from this module are the opcode([15:12]), IR_11([11]), IR_5([5]), IR_4([4]), offset6([5:0]), offset9([8:0]), offset11([10:0]), trapVect([7:0]), imm4([3:0]), imm5([4:0]), dest([11:9]), src1([8:6]), and src2([2:0]). These outputs are used to control what happens in the control unit and are signals within the datapath to control the flow of data. Due to its role in controlling which instruction is executed, all of the instructions will inherently use this module by default. Due to this, the addition of trapVect, imm5,  imm4, IR_4, IR_5, and IR_11 were needed support the rest of the ISA. These modifications will be further discussed in flowing sections as specific outputs are used by other modules.
+
+DR Mux:
+The destination register (DR) mux is 2 to 1 mux used to pick the 3 bit sequence that specifies the register within the register file in which to store. The addition of this mux is necessary to support JSR, JSRR, and TRAP instructions. Without this mux, the architecture would be forced to use the dest output from the IR and this would not work well for JSR, JSRR, and TRAP. Instead of using the dest output from the IR, a predefined value of 3’b111 can be used to pick R7 as the destination register. This allows the architecture to save the current PC value in register R7 and then jump to the location specified by the instruction being executed. The importance of this is that only one specific register, in this case R7, is being used for the purposes of storing the return address. This allows for consistency with respect to return addresses and creates a convention for the programs to follow. The DR mux uses the dest value from the IR for all other instructions that require a value to be stored in a register.
+
+ADJ: Adj6, Adj9, and Adj11
+The Adj module is a parametrized module that is used to sign-extend and variably left shift a given input. The inputs into the module are a variable length input that is less than the 16-bits in length and a select bit. The select bit is used to decide if the input value should be left shifted and sign-extended or simply sign-extended. In the Adj11 and Adj9 module, the select bit are pulled high to 1’b1 which means that the outputs are always left shifted and sign-extended. However, for the Adj6 module, STB and LDB need the the output of the adj module to be only sign-extended and not left shifted. However, LDR and STR need the Adj6 module to be sign-extend and left shift the input. Due to this, the select bit was added to this module to allow for both sets of instructions to work. The importance between left shifting and not left shifting is the difference between word addressability and byte addressability. When the input is left shifted, it is generally used to address words within memory. On the other hand, when it is not left shifted, it is used to address bytes in memory. The Adj11 instance of the module is used by the JSR instruction. The Adj9 instance of the module is used by BR and LEA. Lastly, the Adj6 instance of the module is used by LDB, LDI, LDR, STB, STI, and STR.
+
+
+ZEXT:
+ZEXT is used in the design to zero extend a given input to a 16-bit output so that it can be used throughout the rest of the design. The implementation of this block is through the use of SystemVerilog port wiring and concatenation. It is used for SHF, LDB, and STB instructions.
+
+ZEXT-LS:
+ZEXT-LS is used in the design for zero extending and left shifting a given input to a 16-bit output. The implementation of this block is through the use of SystemVerilog port wiring and concatenation. It is used only for the TRAP instruction.
+
+SEXT:
+SEXT is used in the design for sign extending  given input to a 16-bit output. The implementation of this block is through the use of SystemVerilog port wiring and concatenation. It is used only for the ADDi and ANDi instructions.
+
+LS8:
+LS8 is used in the design for left shifting a given input 8 times to the left. The implementation of this block is through the use of SystemVerilog port wiring and concatenation. It is used only for the STB instruction.
+
+Addr Mux:
+The Addr Mux is a 2 to 1 mux which is used to pick the offset value (adj11 or adj9) to add with the value of PC. This mux was used for instructions JSR, LEA, and BR. JSR requires the use of the Adj11 value. BR and LEA require the adj9 value.
+
+PC Mux:
+The PC mux is a 4 to 1 mux which is used to pick the values that are stored PC. This mux plays an important role in picking the next value of the program counter and allows for easy jumps and branches in code. Initially, this mux was a 2 to 1 mux which allowed for the support of a regular instruction cycle and BR. To increase the support to JMP, JSRR, and TRAP, this was converted to a 4 to 1 mux.
+
+Mar Mux:
+The Mar mux is a 4 to 1 mux which is used to pick the values that are stored Mar. These values specify the address in memory we are trying to access. Due to this it is used for fetching instructions and any other data access in memory. Initially, this mux was a 2 to 1 mux which allowed for the support of a regular instruction cycle and a few simple instructions. To increase the support to LDI, STI, and TRAP, this was converted to a 4 to 1 mux.
+
+Reg File Mux:
+The register file mux is a 4 to 1 mux which is used to pick the value that could be stored into a register in the register file. As with many of the other muxes, this initially a 2 to 1 mux. In this state, it was able to support ADD, AND, NOT, SHF, LDR, LDB, and LDI. However, to increase the functionality of the design to support JSR, JSRR, TRAP, and LEA, it was expanded to a 4 to 1 mux.
+
+ALU Mux:
+The register file mux is a 4 to 1 mux which is used to pick the values that will be used for computation in the ALU. This was also a 2 to 1 mux that was able to support ADD, AND, NOT, LDR, LDB, LDI, STR, STB, and STI. To increase the support to SHF, ADDi, and ANDi, it was expanded to a 4 to 1 mux.
+
+MDR In Modifier Mux:
+MDR In Modifier Mux is used to modify the input to the MDR to allow for proper functionality of STB. This modifier is needed because a user could specify an odd or even address to write to while using STB. Due to this, the modifier makes sure that the source registers [7:0] bits get written to the correct half of MDR. If the user is writing to an even address, then then design will zero extend the SR[7:0] bits through the use of a ZEXT block and place that value into MDR. However, if the user is writing to an odd address, then the design will first left shift SR[7:0]  8 times and then place that value into MDR. This way when the write to memory is performed, only the correct half of the word will be written to memory. If STB is not being executed, then the MDR In Modifier mux does nothing and allows the ALU value to directly go to MDR. Initially, the design only had access to word aligned memory address. The implementation of this mux allows support for STB and thus allows write access to byte aligned memory addresses.
+
+MDR Out Modifier Mux:
+MDR Out Modifier Mux is used to modify the output from the MDR to allow for proper functionality of LDB. This modifier is needed because a user could specify an odd or even address to read from. Due to this, the hardware needs to modify the read value to be able to parse the byte the the user was looking for. If the user was trying to read from an even address, then the design will zero extend MDR[7:0] and pass that value to the reg file mux. On the other hand, if the user is trying to read from an odd address, then the design will zero extend MDR[15:8]  instead and pass that value to the reg file mux to be loaded into a register. The implementation of this mux allows support for LTB and thus allows read access with a granularity of a byte.
+
+
+Testing Strategy:
+Testing is a very important part of the design process. Due to this, a design must be put through rigorous tests to make sure that it is actually working. To test my design, I decided to use a 2 phase testing process. The first phase was a basic visual verification phase. During this phase, I made sure that all of the modules in the datapath and the mp1 top-level module were connected correctly. To do this, I used the RTL viewer functionality that is built into Quartus. Going through this simple visual check allowed me verify that the design did not have have any connection related issues. The next part of the visual verification phase was to use the state machine viewer in Quartus. Through the use of this tool, I was able to make sure that there weren’t any obvious mistakes in the state transitions. Through the use of visual verification, I was able to catch quite a few simple bugs and thus speed up the verification process.
+
+Once the visual verification phase had ended, the code based verification phase began. Using code based verification was very important because it revealed insidious bugs that could not have been caught visually. I wrote a total of 11 programs that tested each targeted instruction or pairs of instructions. The code was written to test edge cases and make sure that all combinations of a given instructions would work correctly. For example, in the test program for the SHF instruction, all 16 immediate values were used for left and right shifting of register values. On top of this, multiple combinations of source and destination registers were also used to check for any edge case situations. Like this test program, all programs tested multiple combinations of inputs and offsets. As a result, this allowed for verification of design functionality.
+
+Once the program was written and working correctly in the LC3bSimulator, it was loaded into the design and simulated using ModelSim. To make sure that the program was being executed correctly on the designed LC3, I stepped through each instruction while constantly comparing the register values in ModelSim to those in LC3bSimulator. Once a program had finished executing, I compared the values in memory for my design to that of the LC3bSimulator. I then repeated this process for each of the test programs that I had written. Since all of them were executed successfully and all results in ModelSim matched those in the LC3bSimulator, I believe that I can safely claim that my design would be able to successfully execute any test program loaded into it.
+
+
+
+
+
