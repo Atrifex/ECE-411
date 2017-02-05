@@ -1,5 +1,5 @@
 ;;
-;; This program is a test of LDB and STB
+;; This program is a test of LDR and STR
 ;; In the comments you can find the expected end results for each register.
 ;; Other end conditions will also be speficied to make sure that success
 ;; has actually occured.
@@ -21,23 +21,23 @@ CODE:
 	;;
 
 	LEA R0, DATA
-	;; Testing LDB
-	LDB R1, R0, LVAL_1
-	LDB R2, R0, LVAL_2
-	LDB R3, R0, LVAL_3
-	LDB R4, R0, LVAL_4
-	LDB R5, R0, LVAL_5
-	LDB R6, R0, LVAL_6
-	LDB R7, R0, LVAL_7
+	;; Testing LDR
+	LDR R1, R0, LVAL_1
+	LDR R2, R0, LVAL_2
+	LDR R3, R0, LVAL_3
+	LDR R4, R0, LVAL_4
+	LDR R5, R0, LVAL_5
+	LDR R6, R0, LVAL_6
+	LDR R7, R0, LVAL_7
 
-	;; Testing STB
-	STB R1, R0, SVAL_1
-	STB R2, R0, SVAL_2
-	STB R3, R0, SVAL_3
-	STB R4, R0, SVAL_4
-	STB R5, R0, SVAL_5
-	STB R6, R0, SVAL_6
-	STB R7, R0, SVAL_7
+	;; Testing STR
+	STR R1, R0, SVAL_1
+	STR R2, R0, SVAL_2
+	STR R3, R0, SVAL_3
+	STR R4, R0, SVAL_4
+	STR R5, R0, SVAL_5
+	STR R6, R0, SVAL_6
+	STR R7, R0, SVAL_7
 
 
 HALT_PROG:

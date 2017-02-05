@@ -33,12 +33,12 @@ CODE:
 
 	;; Testing RSHFL
 	RSHFL R1, R1, 15		;; R1 <- 0x0001
-	RSHFL R2, R2, 14		;; R2 <- 0x0002
-	RSHFL R3, R3, 13		;; R3 <- 0x0004
-	RSHFL R4, R4, 12		;; R4 <- 0x0008
-	RSHFL R5, R5, 11		;; R5 <- 0x0010
-	RSHFL R6, R6, 10		;; R6 <- 0x0020
-	RSHFL R7, R7, 9			;; R7 <- 0x0040
+	RSHFL R2, R2, 14		;; R2 <- 0x0003
+	RSHFL R3, R3, 13		;; R3 <- 0x0007
+	RSHFL R4, R4, 12		;; R4 <- 0x000F
+	RSHFL R5, R5, 11		;; R5 <- 0x001F
+	RSHFL R6, R6, 10		;; R6 <- 0x003F
+	RSHFL R7, R7, 9			;; R7 <- 0x007F
 
 	;; Testing RSHFA
 	LDR R4, R0, RSHFA_TVAL
@@ -65,3 +65,7 @@ DATA:
 LSHF_TVAL:		DATA2 4x0001 ;; Arg for testing LSHF
 RSHFL_TVAL: 	DATA2 4xFFFF ;; Arg for testing RSHFL
 RSHFA_TVAL: 	DATA2 4x8000 ;; Arg for testing RSHFA
+
+
+
+

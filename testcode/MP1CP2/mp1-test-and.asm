@@ -49,11 +49,11 @@ CODE:
 	;; Testing AND imm.
 	LEA R0, DATA
 	LDR R0, R0, TVAL_1
-	AND R0, R0, #15
-	AND R0, R0, #7
-	AND R0, R0, #3
-	AND R0, R0, #1
-	AND R0, R0, #0			;; Make sure R0 = 0xFFF0
+	AND R0, R0, 15
+	AND R0, R0, 7
+	AND R0, R0, 3
+	AND R0, R0, 1
+	AND R0, R0, 0			;; Make sure R0 = 0x0000
 
 HALT_PROG:
 	BRnzp HALT_PROG

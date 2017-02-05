@@ -49,22 +49,22 @@ CODE:
 	;; Testing add imm.
 	LEA R0, DATA
 	LDR R0, R0, ZERO
-	ADD R0, R0, #0
-	ADD R0, R0, #1
-	ADD R0, R0, #2
-	ADD R0, R0, #3
-	ADD R0, R0, #4
-	ADD R0, R0, #5
-	ADD R0, R0, #6
-	ADD R0, R0, #7
-	ADD R0, R0, #8
-	ADD R0, R0, #9
-	ADD R0, R0, #10
-	ADD R0, R0, #11
-	ADD R0, R0, #12
-	ADD R0, R0, #13
-	ADD R0, R0, #14
-	ADD R0, R0, #15				;; Make sure R0 = 0x0078
+	ADD R0, R0, 0
+	ADD R0, R0, 1
+	ADD R0, R0, 2
+	ADD R0, R0, 3
+	ADD R0, R0, 4
+	ADD R0, R0, 5
+	ADD R0, R0, 6
+	ADD R0, R0, 7
+	ADD R0, R0, 8
+	ADD R0, R0, 9
+	ADD R0, R0, 10
+	ADD R0, R0, 11
+	ADD R0, R0, 12
+	ADD R0, R0, 13
+	ADD R0, R0, 14
+	ADD R0, R0, 15				;; Make sure R0 = 0x0078
 
 
 HALT_PROG:
