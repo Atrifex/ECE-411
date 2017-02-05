@@ -1,5 +1,5 @@
 ;;
-;; This program is a test of BR and JMP
+;; This program is a test of NOT
 ;; In the comments you can find the expected end results for each register.
 ;; Other end conditions will also be speficied to make sure that success
 ;; has actually occured.
@@ -16,53 +16,44 @@ SEGMENT
 CODE:
 
 	;; ************* Expected End Results *************
-	;; R0: 0x600D
-	;; R1 - R7: Not used
 	;;
 	;; To check for correctness, you will need to compare the
 	;; register values after every instruction and that the contents
 	;; of memory in ModelSim match the contents of memory in the
 	;; LC3bSimulator.
 	;;
-	;;
 
 	;; Prepare register values
 	LEA R0, DATA
-
 	LDR R1, R0, TVAL_1
-	BRn GOOD1
-	BR BAD
+	LDR R2, R0, TVAL_2
+	LDR R3, R0, TVAL_3
+	LDR R4, R0, TVAL_4
+	LDR R5, R0, TVAL_5
+	LDR R6, R0, TVAL_6
+	LDR R7, R0, TVAL_7
+	LDR R0, R0, TVAL_8
 
-GOOD1:
-	LDR R1, R0, TVAL_2
-	BRp GOOD2
-	BR BAD
+	;; Testing NOT
+	NOT R0, R0
+	NOT R1, R1
+	NOT R2, R2
+	NOT R3, R3
+	NOT R4, R4
+	NOT R5, R5
+	NOT R6, R6
+	NOT R7, R7
 
-GOOD2:
-	LDR R1, R0, TVAL_3
-	BRz JPM_TEST
-	BR BAD
-
-JPM_TEST:
-	JMP GOOD
-
-GOOD:
-	LDR R0, R0, GOOD_END
-	JMP DONE
-
-BAD:
-	LDR R0, R0, BAD_END
-	JMP DONE
-
-DONE:
-	BR DONE
-
+HALT_PROG:
+	BRnzp HALT_PROG
 
 SEGMENT
 DATA:
-ZERO: 	DATA2 4x0000
-TVAL_1: DATA2 4xFFFF
-TVAL_2: DATA2 4x0005
-TVAL_3: DATA2 4x0000
-GOOD_END: DATA2	4x600D
-BAD_END: DATA2 4xFBAD
+TVAL_1: DATA2 4x0001
+TVAL_2: DATA2 4x0002
+TVAL_3: DATA2 4x0003
+TVAL_4: DATA2 4x0004
+TVAL_5: DATA2 4x0005
+TVAL_6: DATA2 4x0006
+TVAL_7: DATA2 4x0007
+TVAL_8: DATA2 4x0000

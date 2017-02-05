@@ -1,8 +1,8 @@
 ;;
-;; This program is a limited test of ADD
-;; An all-encompassing test for this instruction will be performed separately in dedicated programs.
+;; This program is a  test of ADD
 ;; In the comments you can find the expected end results for each register.
-;; Other end conditions will also be speficied to make sure that success has actually occured.
+;; Other end conditions will also be speficied to make sure that success
+;; has actually occured.
 ;;
 ;; Author: Rishi Thakkar
 ;; Date: 2/2/2017
@@ -16,7 +16,7 @@ SEGMENT
 CODE:
 
 	;; ************* Expected End Results *************
-	;; R0: 0x0078 
+	;; R0: 0x0078
 	;; R1: 0x0024
 	;; R2 - R7: Used for many tasks
 	;;

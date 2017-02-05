@@ -1,8 +1,8 @@
 ;;
-;; This program is a limited test of JSR and JSRR.
-;; An all-encompassing test for each instruction will be performed separately in dedicated programs.
+;; This program is a test of JSR and JSRR.
 ;; In the comments you can find the expected end results for each register.
-;; Other end conditions will also be speficied to make sure that success has actually occured.
+;; Other end conditions will also be speficied to make sure that success
+;; has actually occured.
 ;;
 ;; Author: Rishi Thakkar
 ;; Date: 2/2/2017
