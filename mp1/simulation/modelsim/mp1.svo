@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 32-bit"
 // VERSION "Version 13.1.4 Build 182 03/12/2014 SJ Full Version"
 
-// DATE "02/02/2017 22:14:40"
+// DATE "02/04/2017 16:52:41"
 
 // 
 // Device: Altera EP3SE50F780C2 Package FBGA780
@@ -37,14 +37,14 @@ module mp1 (
 	mem_byte_enable,
 	mem_address,
 	mem_wdata);
-input 	reg clk ;
-input 	reg mem_resp ;
-input 	logic [15:0] mem_rdata ;
-output 	reg mem_read ;
-output 	reg mem_write ;
-output 	logic [1:0] mem_byte_enable ;
-output 	logic [15:0] mem_address ;
-output 	logic [15:0] mem_wdata ;
+input 	clk;
+input 	mem_resp;
+input 	[15:0] mem_rdata;
+output 	mem_read;
+output 	mem_write;
+output 	[1:0] mem_byte_enable;
+output 	[15:0] mem_address;
+output 	[15:0] mem_wdata;
 
 // Design Ports Information
 // mem_read	=>  Location: PIN_M24,	 I/O Standard: 2.5 V,	 Current Strength: Default
