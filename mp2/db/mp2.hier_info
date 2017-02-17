@@ -1,62 +1,342 @@
 |mp2
-clk => control:control_inst.clk
-clk => datapath:datapath_inst.clk
-mem_resp => control:control_inst.mem_resp
-mem_rdata[0] => datapath:datapath_inst.mem_rdata[0]
-mem_rdata[1] => datapath:datapath_inst.mem_rdata[1]
-mem_rdata[2] => datapath:datapath_inst.mem_rdata[2]
-mem_rdata[3] => datapath:datapath_inst.mem_rdata[3]
-mem_rdata[4] => datapath:datapath_inst.mem_rdata[4]
-mem_rdata[5] => datapath:datapath_inst.mem_rdata[5]
-mem_rdata[6] => datapath:datapath_inst.mem_rdata[6]
-mem_rdata[7] => datapath:datapath_inst.mem_rdata[7]
-mem_rdata[8] => datapath:datapath_inst.mem_rdata[8]
-mem_rdata[9] => datapath:datapath_inst.mem_rdata[9]
-mem_rdata[10] => datapath:datapath_inst.mem_rdata[10]
-mem_rdata[11] => datapath:datapath_inst.mem_rdata[11]
-mem_rdata[12] => datapath:datapath_inst.mem_rdata[12]
-mem_rdata[13] => datapath:datapath_inst.mem_rdata[13]
-mem_rdata[14] => datapath:datapath_inst.mem_rdata[14]
-mem_rdata[15] => datapath:datapath_inst.mem_rdata[15]
-mem_read << control:control_inst.mem_read
-mem_write << control:control_inst.mem_write
-mem_byte_enable[0] << control:control_inst.mem_byte_enable[0]
-mem_byte_enable[1] << control:control_inst.mem_byte_enable[1]
-mem_address[0] << datapath:datapath_inst.mem_address[0]
-mem_address[1] << datapath:datapath_inst.mem_address[1]
-mem_address[2] << datapath:datapath_inst.mem_address[2]
-mem_address[3] << datapath:datapath_inst.mem_address[3]
-mem_address[4] << datapath:datapath_inst.mem_address[4]
-mem_address[5] << datapath:datapath_inst.mem_address[5]
-mem_address[6] << datapath:datapath_inst.mem_address[6]
-mem_address[7] << datapath:datapath_inst.mem_address[7]
-mem_address[8] << datapath:datapath_inst.mem_address[8]
-mem_address[9] << datapath:datapath_inst.mem_address[9]
-mem_address[10] << datapath:datapath_inst.mem_address[10]
-mem_address[11] << datapath:datapath_inst.mem_address[11]
-mem_address[12] << datapath:datapath_inst.mem_address[12]
-mem_address[13] << datapath:datapath_inst.mem_address[13]
-mem_address[14] << datapath:datapath_inst.mem_address[14]
-mem_address[15] << datapath:datapath_inst.mem_address[15]
-mem_wdata[0] << datapath:datapath_inst.mem_wdata[0]
-mem_wdata[1] << datapath:datapath_inst.mem_wdata[1]
-mem_wdata[2] << datapath:datapath_inst.mem_wdata[2]
-mem_wdata[3] << datapath:datapath_inst.mem_wdata[3]
-mem_wdata[4] << datapath:datapath_inst.mem_wdata[4]
-mem_wdata[5] << datapath:datapath_inst.mem_wdata[5]
-mem_wdata[6] << datapath:datapath_inst.mem_wdata[6]
-mem_wdata[7] << datapath:datapath_inst.mem_wdata[7]
-mem_wdata[8] << datapath:datapath_inst.mem_wdata[8]
-mem_wdata[9] << datapath:datapath_inst.mem_wdata[9]
-mem_wdata[10] << datapath:datapath_inst.mem_wdata[10]
-mem_wdata[11] << datapath:datapath_inst.mem_wdata[11]
-mem_wdata[12] << datapath:datapath_inst.mem_wdata[12]
-mem_wdata[13] << datapath:datapath_inst.mem_wdata[13]
-mem_wdata[14] << datapath:datapath_inst.mem_wdata[14]
-mem_wdata[15] << datapath:datapath_inst.mem_wdata[15]
+clk => cpu:cpu_inst.clk
+clk => cache:cache_inst.clk
+pmem_resp => cache:cache_inst.pmem_resp
+pmem_rdata[0] => cache:cache_inst.pmem_rdata[0]
+pmem_rdata[1] => cache:cache_inst.pmem_rdata[1]
+pmem_rdata[2] => cache:cache_inst.pmem_rdata[2]
+pmem_rdata[3] => cache:cache_inst.pmem_rdata[3]
+pmem_rdata[4] => cache:cache_inst.pmem_rdata[4]
+pmem_rdata[5] => cache:cache_inst.pmem_rdata[5]
+pmem_rdata[6] => cache:cache_inst.pmem_rdata[6]
+pmem_rdata[7] => cache:cache_inst.pmem_rdata[7]
+pmem_rdata[8] => cache:cache_inst.pmem_rdata[8]
+pmem_rdata[9] => cache:cache_inst.pmem_rdata[9]
+pmem_rdata[10] => cache:cache_inst.pmem_rdata[10]
+pmem_rdata[11] => cache:cache_inst.pmem_rdata[11]
+pmem_rdata[12] => cache:cache_inst.pmem_rdata[12]
+pmem_rdata[13] => cache:cache_inst.pmem_rdata[13]
+pmem_rdata[14] => cache:cache_inst.pmem_rdata[14]
+pmem_rdata[15] => cache:cache_inst.pmem_rdata[15]
+pmem_rdata[16] => cache:cache_inst.pmem_rdata[16]
+pmem_rdata[17] => cache:cache_inst.pmem_rdata[17]
+pmem_rdata[18] => cache:cache_inst.pmem_rdata[18]
+pmem_rdata[19] => cache:cache_inst.pmem_rdata[19]
+pmem_rdata[20] => cache:cache_inst.pmem_rdata[20]
+pmem_rdata[21] => cache:cache_inst.pmem_rdata[21]
+pmem_rdata[22] => cache:cache_inst.pmem_rdata[22]
+pmem_rdata[23] => cache:cache_inst.pmem_rdata[23]
+pmem_rdata[24] => cache:cache_inst.pmem_rdata[24]
+pmem_rdata[25] => cache:cache_inst.pmem_rdata[25]
+pmem_rdata[26] => cache:cache_inst.pmem_rdata[26]
+pmem_rdata[27] => cache:cache_inst.pmem_rdata[27]
+pmem_rdata[28] => cache:cache_inst.pmem_rdata[28]
+pmem_rdata[29] => cache:cache_inst.pmem_rdata[29]
+pmem_rdata[30] => cache:cache_inst.pmem_rdata[30]
+pmem_rdata[31] => cache:cache_inst.pmem_rdata[31]
+pmem_rdata[32] => cache:cache_inst.pmem_rdata[32]
+pmem_rdata[33] => cache:cache_inst.pmem_rdata[33]
+pmem_rdata[34] => cache:cache_inst.pmem_rdata[34]
+pmem_rdata[35] => cache:cache_inst.pmem_rdata[35]
+pmem_rdata[36] => cache:cache_inst.pmem_rdata[36]
+pmem_rdata[37] => cache:cache_inst.pmem_rdata[37]
+pmem_rdata[38] => cache:cache_inst.pmem_rdata[38]
+pmem_rdata[39] => cache:cache_inst.pmem_rdata[39]
+pmem_rdata[40] => cache:cache_inst.pmem_rdata[40]
+pmem_rdata[41] => cache:cache_inst.pmem_rdata[41]
+pmem_rdata[42] => cache:cache_inst.pmem_rdata[42]
+pmem_rdata[43] => cache:cache_inst.pmem_rdata[43]
+pmem_rdata[44] => cache:cache_inst.pmem_rdata[44]
+pmem_rdata[45] => cache:cache_inst.pmem_rdata[45]
+pmem_rdata[46] => cache:cache_inst.pmem_rdata[46]
+pmem_rdata[47] => cache:cache_inst.pmem_rdata[47]
+pmem_rdata[48] => cache:cache_inst.pmem_rdata[48]
+pmem_rdata[49] => cache:cache_inst.pmem_rdata[49]
+pmem_rdata[50] => cache:cache_inst.pmem_rdata[50]
+pmem_rdata[51] => cache:cache_inst.pmem_rdata[51]
+pmem_rdata[52] => cache:cache_inst.pmem_rdata[52]
+pmem_rdata[53] => cache:cache_inst.pmem_rdata[53]
+pmem_rdata[54] => cache:cache_inst.pmem_rdata[54]
+pmem_rdata[55] => cache:cache_inst.pmem_rdata[55]
+pmem_rdata[56] => cache:cache_inst.pmem_rdata[56]
+pmem_rdata[57] => cache:cache_inst.pmem_rdata[57]
+pmem_rdata[58] => cache:cache_inst.pmem_rdata[58]
+pmem_rdata[59] => cache:cache_inst.pmem_rdata[59]
+pmem_rdata[60] => cache:cache_inst.pmem_rdata[60]
+pmem_rdata[61] => cache:cache_inst.pmem_rdata[61]
+pmem_rdata[62] => cache:cache_inst.pmem_rdata[62]
+pmem_rdata[63] => cache:cache_inst.pmem_rdata[63]
+pmem_rdata[64] => cache:cache_inst.pmem_rdata[64]
+pmem_rdata[65] => cache:cache_inst.pmem_rdata[65]
+pmem_rdata[66] => cache:cache_inst.pmem_rdata[66]
+pmem_rdata[67] => cache:cache_inst.pmem_rdata[67]
+pmem_rdata[68] => cache:cache_inst.pmem_rdata[68]
+pmem_rdata[69] => cache:cache_inst.pmem_rdata[69]
+pmem_rdata[70] => cache:cache_inst.pmem_rdata[70]
+pmem_rdata[71] => cache:cache_inst.pmem_rdata[71]
+pmem_rdata[72] => cache:cache_inst.pmem_rdata[72]
+pmem_rdata[73] => cache:cache_inst.pmem_rdata[73]
+pmem_rdata[74] => cache:cache_inst.pmem_rdata[74]
+pmem_rdata[75] => cache:cache_inst.pmem_rdata[75]
+pmem_rdata[76] => cache:cache_inst.pmem_rdata[76]
+pmem_rdata[77] => cache:cache_inst.pmem_rdata[77]
+pmem_rdata[78] => cache:cache_inst.pmem_rdata[78]
+pmem_rdata[79] => cache:cache_inst.pmem_rdata[79]
+pmem_rdata[80] => cache:cache_inst.pmem_rdata[80]
+pmem_rdata[81] => cache:cache_inst.pmem_rdata[81]
+pmem_rdata[82] => cache:cache_inst.pmem_rdata[82]
+pmem_rdata[83] => cache:cache_inst.pmem_rdata[83]
+pmem_rdata[84] => cache:cache_inst.pmem_rdata[84]
+pmem_rdata[85] => cache:cache_inst.pmem_rdata[85]
+pmem_rdata[86] => cache:cache_inst.pmem_rdata[86]
+pmem_rdata[87] => cache:cache_inst.pmem_rdata[87]
+pmem_rdata[88] => cache:cache_inst.pmem_rdata[88]
+pmem_rdata[89] => cache:cache_inst.pmem_rdata[89]
+pmem_rdata[90] => cache:cache_inst.pmem_rdata[90]
+pmem_rdata[91] => cache:cache_inst.pmem_rdata[91]
+pmem_rdata[92] => cache:cache_inst.pmem_rdata[92]
+pmem_rdata[93] => cache:cache_inst.pmem_rdata[93]
+pmem_rdata[94] => cache:cache_inst.pmem_rdata[94]
+pmem_rdata[95] => cache:cache_inst.pmem_rdata[95]
+pmem_rdata[96] => cache:cache_inst.pmem_rdata[96]
+pmem_rdata[97] => cache:cache_inst.pmem_rdata[97]
+pmem_rdata[98] => cache:cache_inst.pmem_rdata[98]
+pmem_rdata[99] => cache:cache_inst.pmem_rdata[99]
+pmem_rdata[100] => cache:cache_inst.pmem_rdata[100]
+pmem_rdata[101] => cache:cache_inst.pmem_rdata[101]
+pmem_rdata[102] => cache:cache_inst.pmem_rdata[102]
+pmem_rdata[103] => cache:cache_inst.pmem_rdata[103]
+pmem_rdata[104] => cache:cache_inst.pmem_rdata[104]
+pmem_rdata[105] => cache:cache_inst.pmem_rdata[105]
+pmem_rdata[106] => cache:cache_inst.pmem_rdata[106]
+pmem_rdata[107] => cache:cache_inst.pmem_rdata[107]
+pmem_rdata[108] => cache:cache_inst.pmem_rdata[108]
+pmem_rdata[109] => cache:cache_inst.pmem_rdata[109]
+pmem_rdata[110] => cache:cache_inst.pmem_rdata[110]
+pmem_rdata[111] => cache:cache_inst.pmem_rdata[111]
+pmem_rdata[112] => cache:cache_inst.pmem_rdata[112]
+pmem_rdata[113] => cache:cache_inst.pmem_rdata[113]
+pmem_rdata[114] => cache:cache_inst.pmem_rdata[114]
+pmem_rdata[115] => cache:cache_inst.pmem_rdata[115]
+pmem_rdata[116] => cache:cache_inst.pmem_rdata[116]
+pmem_rdata[117] => cache:cache_inst.pmem_rdata[117]
+pmem_rdata[118] => cache:cache_inst.pmem_rdata[118]
+pmem_rdata[119] => cache:cache_inst.pmem_rdata[119]
+pmem_rdata[120] => cache:cache_inst.pmem_rdata[120]
+pmem_rdata[121] => cache:cache_inst.pmem_rdata[121]
+pmem_rdata[122] => cache:cache_inst.pmem_rdata[122]
+pmem_rdata[123] => cache:cache_inst.pmem_rdata[123]
+pmem_rdata[124] => cache:cache_inst.pmem_rdata[124]
+pmem_rdata[125] => cache:cache_inst.pmem_rdata[125]
+pmem_rdata[126] => cache:cache_inst.pmem_rdata[126]
+pmem_rdata[127] => cache:cache_inst.pmem_rdata[127]
+pmem_read <= cache:cache_inst.pmem_read
+pmem_write <= cache:cache_inst.pmem_write
+pmem_address[0] <= cache:cache_inst.pmem_address[0]
+pmem_address[1] <= cache:cache_inst.pmem_address[1]
+pmem_address[2] <= cache:cache_inst.pmem_address[2]
+pmem_address[3] <= cache:cache_inst.pmem_address[3]
+pmem_address[4] <= cache:cache_inst.pmem_address[4]
+pmem_address[5] <= cache:cache_inst.pmem_address[5]
+pmem_address[6] <= cache:cache_inst.pmem_address[6]
+pmem_address[7] <= cache:cache_inst.pmem_address[7]
+pmem_address[8] <= cache:cache_inst.pmem_address[8]
+pmem_address[9] <= cache:cache_inst.pmem_address[9]
+pmem_address[10] <= cache:cache_inst.pmem_address[10]
+pmem_address[11] <= cache:cache_inst.pmem_address[11]
+pmem_address[12] <= cache:cache_inst.pmem_address[12]
+pmem_address[13] <= cache:cache_inst.pmem_address[13]
+pmem_address[14] <= cache:cache_inst.pmem_address[14]
+pmem_address[15] <= cache:cache_inst.pmem_address[15]
+pmem_wdata[0] <= cache:cache_inst.pmem_wdata[0]
+pmem_wdata[1] <= cache:cache_inst.pmem_wdata[1]
+pmem_wdata[2] <= cache:cache_inst.pmem_wdata[2]
+pmem_wdata[3] <= cache:cache_inst.pmem_wdata[3]
+pmem_wdata[4] <= cache:cache_inst.pmem_wdata[4]
+pmem_wdata[5] <= cache:cache_inst.pmem_wdata[5]
+pmem_wdata[6] <= cache:cache_inst.pmem_wdata[6]
+pmem_wdata[7] <= cache:cache_inst.pmem_wdata[7]
+pmem_wdata[8] <= cache:cache_inst.pmem_wdata[8]
+pmem_wdata[9] <= cache:cache_inst.pmem_wdata[9]
+pmem_wdata[10] <= cache:cache_inst.pmem_wdata[10]
+pmem_wdata[11] <= cache:cache_inst.pmem_wdata[11]
+pmem_wdata[12] <= cache:cache_inst.pmem_wdata[12]
+pmem_wdata[13] <= cache:cache_inst.pmem_wdata[13]
+pmem_wdata[14] <= cache:cache_inst.pmem_wdata[14]
+pmem_wdata[15] <= cache:cache_inst.pmem_wdata[15]
+pmem_wdata[16] <= cache:cache_inst.pmem_wdata[16]
+pmem_wdata[17] <= cache:cache_inst.pmem_wdata[17]
+pmem_wdata[18] <= cache:cache_inst.pmem_wdata[18]
+pmem_wdata[19] <= cache:cache_inst.pmem_wdata[19]
+pmem_wdata[20] <= cache:cache_inst.pmem_wdata[20]
+pmem_wdata[21] <= cache:cache_inst.pmem_wdata[21]
+pmem_wdata[22] <= cache:cache_inst.pmem_wdata[22]
+pmem_wdata[23] <= cache:cache_inst.pmem_wdata[23]
+pmem_wdata[24] <= cache:cache_inst.pmem_wdata[24]
+pmem_wdata[25] <= cache:cache_inst.pmem_wdata[25]
+pmem_wdata[26] <= cache:cache_inst.pmem_wdata[26]
+pmem_wdata[27] <= cache:cache_inst.pmem_wdata[27]
+pmem_wdata[28] <= cache:cache_inst.pmem_wdata[28]
+pmem_wdata[29] <= cache:cache_inst.pmem_wdata[29]
+pmem_wdata[30] <= cache:cache_inst.pmem_wdata[30]
+pmem_wdata[31] <= cache:cache_inst.pmem_wdata[31]
+pmem_wdata[32] <= cache:cache_inst.pmem_wdata[32]
+pmem_wdata[33] <= cache:cache_inst.pmem_wdata[33]
+pmem_wdata[34] <= cache:cache_inst.pmem_wdata[34]
+pmem_wdata[35] <= cache:cache_inst.pmem_wdata[35]
+pmem_wdata[36] <= cache:cache_inst.pmem_wdata[36]
+pmem_wdata[37] <= cache:cache_inst.pmem_wdata[37]
+pmem_wdata[38] <= cache:cache_inst.pmem_wdata[38]
+pmem_wdata[39] <= cache:cache_inst.pmem_wdata[39]
+pmem_wdata[40] <= cache:cache_inst.pmem_wdata[40]
+pmem_wdata[41] <= cache:cache_inst.pmem_wdata[41]
+pmem_wdata[42] <= cache:cache_inst.pmem_wdata[42]
+pmem_wdata[43] <= cache:cache_inst.pmem_wdata[43]
+pmem_wdata[44] <= cache:cache_inst.pmem_wdata[44]
+pmem_wdata[45] <= cache:cache_inst.pmem_wdata[45]
+pmem_wdata[46] <= cache:cache_inst.pmem_wdata[46]
+pmem_wdata[47] <= cache:cache_inst.pmem_wdata[47]
+pmem_wdata[48] <= cache:cache_inst.pmem_wdata[48]
+pmem_wdata[49] <= cache:cache_inst.pmem_wdata[49]
+pmem_wdata[50] <= cache:cache_inst.pmem_wdata[50]
+pmem_wdata[51] <= cache:cache_inst.pmem_wdata[51]
+pmem_wdata[52] <= cache:cache_inst.pmem_wdata[52]
+pmem_wdata[53] <= cache:cache_inst.pmem_wdata[53]
+pmem_wdata[54] <= cache:cache_inst.pmem_wdata[54]
+pmem_wdata[55] <= cache:cache_inst.pmem_wdata[55]
+pmem_wdata[56] <= cache:cache_inst.pmem_wdata[56]
+pmem_wdata[57] <= cache:cache_inst.pmem_wdata[57]
+pmem_wdata[58] <= cache:cache_inst.pmem_wdata[58]
+pmem_wdata[59] <= cache:cache_inst.pmem_wdata[59]
+pmem_wdata[60] <= cache:cache_inst.pmem_wdata[60]
+pmem_wdata[61] <= cache:cache_inst.pmem_wdata[61]
+pmem_wdata[62] <= cache:cache_inst.pmem_wdata[62]
+pmem_wdata[63] <= cache:cache_inst.pmem_wdata[63]
+pmem_wdata[64] <= cache:cache_inst.pmem_wdata[64]
+pmem_wdata[65] <= cache:cache_inst.pmem_wdata[65]
+pmem_wdata[66] <= cache:cache_inst.pmem_wdata[66]
+pmem_wdata[67] <= cache:cache_inst.pmem_wdata[67]
+pmem_wdata[68] <= cache:cache_inst.pmem_wdata[68]
+pmem_wdata[69] <= cache:cache_inst.pmem_wdata[69]
+pmem_wdata[70] <= cache:cache_inst.pmem_wdata[70]
+pmem_wdata[71] <= cache:cache_inst.pmem_wdata[71]
+pmem_wdata[72] <= cache:cache_inst.pmem_wdata[72]
+pmem_wdata[73] <= cache:cache_inst.pmem_wdata[73]
+pmem_wdata[74] <= cache:cache_inst.pmem_wdata[74]
+pmem_wdata[75] <= cache:cache_inst.pmem_wdata[75]
+pmem_wdata[76] <= cache:cache_inst.pmem_wdata[76]
+pmem_wdata[77] <= cache:cache_inst.pmem_wdata[77]
+pmem_wdata[78] <= cache:cache_inst.pmem_wdata[78]
+pmem_wdata[79] <= cache:cache_inst.pmem_wdata[79]
+pmem_wdata[80] <= cache:cache_inst.pmem_wdata[80]
+pmem_wdata[81] <= cache:cache_inst.pmem_wdata[81]
+pmem_wdata[82] <= cache:cache_inst.pmem_wdata[82]
+pmem_wdata[83] <= cache:cache_inst.pmem_wdata[83]
+pmem_wdata[84] <= cache:cache_inst.pmem_wdata[84]
+pmem_wdata[85] <= cache:cache_inst.pmem_wdata[85]
+pmem_wdata[86] <= cache:cache_inst.pmem_wdata[86]
+pmem_wdata[87] <= cache:cache_inst.pmem_wdata[87]
+pmem_wdata[88] <= cache:cache_inst.pmem_wdata[88]
+pmem_wdata[89] <= cache:cache_inst.pmem_wdata[89]
+pmem_wdata[90] <= cache:cache_inst.pmem_wdata[90]
+pmem_wdata[91] <= cache:cache_inst.pmem_wdata[91]
+pmem_wdata[92] <= cache:cache_inst.pmem_wdata[92]
+pmem_wdata[93] <= cache:cache_inst.pmem_wdata[93]
+pmem_wdata[94] <= cache:cache_inst.pmem_wdata[94]
+pmem_wdata[95] <= cache:cache_inst.pmem_wdata[95]
+pmem_wdata[96] <= cache:cache_inst.pmem_wdata[96]
+pmem_wdata[97] <= cache:cache_inst.pmem_wdata[97]
+pmem_wdata[98] <= cache:cache_inst.pmem_wdata[98]
+pmem_wdata[99] <= cache:cache_inst.pmem_wdata[99]
+pmem_wdata[100] <= cache:cache_inst.pmem_wdata[100]
+pmem_wdata[101] <= cache:cache_inst.pmem_wdata[101]
+pmem_wdata[102] <= cache:cache_inst.pmem_wdata[102]
+pmem_wdata[103] <= cache:cache_inst.pmem_wdata[103]
+pmem_wdata[104] <= cache:cache_inst.pmem_wdata[104]
+pmem_wdata[105] <= cache:cache_inst.pmem_wdata[105]
+pmem_wdata[106] <= cache:cache_inst.pmem_wdata[106]
+pmem_wdata[107] <= cache:cache_inst.pmem_wdata[107]
+pmem_wdata[108] <= cache:cache_inst.pmem_wdata[108]
+pmem_wdata[109] <= cache:cache_inst.pmem_wdata[109]
+pmem_wdata[110] <= cache:cache_inst.pmem_wdata[110]
+pmem_wdata[111] <= cache:cache_inst.pmem_wdata[111]
+pmem_wdata[112] <= cache:cache_inst.pmem_wdata[112]
+pmem_wdata[113] <= cache:cache_inst.pmem_wdata[113]
+pmem_wdata[114] <= cache:cache_inst.pmem_wdata[114]
+pmem_wdata[115] <= cache:cache_inst.pmem_wdata[115]
+pmem_wdata[116] <= cache:cache_inst.pmem_wdata[116]
+pmem_wdata[117] <= cache:cache_inst.pmem_wdata[117]
+pmem_wdata[118] <= cache:cache_inst.pmem_wdata[118]
+pmem_wdata[119] <= cache:cache_inst.pmem_wdata[119]
+pmem_wdata[120] <= cache:cache_inst.pmem_wdata[120]
+pmem_wdata[121] <= cache:cache_inst.pmem_wdata[121]
+pmem_wdata[122] <= cache:cache_inst.pmem_wdata[122]
+pmem_wdata[123] <= cache:cache_inst.pmem_wdata[123]
+pmem_wdata[124] <= cache:cache_inst.pmem_wdata[124]
+pmem_wdata[125] <= cache:cache_inst.pmem_wdata[125]
+pmem_wdata[126] <= cache:cache_inst.pmem_wdata[126]
+pmem_wdata[127] <= cache:cache_inst.pmem_wdata[127]
 
 
-|mp2|control:control_inst
+|mp2|cpu:cpu_inst
+clk => cpu_control:control.clk
+clk => cpu_datapath:datapath.clk
+mem_resp => cpu_control:control.mem_resp
+mem_rdata[0] => cpu_datapath:datapath.mem_rdata[0]
+mem_rdata[1] => cpu_datapath:datapath.mem_rdata[1]
+mem_rdata[2] => cpu_datapath:datapath.mem_rdata[2]
+mem_rdata[3] => cpu_datapath:datapath.mem_rdata[3]
+mem_rdata[4] => cpu_datapath:datapath.mem_rdata[4]
+mem_rdata[5] => cpu_datapath:datapath.mem_rdata[5]
+mem_rdata[6] => cpu_datapath:datapath.mem_rdata[6]
+mem_rdata[7] => cpu_datapath:datapath.mem_rdata[7]
+mem_rdata[8] => cpu_datapath:datapath.mem_rdata[8]
+mem_rdata[9] => cpu_datapath:datapath.mem_rdata[9]
+mem_rdata[10] => cpu_datapath:datapath.mem_rdata[10]
+mem_rdata[11] => cpu_datapath:datapath.mem_rdata[11]
+mem_rdata[12] => cpu_datapath:datapath.mem_rdata[12]
+mem_rdata[13] => cpu_datapath:datapath.mem_rdata[13]
+mem_rdata[14] => cpu_datapath:datapath.mem_rdata[14]
+mem_rdata[15] => cpu_datapath:datapath.mem_rdata[15]
+mem_read <= cpu_control:control.mem_read
+mem_write <= cpu_control:control.mem_write
+mem_byte_enable[0] <= cpu_control:control.mem_byte_enable[0]
+mem_byte_enable[1] <= cpu_control:control.mem_byte_enable[1]
+mem_address[0] <= cpu_datapath:datapath.mem_address[0]
+mem_address[1] <= cpu_datapath:datapath.mem_address[1]
+mem_address[2] <= cpu_datapath:datapath.mem_address[2]
+mem_address[3] <= cpu_datapath:datapath.mem_address[3]
+mem_address[4] <= cpu_datapath:datapath.mem_address[4]
+mem_address[5] <= cpu_datapath:datapath.mem_address[5]
+mem_address[6] <= cpu_datapath:datapath.mem_address[6]
+mem_address[7] <= cpu_datapath:datapath.mem_address[7]
+mem_address[8] <= cpu_datapath:datapath.mem_address[8]
+mem_address[9] <= cpu_datapath:datapath.mem_address[9]
+mem_address[10] <= cpu_datapath:datapath.mem_address[10]
+mem_address[11] <= cpu_datapath:datapath.mem_address[11]
+mem_address[12] <= cpu_datapath:datapath.mem_address[12]
+mem_address[13] <= cpu_datapath:datapath.mem_address[13]
+mem_address[14] <= cpu_datapath:datapath.mem_address[14]
+mem_address[15] <= cpu_datapath:datapath.mem_address[15]
+mem_wdata[0] <= cpu_datapath:datapath.mem_wdata[0]
+mem_wdata[1] <= cpu_datapath:datapath.mem_wdata[1]
+mem_wdata[2] <= cpu_datapath:datapath.mem_wdata[2]
+mem_wdata[3] <= cpu_datapath:datapath.mem_wdata[3]
+mem_wdata[4] <= cpu_datapath:datapath.mem_wdata[4]
+mem_wdata[5] <= cpu_datapath:datapath.mem_wdata[5]
+mem_wdata[6] <= cpu_datapath:datapath.mem_wdata[6]
+mem_wdata[7] <= cpu_datapath:datapath.mem_wdata[7]
+mem_wdata[8] <= cpu_datapath:datapath.mem_wdata[8]
+mem_wdata[9] <= cpu_datapath:datapath.mem_wdata[9]
+mem_wdata[10] <= cpu_datapath:datapath.mem_wdata[10]
+mem_wdata[11] <= cpu_datapath:datapath.mem_wdata[11]
+mem_wdata[12] <= cpu_datapath:datapath.mem_wdata[12]
+mem_wdata[13] <= cpu_datapath:datapath.mem_wdata[13]
+mem_wdata[14] <= cpu_datapath:datapath.mem_wdata[14]
+mem_wdata[15] <= cpu_datapath:datapath.mem_wdata[15]
+
+
+|mp2|cpu:cpu_inst|cpu_control:control
 clk => state~1.DATAIN
 opcode[0] => Equal0.IN7
 opcode[0] => Equal1.IN7
@@ -210,7 +490,7 @@ mem_byte_enable[0] <= mem_byte_enable.DB_MAX_OUTPUT_PORT_TYPE
 mem_byte_enable[1] <= mem_byte_enable.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst
+|mp2|cpu:cpu_inst|cpu_datapath:datapath
 clk => register:pc.clk
 clk => ir:IR.clk
 clk => regfile:regfile_inst.clk
@@ -302,7 +582,7 @@ mem_wdata[14] <= mdr_out[14].DB_MAX_OUTPUT_PORT_TYPE
 mem_wdata[15] <= mdr_out[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|register:pc
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|register:pc
 clk => data[0].CLK
 clk => data[1].CLK
 clk => data[2].CLK
@@ -369,7 +649,7 @@ out[14] <= data[14].DB_MAX_OUTPUT_PORT_TYPE
 out[15] <= data[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|mux4:pcmux
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|mux4:pcmux
 sel[0] => Mux0.IN1
 sel[0] => Mux1.IN1
 sel[0] => Mux2.IN1
@@ -484,7 +764,7 @@ f[14] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 f[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|plus2:pcPlus2
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|plus2:pcPlus2
 in[0] => out[0].DATAIN
 in[1] => Add0.IN30
 in[2] => Add0.IN29
@@ -519,7 +799,7 @@ out[14] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 out[15] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|adder:br_adder
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|adder:br_adder
 a[0] => Add0.IN16
 a[1] => Add0.IN15
 a[2] => Add0.IN14
@@ -570,7 +850,7 @@ c[14] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 c[15] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|mux2:addrmux
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|mux2:addrmux
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
@@ -637,7 +917,7 @@ f[14] <= f.DB_MAX_OUTPUT_PORT_TYPE
 f[15] <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|adj:offset9_adjuster
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|adj:offset9_adjuster
 lsse => out.OUTPUTSELECT
 lsse => out.OUTPUTSELECT
 lsse => out.OUTPUTSELECT
@@ -689,7 +969,7 @@ out[14] <= in[8].DB_MAX_OUTPUT_PORT_TYPE
 out[15] <= in[8].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|adj:offset11_adjuster
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|adj:offset11_adjuster
 lsse => out.OUTPUTSELECT
 lsse => out.OUTPUTSELECT
 lsse => out.OUTPUTSELECT
@@ -745,7 +1025,7 @@ out[14] <= in[10].DB_MAX_OUTPUT_PORT_TYPE
 out[15] <= in[10].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|ir:IR
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|ir:IR
 clk => data[0].CLK
 clk => data[1].CLK
 clk => data[2].CLK
@@ -855,7 +1135,7 @@ ir_5 <= data[5].DB_MAX_OUTPUT_PORT_TYPE
 ir_11 <= data[11].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|mux2:storemux
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|mux2:storemux
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
@@ -870,7 +1150,7 @@ f[1] <= f.DB_MAX_OUTPUT_PORT_TYPE
 f[2] <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|mux2:drmux
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|mux2:drmux
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
@@ -885,7 +1165,7 @@ f[1] <= f.DB_MAX_OUTPUT_PORT_TYPE
 f[2] <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|adj:offset6_adjuster
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|adj:offset6_adjuster
 lsse => out.OUTPUTSELECT
 lsse => out.OUTPUTSELECT
 lsse => out.OUTPUTSELECT
@@ -931,7 +1211,7 @@ out[14] <= in[5].DB_MAX_OUTPUT_PORT_TYPE
 out[15] <= in[5].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|regfile:regfile_inst
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|regfile:regfile_inst
 clk => data.we_a.CLK
 clk => data.waddr_a[2].CLK
 clk => data.waddr_a[1].CLK
@@ -1033,7 +1313,7 @@ reg_b[14] <= reg_b[14].DB_MAX_OUTPUT_PORT_TYPE
 reg_b[15] <= reg_b[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|mux4:regfilemux
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|mux4:regfilemux
 sel[0] => Mux0.IN1
 sel[0] => Mux1.IN1
 sel[0] => Mux2.IN1
@@ -1148,7 +1428,7 @@ f[14] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 f[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|mux4:alumux
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|mux4:alumux
 sel[0] => Mux0.IN1
 sel[0] => Mux1.IN1
 sel[0] => Mux2.IN1
@@ -1263,7 +1543,7 @@ f[14] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 f[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|alu:alu_inst
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|alu:alu_inst
 aluop[0] => Equal0.IN7
 aluop[0] => Equal1.IN7
 aluop[0] => Equal2.IN7
@@ -1503,7 +1783,7 @@ f[14] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
 f[15] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|gencc:gencc_inst
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|gencc:gencc_inst
 in[0] => WideOr0.IN0
 in[1] => WideOr0.IN1
 in[2] => WideOr0.IN2
@@ -1528,7 +1808,7 @@ out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= in[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|register:cc
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|register:cc
 clk => data[0].CLK
 clk => data[1].CLK
 clk => data[2].CLK
@@ -1543,7 +1823,7 @@ out[1] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= data[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|cccomp:cccomp_inst
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|cccomp:cccomp_inst
 cur_cc[0] => always0.IN0
 cur_cc[1] => always0.IN0
 cur_cc[2] => always0.IN0
@@ -1553,7 +1833,7 @@ br_cc[2] => always0.IN1
 br_enable <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|mux4:marmux
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|mux4:marmux
 sel[0] => Mux0.IN1
 sel[0] => Mux1.IN1
 sel[0] => Mux2.IN1
@@ -1668,7 +1948,7 @@ f[14] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 f[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|register:MAR
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|register:MAR
 clk => data[0].CLK
 clk => data[1].CLK
 clk => data[2].CLK
@@ -1735,7 +2015,7 @@ out[14] <= data[14].DB_MAX_OUTPUT_PORT_TYPE
 out[15] <= data[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|mux4:mdrInModifier
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|mux4:mdrInModifier
 sel[0] => Mux0.IN1
 sel[0] => Mux1.IN1
 sel[0] => Mux2.IN1
@@ -1850,7 +2130,7 @@ f[14] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 f[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|mux2:mdrmux
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|mux2:mdrmux
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
 sel => f.OUTPUTSELECT
@@ -1917,7 +2197,7 @@ f[14] <= f.DB_MAX_OUTPUT_PORT_TYPE
 f[15] <= f.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|register:MDR
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|register:MDR
 clk => data[0].CLK
 clk => data[1].CLK
 clk => data[2].CLK
@@ -1984,7 +2264,7 @@ out[14] <= data[14].DB_MAX_OUTPUT_PORT_TYPE
 out[15] <= data[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mp2|datapath:datapath_inst|mux4:mdrOutModifier
+|mp2|cpu:cpu_inst|cpu_datapath:datapath|mux4:mdrOutModifier
 sel[0] => Mux0.IN1
 sel[0] => Mux1.IN1
 sel[0] => Mux2.IN1
@@ -2097,5 +2377,674 @@ f[12] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
 f[13] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 f[14] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 f[15] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mp2|cache:cache_inst
+clk => cache_control:control.clk
+clk => cache_datapath:datapath.clk
+mem_read => cache_control:control.mem_read
+mem_write => cache_control:control.mem_write
+mem_byte_enable[0] => cache_datapath:datapath.mem_byte_enable[0]
+mem_byte_enable[1] => cache_datapath:datapath.mem_byte_enable[1]
+mem_address[0] => cache_datapath:datapath.mem_address[0]
+mem_address[1] => cache_datapath:datapath.mem_address[1]
+mem_address[2] => cache_datapath:datapath.mem_address[2]
+mem_address[3] => cache_datapath:datapath.mem_address[3]
+mem_address[4] => cache_datapath:datapath.mem_address[4]
+mem_address[5] => cache_datapath:datapath.mem_address[5]
+mem_address[6] => cache_datapath:datapath.mem_address[6]
+mem_address[7] => cache_datapath:datapath.mem_address[7]
+mem_address[8] => cache_datapath:datapath.mem_address[8]
+mem_address[9] => cache_datapath:datapath.mem_address[9]
+mem_address[10] => cache_datapath:datapath.mem_address[10]
+mem_address[11] => cache_datapath:datapath.mem_address[11]
+mem_address[12] => cache_datapath:datapath.mem_address[12]
+mem_address[13] => cache_datapath:datapath.mem_address[13]
+mem_address[14] => cache_datapath:datapath.mem_address[14]
+mem_address[15] => cache_datapath:datapath.mem_address[15]
+mem_wdata[0] => cache_datapath:datapath.mem_wdata[0]
+mem_wdata[1] => cache_datapath:datapath.mem_wdata[1]
+mem_wdata[2] => cache_datapath:datapath.mem_wdata[2]
+mem_wdata[3] => cache_datapath:datapath.mem_wdata[3]
+mem_wdata[4] => cache_datapath:datapath.mem_wdata[4]
+mem_wdata[5] => cache_datapath:datapath.mem_wdata[5]
+mem_wdata[6] => cache_datapath:datapath.mem_wdata[6]
+mem_wdata[7] => cache_datapath:datapath.mem_wdata[7]
+mem_wdata[8] => cache_datapath:datapath.mem_wdata[8]
+mem_wdata[9] => cache_datapath:datapath.mem_wdata[9]
+mem_wdata[10] => cache_datapath:datapath.mem_wdata[10]
+mem_wdata[11] => cache_datapath:datapath.mem_wdata[11]
+mem_wdata[12] => cache_datapath:datapath.mem_wdata[12]
+mem_wdata[13] => cache_datapath:datapath.mem_wdata[13]
+mem_wdata[14] => cache_datapath:datapath.mem_wdata[14]
+mem_wdata[15] => cache_datapath:datapath.mem_wdata[15]
+mem_resp <= cache_control:control.mem_resp
+mem_rdata[0] <= cache_datapath:datapath.mem_rdata[0]
+mem_rdata[1] <= cache_datapath:datapath.mem_rdata[1]
+mem_rdata[2] <= cache_datapath:datapath.mem_rdata[2]
+mem_rdata[3] <= cache_datapath:datapath.mem_rdata[3]
+mem_rdata[4] <= cache_datapath:datapath.mem_rdata[4]
+mem_rdata[5] <= cache_datapath:datapath.mem_rdata[5]
+mem_rdata[6] <= cache_datapath:datapath.mem_rdata[6]
+mem_rdata[7] <= cache_datapath:datapath.mem_rdata[7]
+mem_rdata[8] <= cache_datapath:datapath.mem_rdata[8]
+mem_rdata[9] <= cache_datapath:datapath.mem_rdata[9]
+mem_rdata[10] <= cache_datapath:datapath.mem_rdata[10]
+mem_rdata[11] <= cache_datapath:datapath.mem_rdata[11]
+mem_rdata[12] <= cache_datapath:datapath.mem_rdata[12]
+mem_rdata[13] <= cache_datapath:datapath.mem_rdata[13]
+mem_rdata[14] <= cache_datapath:datapath.mem_rdata[14]
+mem_rdata[15] <= cache_datapath:datapath.mem_rdata[15]
+pmem_resp => cache_control:control.pmem_resp
+pmem_rdata[0] => cache_datapath:datapath.pmem_rdata[0]
+pmem_rdata[1] => cache_datapath:datapath.pmem_rdata[1]
+pmem_rdata[2] => cache_datapath:datapath.pmem_rdata[2]
+pmem_rdata[3] => cache_datapath:datapath.pmem_rdata[3]
+pmem_rdata[4] => cache_datapath:datapath.pmem_rdata[4]
+pmem_rdata[5] => cache_datapath:datapath.pmem_rdata[5]
+pmem_rdata[6] => cache_datapath:datapath.pmem_rdata[6]
+pmem_rdata[7] => cache_datapath:datapath.pmem_rdata[7]
+pmem_rdata[8] => cache_datapath:datapath.pmem_rdata[8]
+pmem_rdata[9] => cache_datapath:datapath.pmem_rdata[9]
+pmem_rdata[10] => cache_datapath:datapath.pmem_rdata[10]
+pmem_rdata[11] => cache_datapath:datapath.pmem_rdata[11]
+pmem_rdata[12] => cache_datapath:datapath.pmem_rdata[12]
+pmem_rdata[13] => cache_datapath:datapath.pmem_rdata[13]
+pmem_rdata[14] => cache_datapath:datapath.pmem_rdata[14]
+pmem_rdata[15] => cache_datapath:datapath.pmem_rdata[15]
+pmem_rdata[16] => cache_datapath:datapath.pmem_rdata[16]
+pmem_rdata[17] => cache_datapath:datapath.pmem_rdata[17]
+pmem_rdata[18] => cache_datapath:datapath.pmem_rdata[18]
+pmem_rdata[19] => cache_datapath:datapath.pmem_rdata[19]
+pmem_rdata[20] => cache_datapath:datapath.pmem_rdata[20]
+pmem_rdata[21] => cache_datapath:datapath.pmem_rdata[21]
+pmem_rdata[22] => cache_datapath:datapath.pmem_rdata[22]
+pmem_rdata[23] => cache_datapath:datapath.pmem_rdata[23]
+pmem_rdata[24] => cache_datapath:datapath.pmem_rdata[24]
+pmem_rdata[25] => cache_datapath:datapath.pmem_rdata[25]
+pmem_rdata[26] => cache_datapath:datapath.pmem_rdata[26]
+pmem_rdata[27] => cache_datapath:datapath.pmem_rdata[27]
+pmem_rdata[28] => cache_datapath:datapath.pmem_rdata[28]
+pmem_rdata[29] => cache_datapath:datapath.pmem_rdata[29]
+pmem_rdata[30] => cache_datapath:datapath.pmem_rdata[30]
+pmem_rdata[31] => cache_datapath:datapath.pmem_rdata[31]
+pmem_rdata[32] => cache_datapath:datapath.pmem_rdata[32]
+pmem_rdata[33] => cache_datapath:datapath.pmem_rdata[33]
+pmem_rdata[34] => cache_datapath:datapath.pmem_rdata[34]
+pmem_rdata[35] => cache_datapath:datapath.pmem_rdata[35]
+pmem_rdata[36] => cache_datapath:datapath.pmem_rdata[36]
+pmem_rdata[37] => cache_datapath:datapath.pmem_rdata[37]
+pmem_rdata[38] => cache_datapath:datapath.pmem_rdata[38]
+pmem_rdata[39] => cache_datapath:datapath.pmem_rdata[39]
+pmem_rdata[40] => cache_datapath:datapath.pmem_rdata[40]
+pmem_rdata[41] => cache_datapath:datapath.pmem_rdata[41]
+pmem_rdata[42] => cache_datapath:datapath.pmem_rdata[42]
+pmem_rdata[43] => cache_datapath:datapath.pmem_rdata[43]
+pmem_rdata[44] => cache_datapath:datapath.pmem_rdata[44]
+pmem_rdata[45] => cache_datapath:datapath.pmem_rdata[45]
+pmem_rdata[46] => cache_datapath:datapath.pmem_rdata[46]
+pmem_rdata[47] => cache_datapath:datapath.pmem_rdata[47]
+pmem_rdata[48] => cache_datapath:datapath.pmem_rdata[48]
+pmem_rdata[49] => cache_datapath:datapath.pmem_rdata[49]
+pmem_rdata[50] => cache_datapath:datapath.pmem_rdata[50]
+pmem_rdata[51] => cache_datapath:datapath.pmem_rdata[51]
+pmem_rdata[52] => cache_datapath:datapath.pmem_rdata[52]
+pmem_rdata[53] => cache_datapath:datapath.pmem_rdata[53]
+pmem_rdata[54] => cache_datapath:datapath.pmem_rdata[54]
+pmem_rdata[55] => cache_datapath:datapath.pmem_rdata[55]
+pmem_rdata[56] => cache_datapath:datapath.pmem_rdata[56]
+pmem_rdata[57] => cache_datapath:datapath.pmem_rdata[57]
+pmem_rdata[58] => cache_datapath:datapath.pmem_rdata[58]
+pmem_rdata[59] => cache_datapath:datapath.pmem_rdata[59]
+pmem_rdata[60] => cache_datapath:datapath.pmem_rdata[60]
+pmem_rdata[61] => cache_datapath:datapath.pmem_rdata[61]
+pmem_rdata[62] => cache_datapath:datapath.pmem_rdata[62]
+pmem_rdata[63] => cache_datapath:datapath.pmem_rdata[63]
+pmem_rdata[64] => cache_datapath:datapath.pmem_rdata[64]
+pmem_rdata[65] => cache_datapath:datapath.pmem_rdata[65]
+pmem_rdata[66] => cache_datapath:datapath.pmem_rdata[66]
+pmem_rdata[67] => cache_datapath:datapath.pmem_rdata[67]
+pmem_rdata[68] => cache_datapath:datapath.pmem_rdata[68]
+pmem_rdata[69] => cache_datapath:datapath.pmem_rdata[69]
+pmem_rdata[70] => cache_datapath:datapath.pmem_rdata[70]
+pmem_rdata[71] => cache_datapath:datapath.pmem_rdata[71]
+pmem_rdata[72] => cache_datapath:datapath.pmem_rdata[72]
+pmem_rdata[73] => cache_datapath:datapath.pmem_rdata[73]
+pmem_rdata[74] => cache_datapath:datapath.pmem_rdata[74]
+pmem_rdata[75] => cache_datapath:datapath.pmem_rdata[75]
+pmem_rdata[76] => cache_datapath:datapath.pmem_rdata[76]
+pmem_rdata[77] => cache_datapath:datapath.pmem_rdata[77]
+pmem_rdata[78] => cache_datapath:datapath.pmem_rdata[78]
+pmem_rdata[79] => cache_datapath:datapath.pmem_rdata[79]
+pmem_rdata[80] => cache_datapath:datapath.pmem_rdata[80]
+pmem_rdata[81] => cache_datapath:datapath.pmem_rdata[81]
+pmem_rdata[82] => cache_datapath:datapath.pmem_rdata[82]
+pmem_rdata[83] => cache_datapath:datapath.pmem_rdata[83]
+pmem_rdata[84] => cache_datapath:datapath.pmem_rdata[84]
+pmem_rdata[85] => cache_datapath:datapath.pmem_rdata[85]
+pmem_rdata[86] => cache_datapath:datapath.pmem_rdata[86]
+pmem_rdata[87] => cache_datapath:datapath.pmem_rdata[87]
+pmem_rdata[88] => cache_datapath:datapath.pmem_rdata[88]
+pmem_rdata[89] => cache_datapath:datapath.pmem_rdata[89]
+pmem_rdata[90] => cache_datapath:datapath.pmem_rdata[90]
+pmem_rdata[91] => cache_datapath:datapath.pmem_rdata[91]
+pmem_rdata[92] => cache_datapath:datapath.pmem_rdata[92]
+pmem_rdata[93] => cache_datapath:datapath.pmem_rdata[93]
+pmem_rdata[94] => cache_datapath:datapath.pmem_rdata[94]
+pmem_rdata[95] => cache_datapath:datapath.pmem_rdata[95]
+pmem_rdata[96] => cache_datapath:datapath.pmem_rdata[96]
+pmem_rdata[97] => cache_datapath:datapath.pmem_rdata[97]
+pmem_rdata[98] => cache_datapath:datapath.pmem_rdata[98]
+pmem_rdata[99] => cache_datapath:datapath.pmem_rdata[99]
+pmem_rdata[100] => cache_datapath:datapath.pmem_rdata[100]
+pmem_rdata[101] => cache_datapath:datapath.pmem_rdata[101]
+pmem_rdata[102] => cache_datapath:datapath.pmem_rdata[102]
+pmem_rdata[103] => cache_datapath:datapath.pmem_rdata[103]
+pmem_rdata[104] => cache_datapath:datapath.pmem_rdata[104]
+pmem_rdata[105] => cache_datapath:datapath.pmem_rdata[105]
+pmem_rdata[106] => cache_datapath:datapath.pmem_rdata[106]
+pmem_rdata[107] => cache_datapath:datapath.pmem_rdata[107]
+pmem_rdata[108] => cache_datapath:datapath.pmem_rdata[108]
+pmem_rdata[109] => cache_datapath:datapath.pmem_rdata[109]
+pmem_rdata[110] => cache_datapath:datapath.pmem_rdata[110]
+pmem_rdata[111] => cache_datapath:datapath.pmem_rdata[111]
+pmem_rdata[112] => cache_datapath:datapath.pmem_rdata[112]
+pmem_rdata[113] => cache_datapath:datapath.pmem_rdata[113]
+pmem_rdata[114] => cache_datapath:datapath.pmem_rdata[114]
+pmem_rdata[115] => cache_datapath:datapath.pmem_rdata[115]
+pmem_rdata[116] => cache_datapath:datapath.pmem_rdata[116]
+pmem_rdata[117] => cache_datapath:datapath.pmem_rdata[117]
+pmem_rdata[118] => cache_datapath:datapath.pmem_rdata[118]
+pmem_rdata[119] => cache_datapath:datapath.pmem_rdata[119]
+pmem_rdata[120] => cache_datapath:datapath.pmem_rdata[120]
+pmem_rdata[121] => cache_datapath:datapath.pmem_rdata[121]
+pmem_rdata[122] => cache_datapath:datapath.pmem_rdata[122]
+pmem_rdata[123] => cache_datapath:datapath.pmem_rdata[123]
+pmem_rdata[124] => cache_datapath:datapath.pmem_rdata[124]
+pmem_rdata[125] => cache_datapath:datapath.pmem_rdata[125]
+pmem_rdata[126] => cache_datapath:datapath.pmem_rdata[126]
+pmem_rdata[127] => cache_datapath:datapath.pmem_rdata[127]
+pmem_read <= cache_control:control.pmem_read
+pmem_write <= cache_control:control.pmem_write
+pmem_address[0] <= cache_datapath:datapath.pmem_address[0]
+pmem_address[1] <= cache_datapath:datapath.pmem_address[1]
+pmem_address[2] <= cache_datapath:datapath.pmem_address[2]
+pmem_address[3] <= cache_datapath:datapath.pmem_address[3]
+pmem_address[4] <= cache_datapath:datapath.pmem_address[4]
+pmem_address[5] <= cache_datapath:datapath.pmem_address[5]
+pmem_address[6] <= cache_datapath:datapath.pmem_address[6]
+pmem_address[7] <= cache_datapath:datapath.pmem_address[7]
+pmem_address[8] <= cache_datapath:datapath.pmem_address[8]
+pmem_address[9] <= cache_datapath:datapath.pmem_address[9]
+pmem_address[10] <= cache_datapath:datapath.pmem_address[10]
+pmem_address[11] <= cache_datapath:datapath.pmem_address[11]
+pmem_address[12] <= cache_datapath:datapath.pmem_address[12]
+pmem_address[13] <= cache_datapath:datapath.pmem_address[13]
+pmem_address[14] <= cache_datapath:datapath.pmem_address[14]
+pmem_address[15] <= cache_datapath:datapath.pmem_address[15]
+pmem_wdata[0] <= cache_datapath:datapath.pmem_wdata[0]
+pmem_wdata[1] <= cache_datapath:datapath.pmem_wdata[1]
+pmem_wdata[2] <= cache_datapath:datapath.pmem_wdata[2]
+pmem_wdata[3] <= cache_datapath:datapath.pmem_wdata[3]
+pmem_wdata[4] <= cache_datapath:datapath.pmem_wdata[4]
+pmem_wdata[5] <= cache_datapath:datapath.pmem_wdata[5]
+pmem_wdata[6] <= cache_datapath:datapath.pmem_wdata[6]
+pmem_wdata[7] <= cache_datapath:datapath.pmem_wdata[7]
+pmem_wdata[8] <= cache_datapath:datapath.pmem_wdata[8]
+pmem_wdata[9] <= cache_datapath:datapath.pmem_wdata[9]
+pmem_wdata[10] <= cache_datapath:datapath.pmem_wdata[10]
+pmem_wdata[11] <= cache_datapath:datapath.pmem_wdata[11]
+pmem_wdata[12] <= cache_datapath:datapath.pmem_wdata[12]
+pmem_wdata[13] <= cache_datapath:datapath.pmem_wdata[13]
+pmem_wdata[14] <= cache_datapath:datapath.pmem_wdata[14]
+pmem_wdata[15] <= cache_datapath:datapath.pmem_wdata[15]
+pmem_wdata[16] <= cache_datapath:datapath.pmem_wdata[16]
+pmem_wdata[17] <= cache_datapath:datapath.pmem_wdata[17]
+pmem_wdata[18] <= cache_datapath:datapath.pmem_wdata[18]
+pmem_wdata[19] <= cache_datapath:datapath.pmem_wdata[19]
+pmem_wdata[20] <= cache_datapath:datapath.pmem_wdata[20]
+pmem_wdata[21] <= cache_datapath:datapath.pmem_wdata[21]
+pmem_wdata[22] <= cache_datapath:datapath.pmem_wdata[22]
+pmem_wdata[23] <= cache_datapath:datapath.pmem_wdata[23]
+pmem_wdata[24] <= cache_datapath:datapath.pmem_wdata[24]
+pmem_wdata[25] <= cache_datapath:datapath.pmem_wdata[25]
+pmem_wdata[26] <= cache_datapath:datapath.pmem_wdata[26]
+pmem_wdata[27] <= cache_datapath:datapath.pmem_wdata[27]
+pmem_wdata[28] <= cache_datapath:datapath.pmem_wdata[28]
+pmem_wdata[29] <= cache_datapath:datapath.pmem_wdata[29]
+pmem_wdata[30] <= cache_datapath:datapath.pmem_wdata[30]
+pmem_wdata[31] <= cache_datapath:datapath.pmem_wdata[31]
+pmem_wdata[32] <= cache_datapath:datapath.pmem_wdata[32]
+pmem_wdata[33] <= cache_datapath:datapath.pmem_wdata[33]
+pmem_wdata[34] <= cache_datapath:datapath.pmem_wdata[34]
+pmem_wdata[35] <= cache_datapath:datapath.pmem_wdata[35]
+pmem_wdata[36] <= cache_datapath:datapath.pmem_wdata[36]
+pmem_wdata[37] <= cache_datapath:datapath.pmem_wdata[37]
+pmem_wdata[38] <= cache_datapath:datapath.pmem_wdata[38]
+pmem_wdata[39] <= cache_datapath:datapath.pmem_wdata[39]
+pmem_wdata[40] <= cache_datapath:datapath.pmem_wdata[40]
+pmem_wdata[41] <= cache_datapath:datapath.pmem_wdata[41]
+pmem_wdata[42] <= cache_datapath:datapath.pmem_wdata[42]
+pmem_wdata[43] <= cache_datapath:datapath.pmem_wdata[43]
+pmem_wdata[44] <= cache_datapath:datapath.pmem_wdata[44]
+pmem_wdata[45] <= cache_datapath:datapath.pmem_wdata[45]
+pmem_wdata[46] <= cache_datapath:datapath.pmem_wdata[46]
+pmem_wdata[47] <= cache_datapath:datapath.pmem_wdata[47]
+pmem_wdata[48] <= cache_datapath:datapath.pmem_wdata[48]
+pmem_wdata[49] <= cache_datapath:datapath.pmem_wdata[49]
+pmem_wdata[50] <= cache_datapath:datapath.pmem_wdata[50]
+pmem_wdata[51] <= cache_datapath:datapath.pmem_wdata[51]
+pmem_wdata[52] <= cache_datapath:datapath.pmem_wdata[52]
+pmem_wdata[53] <= cache_datapath:datapath.pmem_wdata[53]
+pmem_wdata[54] <= cache_datapath:datapath.pmem_wdata[54]
+pmem_wdata[55] <= cache_datapath:datapath.pmem_wdata[55]
+pmem_wdata[56] <= cache_datapath:datapath.pmem_wdata[56]
+pmem_wdata[57] <= cache_datapath:datapath.pmem_wdata[57]
+pmem_wdata[58] <= cache_datapath:datapath.pmem_wdata[58]
+pmem_wdata[59] <= cache_datapath:datapath.pmem_wdata[59]
+pmem_wdata[60] <= cache_datapath:datapath.pmem_wdata[60]
+pmem_wdata[61] <= cache_datapath:datapath.pmem_wdata[61]
+pmem_wdata[62] <= cache_datapath:datapath.pmem_wdata[62]
+pmem_wdata[63] <= cache_datapath:datapath.pmem_wdata[63]
+pmem_wdata[64] <= cache_datapath:datapath.pmem_wdata[64]
+pmem_wdata[65] <= cache_datapath:datapath.pmem_wdata[65]
+pmem_wdata[66] <= cache_datapath:datapath.pmem_wdata[66]
+pmem_wdata[67] <= cache_datapath:datapath.pmem_wdata[67]
+pmem_wdata[68] <= cache_datapath:datapath.pmem_wdata[68]
+pmem_wdata[69] <= cache_datapath:datapath.pmem_wdata[69]
+pmem_wdata[70] <= cache_datapath:datapath.pmem_wdata[70]
+pmem_wdata[71] <= cache_datapath:datapath.pmem_wdata[71]
+pmem_wdata[72] <= cache_datapath:datapath.pmem_wdata[72]
+pmem_wdata[73] <= cache_datapath:datapath.pmem_wdata[73]
+pmem_wdata[74] <= cache_datapath:datapath.pmem_wdata[74]
+pmem_wdata[75] <= cache_datapath:datapath.pmem_wdata[75]
+pmem_wdata[76] <= cache_datapath:datapath.pmem_wdata[76]
+pmem_wdata[77] <= cache_datapath:datapath.pmem_wdata[77]
+pmem_wdata[78] <= cache_datapath:datapath.pmem_wdata[78]
+pmem_wdata[79] <= cache_datapath:datapath.pmem_wdata[79]
+pmem_wdata[80] <= cache_datapath:datapath.pmem_wdata[80]
+pmem_wdata[81] <= cache_datapath:datapath.pmem_wdata[81]
+pmem_wdata[82] <= cache_datapath:datapath.pmem_wdata[82]
+pmem_wdata[83] <= cache_datapath:datapath.pmem_wdata[83]
+pmem_wdata[84] <= cache_datapath:datapath.pmem_wdata[84]
+pmem_wdata[85] <= cache_datapath:datapath.pmem_wdata[85]
+pmem_wdata[86] <= cache_datapath:datapath.pmem_wdata[86]
+pmem_wdata[87] <= cache_datapath:datapath.pmem_wdata[87]
+pmem_wdata[88] <= cache_datapath:datapath.pmem_wdata[88]
+pmem_wdata[89] <= cache_datapath:datapath.pmem_wdata[89]
+pmem_wdata[90] <= cache_datapath:datapath.pmem_wdata[90]
+pmem_wdata[91] <= cache_datapath:datapath.pmem_wdata[91]
+pmem_wdata[92] <= cache_datapath:datapath.pmem_wdata[92]
+pmem_wdata[93] <= cache_datapath:datapath.pmem_wdata[93]
+pmem_wdata[94] <= cache_datapath:datapath.pmem_wdata[94]
+pmem_wdata[95] <= cache_datapath:datapath.pmem_wdata[95]
+pmem_wdata[96] <= cache_datapath:datapath.pmem_wdata[96]
+pmem_wdata[97] <= cache_datapath:datapath.pmem_wdata[97]
+pmem_wdata[98] <= cache_datapath:datapath.pmem_wdata[98]
+pmem_wdata[99] <= cache_datapath:datapath.pmem_wdata[99]
+pmem_wdata[100] <= cache_datapath:datapath.pmem_wdata[100]
+pmem_wdata[101] <= cache_datapath:datapath.pmem_wdata[101]
+pmem_wdata[102] <= cache_datapath:datapath.pmem_wdata[102]
+pmem_wdata[103] <= cache_datapath:datapath.pmem_wdata[103]
+pmem_wdata[104] <= cache_datapath:datapath.pmem_wdata[104]
+pmem_wdata[105] <= cache_datapath:datapath.pmem_wdata[105]
+pmem_wdata[106] <= cache_datapath:datapath.pmem_wdata[106]
+pmem_wdata[107] <= cache_datapath:datapath.pmem_wdata[107]
+pmem_wdata[108] <= cache_datapath:datapath.pmem_wdata[108]
+pmem_wdata[109] <= cache_datapath:datapath.pmem_wdata[109]
+pmem_wdata[110] <= cache_datapath:datapath.pmem_wdata[110]
+pmem_wdata[111] <= cache_datapath:datapath.pmem_wdata[111]
+pmem_wdata[112] <= cache_datapath:datapath.pmem_wdata[112]
+pmem_wdata[113] <= cache_datapath:datapath.pmem_wdata[113]
+pmem_wdata[114] <= cache_datapath:datapath.pmem_wdata[114]
+pmem_wdata[115] <= cache_datapath:datapath.pmem_wdata[115]
+pmem_wdata[116] <= cache_datapath:datapath.pmem_wdata[116]
+pmem_wdata[117] <= cache_datapath:datapath.pmem_wdata[117]
+pmem_wdata[118] <= cache_datapath:datapath.pmem_wdata[118]
+pmem_wdata[119] <= cache_datapath:datapath.pmem_wdata[119]
+pmem_wdata[120] <= cache_datapath:datapath.pmem_wdata[120]
+pmem_wdata[121] <= cache_datapath:datapath.pmem_wdata[121]
+pmem_wdata[122] <= cache_datapath:datapath.pmem_wdata[122]
+pmem_wdata[123] <= cache_datapath:datapath.pmem_wdata[123]
+pmem_wdata[124] <= cache_datapath:datapath.pmem_wdata[124]
+pmem_wdata[125] <= cache_datapath:datapath.pmem_wdata[125]
+pmem_wdata[126] <= cache_datapath:datapath.pmem_wdata[126]
+pmem_wdata[127] <= cache_datapath:datapath.pmem_wdata[127]
+
+
+|mp2|cache:cache_inst|cache_control:control
+clk => ~NO_FANOUT~
+mem_read => ~NO_FANOUT~
+mem_write => ~NO_FANOUT~
+mem_resp <= <GND>
+pmem_resp => ~NO_FANOUT~
+pmem_read <= <GND>
+pmem_write <= <GND>
+
+
+|mp2|cache:cache_inst|cache_datapath:datapath
+clk => ~NO_FANOUT~
+mem_byte_enable[0] => ~NO_FANOUT~
+mem_byte_enable[1] => ~NO_FANOUT~
+mem_address[0] => ~NO_FANOUT~
+mem_address[1] => ~NO_FANOUT~
+mem_address[2] => ~NO_FANOUT~
+mem_address[3] => ~NO_FANOUT~
+mem_address[4] => ~NO_FANOUT~
+mem_address[5] => ~NO_FANOUT~
+mem_address[6] => ~NO_FANOUT~
+mem_address[7] => ~NO_FANOUT~
+mem_address[8] => ~NO_FANOUT~
+mem_address[9] => ~NO_FANOUT~
+mem_address[10] => ~NO_FANOUT~
+mem_address[11] => ~NO_FANOUT~
+mem_address[12] => ~NO_FANOUT~
+mem_address[13] => ~NO_FANOUT~
+mem_address[14] => ~NO_FANOUT~
+mem_address[15] => ~NO_FANOUT~
+mem_wdata[0] => ~NO_FANOUT~
+mem_wdata[1] => ~NO_FANOUT~
+mem_wdata[2] => ~NO_FANOUT~
+mem_wdata[3] => ~NO_FANOUT~
+mem_wdata[4] => ~NO_FANOUT~
+mem_wdata[5] => ~NO_FANOUT~
+mem_wdata[6] => ~NO_FANOUT~
+mem_wdata[7] => ~NO_FANOUT~
+mem_wdata[8] => ~NO_FANOUT~
+mem_wdata[9] => ~NO_FANOUT~
+mem_wdata[10] => ~NO_FANOUT~
+mem_wdata[11] => ~NO_FANOUT~
+mem_wdata[12] => ~NO_FANOUT~
+mem_wdata[13] => ~NO_FANOUT~
+mem_wdata[14] => ~NO_FANOUT~
+mem_wdata[15] => ~NO_FANOUT~
+mem_rdata[0] <= <GND>
+mem_rdata[1] <= <GND>
+mem_rdata[2] <= <GND>
+mem_rdata[3] <= <GND>
+mem_rdata[4] <= <GND>
+mem_rdata[5] <= <GND>
+mem_rdata[6] <= <GND>
+mem_rdata[7] <= <GND>
+mem_rdata[8] <= <GND>
+mem_rdata[9] <= <GND>
+mem_rdata[10] <= <GND>
+mem_rdata[11] <= <GND>
+mem_rdata[12] <= <GND>
+mem_rdata[13] <= <GND>
+mem_rdata[14] <= <GND>
+mem_rdata[15] <= <GND>
+pmem_rdata[0] => ~NO_FANOUT~
+pmem_rdata[1] => ~NO_FANOUT~
+pmem_rdata[2] => ~NO_FANOUT~
+pmem_rdata[3] => ~NO_FANOUT~
+pmem_rdata[4] => ~NO_FANOUT~
+pmem_rdata[5] => ~NO_FANOUT~
+pmem_rdata[6] => ~NO_FANOUT~
+pmem_rdata[7] => ~NO_FANOUT~
+pmem_rdata[8] => ~NO_FANOUT~
+pmem_rdata[9] => ~NO_FANOUT~
+pmem_rdata[10] => ~NO_FANOUT~
+pmem_rdata[11] => ~NO_FANOUT~
+pmem_rdata[12] => ~NO_FANOUT~
+pmem_rdata[13] => ~NO_FANOUT~
+pmem_rdata[14] => ~NO_FANOUT~
+pmem_rdata[15] => ~NO_FANOUT~
+pmem_rdata[16] => ~NO_FANOUT~
+pmem_rdata[17] => ~NO_FANOUT~
+pmem_rdata[18] => ~NO_FANOUT~
+pmem_rdata[19] => ~NO_FANOUT~
+pmem_rdata[20] => ~NO_FANOUT~
+pmem_rdata[21] => ~NO_FANOUT~
+pmem_rdata[22] => ~NO_FANOUT~
+pmem_rdata[23] => ~NO_FANOUT~
+pmem_rdata[24] => ~NO_FANOUT~
+pmem_rdata[25] => ~NO_FANOUT~
+pmem_rdata[26] => ~NO_FANOUT~
+pmem_rdata[27] => ~NO_FANOUT~
+pmem_rdata[28] => ~NO_FANOUT~
+pmem_rdata[29] => ~NO_FANOUT~
+pmem_rdata[30] => ~NO_FANOUT~
+pmem_rdata[31] => ~NO_FANOUT~
+pmem_rdata[32] => ~NO_FANOUT~
+pmem_rdata[33] => ~NO_FANOUT~
+pmem_rdata[34] => ~NO_FANOUT~
+pmem_rdata[35] => ~NO_FANOUT~
+pmem_rdata[36] => ~NO_FANOUT~
+pmem_rdata[37] => ~NO_FANOUT~
+pmem_rdata[38] => ~NO_FANOUT~
+pmem_rdata[39] => ~NO_FANOUT~
+pmem_rdata[40] => ~NO_FANOUT~
+pmem_rdata[41] => ~NO_FANOUT~
+pmem_rdata[42] => ~NO_FANOUT~
+pmem_rdata[43] => ~NO_FANOUT~
+pmem_rdata[44] => ~NO_FANOUT~
+pmem_rdata[45] => ~NO_FANOUT~
+pmem_rdata[46] => ~NO_FANOUT~
+pmem_rdata[47] => ~NO_FANOUT~
+pmem_rdata[48] => ~NO_FANOUT~
+pmem_rdata[49] => ~NO_FANOUT~
+pmem_rdata[50] => ~NO_FANOUT~
+pmem_rdata[51] => ~NO_FANOUT~
+pmem_rdata[52] => ~NO_FANOUT~
+pmem_rdata[53] => ~NO_FANOUT~
+pmem_rdata[54] => ~NO_FANOUT~
+pmem_rdata[55] => ~NO_FANOUT~
+pmem_rdata[56] => ~NO_FANOUT~
+pmem_rdata[57] => ~NO_FANOUT~
+pmem_rdata[58] => ~NO_FANOUT~
+pmem_rdata[59] => ~NO_FANOUT~
+pmem_rdata[60] => ~NO_FANOUT~
+pmem_rdata[61] => ~NO_FANOUT~
+pmem_rdata[62] => ~NO_FANOUT~
+pmem_rdata[63] => ~NO_FANOUT~
+pmem_rdata[64] => ~NO_FANOUT~
+pmem_rdata[65] => ~NO_FANOUT~
+pmem_rdata[66] => ~NO_FANOUT~
+pmem_rdata[67] => ~NO_FANOUT~
+pmem_rdata[68] => ~NO_FANOUT~
+pmem_rdata[69] => ~NO_FANOUT~
+pmem_rdata[70] => ~NO_FANOUT~
+pmem_rdata[71] => ~NO_FANOUT~
+pmem_rdata[72] => ~NO_FANOUT~
+pmem_rdata[73] => ~NO_FANOUT~
+pmem_rdata[74] => ~NO_FANOUT~
+pmem_rdata[75] => ~NO_FANOUT~
+pmem_rdata[76] => ~NO_FANOUT~
+pmem_rdata[77] => ~NO_FANOUT~
+pmem_rdata[78] => ~NO_FANOUT~
+pmem_rdata[79] => ~NO_FANOUT~
+pmem_rdata[80] => ~NO_FANOUT~
+pmem_rdata[81] => ~NO_FANOUT~
+pmem_rdata[82] => ~NO_FANOUT~
+pmem_rdata[83] => ~NO_FANOUT~
+pmem_rdata[84] => ~NO_FANOUT~
+pmem_rdata[85] => ~NO_FANOUT~
+pmem_rdata[86] => ~NO_FANOUT~
+pmem_rdata[87] => ~NO_FANOUT~
+pmem_rdata[88] => ~NO_FANOUT~
+pmem_rdata[89] => ~NO_FANOUT~
+pmem_rdata[90] => ~NO_FANOUT~
+pmem_rdata[91] => ~NO_FANOUT~
+pmem_rdata[92] => ~NO_FANOUT~
+pmem_rdata[93] => ~NO_FANOUT~
+pmem_rdata[94] => ~NO_FANOUT~
+pmem_rdata[95] => ~NO_FANOUT~
+pmem_rdata[96] => ~NO_FANOUT~
+pmem_rdata[97] => ~NO_FANOUT~
+pmem_rdata[98] => ~NO_FANOUT~
+pmem_rdata[99] => ~NO_FANOUT~
+pmem_rdata[100] => ~NO_FANOUT~
+pmem_rdata[101] => ~NO_FANOUT~
+pmem_rdata[102] => ~NO_FANOUT~
+pmem_rdata[103] => ~NO_FANOUT~
+pmem_rdata[104] => ~NO_FANOUT~
+pmem_rdata[105] => ~NO_FANOUT~
+pmem_rdata[106] => ~NO_FANOUT~
+pmem_rdata[107] => ~NO_FANOUT~
+pmem_rdata[108] => ~NO_FANOUT~
+pmem_rdata[109] => ~NO_FANOUT~
+pmem_rdata[110] => ~NO_FANOUT~
+pmem_rdata[111] => ~NO_FANOUT~
+pmem_rdata[112] => ~NO_FANOUT~
+pmem_rdata[113] => ~NO_FANOUT~
+pmem_rdata[114] => ~NO_FANOUT~
+pmem_rdata[115] => ~NO_FANOUT~
+pmem_rdata[116] => ~NO_FANOUT~
+pmem_rdata[117] => ~NO_FANOUT~
+pmem_rdata[118] => ~NO_FANOUT~
+pmem_rdata[119] => ~NO_FANOUT~
+pmem_rdata[120] => ~NO_FANOUT~
+pmem_rdata[121] => ~NO_FANOUT~
+pmem_rdata[122] => ~NO_FANOUT~
+pmem_rdata[123] => ~NO_FANOUT~
+pmem_rdata[124] => ~NO_FANOUT~
+pmem_rdata[125] => ~NO_FANOUT~
+pmem_rdata[126] => ~NO_FANOUT~
+pmem_rdata[127] => ~NO_FANOUT~
+pmem_address[0] <= <GND>
+pmem_address[1] <= <GND>
+pmem_address[2] <= <GND>
+pmem_address[3] <= <GND>
+pmem_address[4] <= <GND>
+pmem_address[5] <= <GND>
+pmem_address[6] <= <GND>
+pmem_address[7] <= <GND>
+pmem_address[8] <= <GND>
+pmem_address[9] <= <GND>
+pmem_address[10] <= <GND>
+pmem_address[11] <= <GND>
+pmem_address[12] <= <GND>
+pmem_address[13] <= <GND>
+pmem_address[14] <= <GND>
+pmem_address[15] <= <GND>
+pmem_wdata[0] <= <GND>
+pmem_wdata[1] <= <GND>
+pmem_wdata[2] <= <GND>
+pmem_wdata[3] <= <GND>
+pmem_wdata[4] <= <GND>
+pmem_wdata[5] <= <GND>
+pmem_wdata[6] <= <GND>
+pmem_wdata[7] <= <GND>
+pmem_wdata[8] <= <GND>
+pmem_wdata[9] <= <GND>
+pmem_wdata[10] <= <GND>
+pmem_wdata[11] <= <GND>
+pmem_wdata[12] <= <GND>
+pmem_wdata[13] <= <GND>
+pmem_wdata[14] <= <GND>
+pmem_wdata[15] <= <GND>
+pmem_wdata[16] <= <GND>
+pmem_wdata[17] <= <GND>
+pmem_wdata[18] <= <GND>
+pmem_wdata[19] <= <GND>
+pmem_wdata[20] <= <GND>
+pmem_wdata[21] <= <GND>
+pmem_wdata[22] <= <GND>
+pmem_wdata[23] <= <GND>
+pmem_wdata[24] <= <GND>
+pmem_wdata[25] <= <GND>
+pmem_wdata[26] <= <GND>
+pmem_wdata[27] <= <GND>
+pmem_wdata[28] <= <GND>
+pmem_wdata[29] <= <GND>
+pmem_wdata[30] <= <GND>
+pmem_wdata[31] <= <GND>
+pmem_wdata[32] <= <GND>
+pmem_wdata[33] <= <GND>
+pmem_wdata[34] <= <GND>
+pmem_wdata[35] <= <GND>
+pmem_wdata[36] <= <GND>
+pmem_wdata[37] <= <GND>
+pmem_wdata[38] <= <GND>
+pmem_wdata[39] <= <GND>
+pmem_wdata[40] <= <GND>
+pmem_wdata[41] <= <GND>
+pmem_wdata[42] <= <GND>
+pmem_wdata[43] <= <GND>
+pmem_wdata[44] <= <GND>
+pmem_wdata[45] <= <GND>
+pmem_wdata[46] <= <GND>
+pmem_wdata[47] <= <GND>
+pmem_wdata[48] <= <GND>
+pmem_wdata[49] <= <GND>
+pmem_wdata[50] <= <GND>
+pmem_wdata[51] <= <GND>
+pmem_wdata[52] <= <GND>
+pmem_wdata[53] <= <GND>
+pmem_wdata[54] <= <GND>
+pmem_wdata[55] <= <GND>
+pmem_wdata[56] <= <GND>
+pmem_wdata[57] <= <GND>
+pmem_wdata[58] <= <GND>
+pmem_wdata[59] <= <GND>
+pmem_wdata[60] <= <GND>
+pmem_wdata[61] <= <GND>
+pmem_wdata[62] <= <GND>
+pmem_wdata[63] <= <GND>
+pmem_wdata[64] <= <GND>
+pmem_wdata[65] <= <GND>
+pmem_wdata[66] <= <GND>
+pmem_wdata[67] <= <GND>
+pmem_wdata[68] <= <GND>
+pmem_wdata[69] <= <GND>
+pmem_wdata[70] <= <GND>
+pmem_wdata[71] <= <GND>
+pmem_wdata[72] <= <GND>
+pmem_wdata[73] <= <GND>
+pmem_wdata[74] <= <GND>
+pmem_wdata[75] <= <GND>
+pmem_wdata[76] <= <GND>
+pmem_wdata[77] <= <GND>
+pmem_wdata[78] <= <GND>
+pmem_wdata[79] <= <GND>
+pmem_wdata[80] <= <GND>
+pmem_wdata[81] <= <GND>
+pmem_wdata[82] <= <GND>
+pmem_wdata[83] <= <GND>
+pmem_wdata[84] <= <GND>
+pmem_wdata[85] <= <GND>
+pmem_wdata[86] <= <GND>
+pmem_wdata[87] <= <GND>
+pmem_wdata[88] <= <GND>
+pmem_wdata[89] <= <GND>
+pmem_wdata[90] <= <GND>
+pmem_wdata[91] <= <GND>
+pmem_wdata[92] <= <GND>
+pmem_wdata[93] <= <GND>
+pmem_wdata[94] <= <GND>
+pmem_wdata[95] <= <GND>
+pmem_wdata[96] <= <GND>
+pmem_wdata[97] <= <GND>
+pmem_wdata[98] <= <GND>
+pmem_wdata[99] <= <GND>
+pmem_wdata[100] <= <GND>
+pmem_wdata[101] <= <GND>
+pmem_wdata[102] <= <GND>
+pmem_wdata[103] <= <GND>
+pmem_wdata[104] <= <GND>
+pmem_wdata[105] <= <GND>
+pmem_wdata[106] <= <GND>
+pmem_wdata[107] <= <GND>
+pmem_wdata[108] <= <GND>
+pmem_wdata[109] <= <GND>
+pmem_wdata[110] <= <GND>
+pmem_wdata[111] <= <GND>
+pmem_wdata[112] <= <GND>
+pmem_wdata[113] <= <GND>
+pmem_wdata[114] <= <GND>
+pmem_wdata[115] <= <GND>
+pmem_wdata[116] <= <GND>
+pmem_wdata[117] <= <GND>
+pmem_wdata[118] <= <GND>
+pmem_wdata[119] <= <GND>
+pmem_wdata[120] <= <GND>
+pmem_wdata[121] <= <GND>
+pmem_wdata[122] <= <GND>
+pmem_wdata[123] <= <GND>
+pmem_wdata[124] <= <GND>
+pmem_wdata[125] <= <GND>
+pmem_wdata[126] <= <GND>
+pmem_wdata[127] <= <GND>
 
 

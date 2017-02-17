@@ -1,6 +1,6 @@
 import lc3b_types::*;
 
-module datapath
+module cpu_datapath
 (
     input clk,
 
@@ -292,4 +292,4 @@ mux4 mdrOutModifier
     .f(mdrOutModifier_out)
 );
 
-endmodule : datapath
+endmodule : cpu_datapath
