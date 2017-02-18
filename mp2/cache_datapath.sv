@@ -8,6 +8,7 @@ module cache_datapath
     input load_lru, writeback_ctrlsig,
     input load_d0, load_v0, load_TD0, d_in0, v_in0,
     input load_d1, load_v1, load_TD1, d_in1, v_in1,
+    input [1:0] pmemaddr_sel,
     output logic lru_out, d_out0, d_out1, hit,
 
     /* CPU signals */
@@ -16,6 +17,7 @@ module cache_datapath
     output lc3b_word mem_rdata,
 
     /* Memory signals */
+    input pmem_read,
     input lc3b_cacheline pmem_rdata,
     output lc3b_word pmem_address,
     output lc3b_cacheline pmem_wdata
@@ -85,6 +87,16 @@ mux8 #(16) mem_rdata_mux
     .y(mem_rdata)
 );
 
+
+mux4 #(16) pmemaddr_mux
+(
+    .sel(pmemaddr_sel),
+    .a({mem_address[15:4], 4'h0}),
+    .b({tag0, mem_address[6:4], 4'h0}),
+    .c({tag1, mem_address[6:4], 4'h0}),
+    .d((16'h0000),
+    .f(pmem_address)
+);
 
 
 endmodule : cache_datapath

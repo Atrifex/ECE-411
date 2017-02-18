@@ -54,11 +54,11 @@ cache_datapath datapath
     // outputs
 
     /* CPU signals */
-    .mem_byte_enable, .mem_address, .mem_wdata,       // inputs
-    .mem_rdata,                                     // outputs
+    .mem_byte_enable, .mem_address, .mem_wdata,      // inputs
+    .mem_rdata,                                      // outputs
 
     /* Memory signals */
-    .pmem_rdata,                                    // inputs
+    .pmem_read, .pmem_rdata,                         // inputs
     .pmem_address, .pmem_wdata                       // outputs
 
 );
