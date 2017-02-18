@@ -27,7 +27,7 @@ logic load_lru, writeback_ctrlsig;
 logic load_d0, load_v0, load_TD0, d_set0, v_set0;
 logic load_d1, load_v1, load_TD1, d_set1, v_set1;
 logic [1:0] pmemaddr_sel;
-logic lru_out, dirty0, dirty1, hit;
+logic lru, lru_set, dirty0, dirty1, hit0, hit1;
 
 cache_control control
 (
@@ -35,9 +35,9 @@ cache_control control
 
     /* Datapath controls */
     // inputs
-    .lru_out, .d_in0(dirty0), .d_in1(dirty1), .hit,
+    .lru_in(lru), .d_in0(dirty0), .d_in1(dirty1), .hit0, .hit1,
     // outputs
-    .load_lru, .writeback_ctrlsig,
+    .load_lru, .lru_set, .writeback_ctrlsig,
     .load_d0, .load_v0, .load_TD0, .d_set0(d_set0), .v_set0(v_set0),
     .load_d1, .load_v1, .load_TD1, .d_set1(d_set1), .v_set1(v_set1),
     .pmemaddr_sel,
@@ -58,12 +58,12 @@ cache_datapath datapath
 
     /* Control signals */
     // inputs
-    .load_lru, .writeback_ctrlsig,
+    .load_lru, .lru_in(lru_set), .writeback_ctrlsig,
     .load_d0, .load_v0, .load_TD0, .d_in0(d_set0), .v_in0(v_set0),
     .load_d1, .load_v1, .load_TD1, .d_in1(d_set1), .v_in1(v_set1),
     .pmemaddr_sel,
     // outputs
-    .lru_out, .d_out0(dirty0), .d_out1(dirty1), .hit,
+    .lru_out(lru), .d_out0(dirty0), .d_out1(dirty1), .hit0, .hit1,
 
     /* CPU signals */
     .mem_byte_enable, .mem_address, .mem_wdata,      // inputs

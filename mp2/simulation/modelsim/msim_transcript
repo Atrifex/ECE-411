@@ -9,6 +9,24 @@
 # ** Warning: Copied /software/altera/13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/cache_control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cache_control
+# 
+# Top level modules:
+# 	cache_control
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/decoder3.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module decoder3
+# 
+# Top level modules:
+# 	decoder3
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/mux8.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux8
+# 
+# Top level modules:
+# 	mux8
 # vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/lc3b_types.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package lc3b_types
@@ -45,6 +63,34 @@
 # 
 # Top level modules:
 # 	mux4
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/cpu_control.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cpu_control_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cpu_control
+# 
+# Top level modules:
+# 	cpu_control
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/cache_writelogic.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# ** Warning: /home/rrthakk2/ece411/mp2/cache_writelogic.sv(28): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: /home/rrthakk2/ece411/mp2/cache_writelogic.sv(37): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# -- Compiling package cache_writelogic_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cache_writelogic
+# ** Warning: /home/rrthakk2/ece411/mp2/cache_writelogic.sv(28): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: /home/rrthakk2/ece411/mp2/cache_writelogic.sv(37): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	cache_writelogic
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/array.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package array_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module array
+# 
+# Top level modules:
+# 	array
 # vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/adj.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package adj_sv_unit
@@ -61,14 +107,6 @@
 # 
 # Top level modules:
 # 	alu
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/control.sv}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package control_sv_unit
-# -- Importing package lc3b_types
-# -- Compiling module control
-# 
-# Top level modules:
-# 	control
 # vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/gencc.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package gencc_sv_unit
@@ -101,14 +139,46 @@
 # 
 # Top level modules:
 # 	cccomp
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/datapath.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/cpu_datapath.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling package datapath_sv_unit
+# -- Compiling package cpu_datapath_sv_unit
 # -- Importing package lc3b_types
-# -- Compiling module datapath
+# -- Compiling module cpu_datapath
 # 
 # Top level modules:
-# 	datapath
+# 	cpu_datapath
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/way.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package way_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module way
+# 
+# Top level modules:
+# 	way
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/cache_datapath.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cache_datapath_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cache_datapath
+# 
+# Top level modules:
+# 	cache_datapath
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/cpu.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cpu_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cpu
+# 
+# Top level modules:
+# 	cpu
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/cache.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling package cache_sv_unit
+# -- Importing package lc3b_types
+# -- Compiling module cache
+# 
+# Top level modules:
+# 	cache
 # vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/mp2.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling package mp2_sv_unit
@@ -124,12 +194,12 @@
 # 
 # Top level modules:
 # 	mp2_tb
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/memory.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/physical_memory.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module memory
+# -- Compiling module physical_memory
 # 
 # Top level modules:
-# 	memory
+# 	physical_memory
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp2_tb
 # vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mp2_tb 
@@ -138,10 +208,12 @@
 # Loading work.lc3b_types
 # Loading work.mp2_sv_unit
 # Loading work.mp2
-# Loading work.control_sv_unit
-# Loading work.control
-# Loading work.datapath_sv_unit
-# Loading work.datapath
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
 # Loading work.register
 # Loading work.mux4
 # Loading work.plus2
@@ -159,19 +231,126 @@
 # Loading work.gencc
 # Loading work.cccomp_sv_unit
 # Loading work.cccomp
-# ** Error: (vsim-3033) /home/rrthakk2/ece411/mp2/mp2_tb.sv(38): Instantiation of 'physical_memory' failed. The design unit was not found.
-#         Region: /mp2_tb
-#         Searched libraries:
-#             /software/altera/13.1/modelsim_ase/altera/verilog/altera
-#             /software/altera/13.1/modelsim_ase/altera/verilog/220model
-#             /software/altera/13.1/modelsim_ase/altera/verilog/sgate
-#             /software/altera/13.1/modelsim_ase/altera/verilog/altera_mf
-#             /software/altera/13.1/modelsim_ase/altera/verilog/altera_lnsim
-#             /software/altera/13.1/modelsim_ase/altera/verilog/stratixiii
-#             /home/rrthakk2/ece411/mp2/simulation/modelsim/rtl_work
-#             /home/rrthakk2/ece411/mp2/simulation/modelsim/rtl_work
-#             /home/rrthakk2/ece411/mp2/simulation/modelsim/rtl_work
-# Error loading design
-# Error: Error loading design 
-#        Pausing macro execution 
-# MACRO ./mp2_run_msim_rtl_verilog.do PAUSED at line 27
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_control
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.cache_writelogic_sv_unit
+# Loading work.cache_writelogic
+# Loading work.decoder3
+# Loading work.array_sv_unit
+# Loading work.array
+# Loading work.way_sv_unit
+# Loading work.way
+# Loading work.mux8
+# Loading work.physical_memory
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 200 ns
+add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/lru/data
+add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way0/data/clk
+add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way0/data/write
+add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way0/data/index
+add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way0/data/datain
+add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way0/data/dataout
+add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way1/data/clk
+add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way1/data/write
+add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way1/data/index
+add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way1/data/datain
+add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way1/data/dataout
+add wave -position end  sim:/mp2_tb/dut/cpu_inst/datapath/regfile_inst/data
+restart -f; 3000ns
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.lc3b_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.register
+# Loading work.mux4
+# Loading work.plus2
+# Loading work.adder
+# Loading work.mux2
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_control
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.cache_writelogic_sv_unit
+# Loading work.cache_writelogic
+# Loading work.decoder3
+# Loading work.array_sv_unit
+# Loading work.array
+# Loading work.way_sv_unit
+# Loading work.way
+# Loading work.mux8
+# Loading work.physical_memory
+# invalid command name "3000ns"
+restart -f; run 3000ns
+# Loading sv_std.std
+# Loading work.mp2_tb
+# Loading work.lc3b_types
+# Loading work.mp2_sv_unit
+# Loading work.mp2
+# Loading work.cpu_sv_unit
+# Loading work.cpu
+# Loading work.cpu_control_sv_unit
+# Loading work.cpu_control
+# Loading work.cpu_datapath_sv_unit
+# Loading work.cpu_datapath
+# Loading work.register
+# Loading work.mux4
+# Loading work.plus2
+# Loading work.adder
+# Loading work.mux2
+# Loading work.adj_sv_unit
+# Loading work.adj
+# Loading work.ir_sv_unit
+# Loading work.ir
+# Loading work.regfile_sv_unit
+# Loading work.regfile
+# Loading work.alu_sv_unit
+# Loading work.alu
+# Loading work.gencc_sv_unit
+# Loading work.gencc
+# Loading work.cccomp_sv_unit
+# Loading work.cccomp
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_control
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.cache_writelogic_sv_unit
+# Loading work.cache_writelogic
+# Loading work.decoder3
+# Loading work.array_sv_unit
+# Loading work.array
+# Loading work.way_sv_unit
+# Loading work.way
+# Loading work.mux8
+# Loading work.physical_memory
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/rrthakk2/ece411/mp2/simulation/modelsim/wave.do
+do wave.do
+do wave.do

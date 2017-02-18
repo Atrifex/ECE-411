@@ -1,4 +1,10 @@
 
+State Machine - |mp2|cache:cache_inst|cache_control:control|state
+Name state.process_request state.write_back state.fetch_cline 
+state.process_request 0 0 0 
+state.fetch_cline 1 0 1 
+state.write_back 1 1 0 
+
 State Machine - |mp2|cpu:cpu_inst|cpu_control:control|state
 Name state.trap3 state.trap2 state.trap1 state.jsr state.lea state.jmp state.sti4 state.sti3 state.sti2 state.sti1 state.stb2 state.stb1 state.str2 state.str1 state.ldi4 state.ldi3 state.ldi2 state.ldi1 state.ldb2 state.ldb1 state.ldr2 state.ldr1 state.calc_addr_b state.calc_addr state.br_taken state.br state.s_shf state.s_not state.s_and state.s_add state.decode state.fetch3 state.fetch2 state.fetch1 
 state.fetch1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
