@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mp2
-Thu Feb 16 23:23:35 2017
+Fri Feb 17 19:03:45 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -13,39 +13,43 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |mp2|cpu:cpu_inst|cpu_control:control|state
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|register:pc
- 14. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux4:pcmux
- 15. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|plus2:pcPlus2
- 16. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|adder:br_adder
- 17. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux2:addrmux
- 18. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|adj:offset9_adjuster
- 19. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|adj:offset11_adjuster
- 20. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux2:storemux
- 21. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux2:drmux
- 22. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|adj:offset6_adjuster
- 23. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux4:regfilemux
- 24. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux4:alumux
- 25. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|register:cc
- 26. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux4:marmux
- 27. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|register:MAR
- 28. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux4:mdrInModifier
- 29. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux2:mdrmux
- 30. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|register:MDR
- 31. Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux4:mdrOutModifier
- 32. Port Connectivity Checks: "cpu:cpu_inst|cpu_datapath:datapath|mux4:mdrOutModifier"
- 33. Port Connectivity Checks: "cpu:cpu_inst|cpu_datapath:datapath|mux4:mdrInModifier"
- 34. Port Connectivity Checks: "cpu:cpu_inst|cpu_datapath:datapath|mux4:marmux"
- 35. Port Connectivity Checks: "cpu:cpu_inst|cpu_datapath:datapath|mux4:alumux"
- 36. Port Connectivity Checks: "cpu:cpu_inst|cpu_datapath:datapath|mux2:drmux"
- 37. Port Connectivity Checks: "cpu:cpu_inst|cpu_datapath:datapath|adj:offset11_adjuster"
- 38. Port Connectivity Checks: "cpu:cpu_inst|cpu_datapath:datapath|adj:offset9_adjuster"
- 39. Elapsed Time Per Partition
- 40. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: mux4:module_instant_loop[0].writelogic_highbyte
+ 11. Parameter Settings for User Entity Instance: mux4:module_instant_loop[0].writelogic_lowbyte
+ 12. Parameter Settings for User Entity Instance: mux4:module_instant_loop[1].writelogic_highbyte
+ 13. Parameter Settings for User Entity Instance: mux4:module_instant_loop[1].writelogic_lowbyte
+ 14. Parameter Settings for User Entity Instance: mux4:module_instant_loop[2].writelogic_highbyte
+ 15. Parameter Settings for User Entity Instance: mux4:module_instant_loop[2].writelogic_lowbyte
+ 16. Parameter Settings for User Entity Instance: mux4:module_instant_loop[3].writelogic_highbyte
+ 17. Parameter Settings for User Entity Instance: mux4:module_instant_loop[3].writelogic_lowbyte
+ 18. Parameter Settings for User Entity Instance: mux4:module_instant_loop[4].writelogic_highbyte
+ 19. Parameter Settings for User Entity Instance: mux4:module_instant_loop[4].writelogic_lowbyte
+ 20. Parameter Settings for User Entity Instance: mux4:module_instant_loop[5].writelogic_highbyte
+ 21. Parameter Settings for User Entity Instance: mux4:module_instant_loop[5].writelogic_lowbyte
+ 22. Parameter Settings for User Entity Instance: mux4:module_instant_loop[6].writelogic_highbyte
+ 23. Parameter Settings for User Entity Instance: mux4:module_instant_loop[6].writelogic_lowbyte
+ 24. Parameter Settings for User Entity Instance: mux4:module_instant_loop[7].writelogic_highbyte
+ 25. Parameter Settings for User Entity Instance: mux4:module_instant_loop[7].writelogic_lowbyte
+ 26. Port Connectivity Checks: "mux4:module_instant_loop[7].writelogic_lowbyte"
+ 27. Port Connectivity Checks: "mux4:module_instant_loop[7].writelogic_highbyte"
+ 28. Port Connectivity Checks: "mux4:module_instant_loop[6].writelogic_lowbyte"
+ 29. Port Connectivity Checks: "mux4:module_instant_loop[6].writelogic_highbyte"
+ 30. Port Connectivity Checks: "mux4:module_instant_loop[5].writelogic_lowbyte"
+ 31. Port Connectivity Checks: "mux4:module_instant_loop[5].writelogic_highbyte"
+ 32. Port Connectivity Checks: "mux4:module_instant_loop[4].writelogic_lowbyte"
+ 33. Port Connectivity Checks: "mux4:module_instant_loop[4].writelogic_highbyte"
+ 34. Port Connectivity Checks: "mux4:module_instant_loop[3].writelogic_lowbyte"
+ 35. Port Connectivity Checks: "mux4:module_instant_loop[3].writelogic_highbyte"
+ 36. Port Connectivity Checks: "mux4:module_instant_loop[2].writelogic_lowbyte"
+ 37. Port Connectivity Checks: "mux4:module_instant_loop[2].writelogic_highbyte"
+ 38. Port Connectivity Checks: "mux4:module_instant_loop[1].writelogic_lowbyte"
+ 39. Port Connectivity Checks: "mux4:module_instant_loop[1].writelogic_highbyte"
+ 40. Port Connectivity Checks: "mux4:module_instant_loop[0].writelogic_lowbyte"
+ 41. Port Connectivity Checks: "mux4:module_instant_loop[0].writelogic_highbyte"
+ 42. Port Connectivity Checks: "decoder3:decoder3_inst"
+ 43. Elapsed Time Per Partition
+ 44. Analysis & Synthesis Messages
 
 
 
@@ -71,17 +75,17 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Thu Feb 16 23:23:35 2017       ;
+; Analysis & Synthesis Status   ; Successful - Fri Feb 17 19:03:45 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp2                                         ;
-; Top-level Entity Name         ; mp2                                         ;
+; Top-level Entity Name         ; cache_writelogic                            ;
 ; Family                        ; Stratix III                                 ;
 ; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 0                                           ;
+;     Combinational ALUTs       ; 144                                         ;
 ;     Memory ALUTs              ; 0                                           ;
 ;     Dedicated logic registers ; 0                                           ;
 ; Total registers               ; 0                                           ;
-; Total pins                    ; 276                                         ;
+; Total pins                    ; 406                                         ;
 ; Total virtual pins            ; 0                                           ;
 ; Total block memory bits       ; 0                                           ;
 ; DSP block 18-bit elements     ; 0                                           ;
@@ -96,7 +100,7 @@ applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; EP3SE50F780C2      ;                    ;
-; Top-level entity name                                                           ; mp2                ; mp2                ;
+; Top-level entity name                                                           ; cache_writelogic   ; mp2                ;
 ; Family name                                                                     ; Stratix III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -195,280 +199,88 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                    ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------+---------+
-; cache_datapath.sv                ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/cache_datapath.sv ;         ;
-; cache_control.sv                 ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/cache_control.sv  ;         ;
-; cache.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/cache.sv          ;         ;
-; mp2.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/mp2.sv            ;         ;
-; cpu_datapath.sv                  ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/cpu_datapath.sv   ;         ;
-; cpu_control.sv                   ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/cpu_control.sv    ;         ;
-; cpu.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/cpu.sv            ;         ;
-; lc3b_types.sv                    ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/lc3b_types.sv     ;         ;
-; adj.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/adj.sv            ;         ;
-; alu.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/alu.sv            ;         ;
-; gencc.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/gencc.sv          ;         ;
-; ir.sv                            ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/ir.sv             ;         ;
-; plus2.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/plus2.sv          ;         ;
-; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/regfile.sv        ;         ;
-; register.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/register.sv       ;         ;
-; mux2.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/mux2.sv           ;         ;
-; adder.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/adder.sv          ;         ;
-; cccomp.sv                        ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/cccomp.sv         ;         ;
-; mux4.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/mux4.sv           ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                  ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------+---------+
+; cache_writelogic.sv              ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/cache_writelogic.sv ;         ;
+; decoder3.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/decoder3.sv         ;         ;
+; lc3b_types.sv                    ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/lc3b_types.sv       ;         ;
+; mux4.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/rrthakk2/ece411/mp2/mux4.sv             ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+-----------------------------------------------+-----------+
-; Resource                                      ; Usage     ;
-+-----------------------------------------------+-----------+
-; Estimated ALUTs Used                          ; 0         ;
-;     -- Combinational ALUTs                    ; 0         ;
-;     -- Memory ALUTs                           ; 0         ;
-;     -- LUT_REGs                               ; 0         ;
-; Dedicated logic registers                     ; 0         ;
-;                                               ;           ;
-; Estimated ALUTs Unavailable                   ; 0         ;
-;     -- Due to unpartnered combinational logic ; 0         ;
-;     -- Due to Memory ALUTs                    ; 0         ;
-;                                               ;           ;
-; Total combinational functions                 ; 0         ;
-; Combinational ALUT usage by number of inputs  ;           ;
-;     -- 7 input functions                      ; 0         ;
-;     -- 6 input functions                      ; 0         ;
-;     -- 5 input functions                      ; 0         ;
-;     -- 4 input functions                      ; 0         ;
-;     -- <=3 input functions                    ; 0         ;
-;                                               ;           ;
-; Combinational ALUTs by mode                   ;           ;
-;     -- normal mode                            ; 0         ;
-;     -- extended LUT mode                      ; 0         ;
-;     -- arithmetic mode                        ; 0         ;
-;     -- shared arithmetic mode                 ; 0         ;
-;                                               ;           ;
-; Estimated ALUT/register pairs used            ; 0         ;
-;                                               ;           ;
-; Total registers                               ; 0         ;
-;     -- Dedicated logic registers              ; 0         ;
-;     -- I/O registers                          ; 0         ;
-;     -- LUT_REGs                               ; 0         ;
-;                                               ;           ;
-;                                               ;           ;
-; I/O pins                                      ; 276       ;
-; DSP block 18-bit elements                     ; 0         ;
-; Maximum fan-out node                          ; pmem_resp ;
-; Maximum fan-out                               ; 1         ;
-; Total fan-out                                 ; 276       ;
-; Average fan-out                               ; 0.50      ;
-+-----------------------------------------------+-----------+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++-----------------------------------------------+-----------------+
+; Resource                                      ; Usage           ;
++-----------------------------------------------+-----------------+
+; Estimated ALUTs Used                          ; 144             ;
+;     -- Combinational ALUTs                    ; 144             ;
+;     -- Memory ALUTs                           ; 0               ;
+;     -- LUT_REGs                               ; 0               ;
+; Dedicated logic registers                     ; 0               ;
+;                                               ;                 ;
+; Estimated ALUTs Unavailable                   ; 0               ;
+;     -- Due to unpartnered combinational logic ; 0               ;
+;     -- Due to Memory ALUTs                    ; 0               ;
+;                                               ;                 ;
+; Total combinational functions                 ; 144             ;
+; Combinational ALUT usage by number of inputs  ;                 ;
+;     -- 7 input functions                      ; 0               ;
+;     -- 6 input functions                      ; 0               ;
+;     -- 5 input functions                      ; 144             ;
+;     -- 4 input functions                      ; 0               ;
+;     -- <=3 input functions                    ; 0               ;
+;                                               ;                 ;
+; Combinational ALUTs by mode                   ;                 ;
+;     -- normal mode                            ; 144             ;
+;     -- extended LUT mode                      ; 0               ;
+;     -- arithmetic mode                        ; 0               ;
+;     -- shared arithmetic mode                 ; 0               ;
+;                                               ;                 ;
+; Estimated ALUT/register pairs used            ; 144             ;
+;                                               ;                 ;
+; Total registers                               ; 0               ;
+;     -- Dedicated logic registers              ; 0               ;
+;     -- I/O registers                          ; 0               ;
+;     -- LUT_REGs                               ; 0               ;
+;                                               ;                 ;
+;                                               ;                 ;
+; I/O pins                                      ; 406             ;
+; DSP block 18-bit elements                     ; 0               ;
+; Maximum fan-out node                          ; pmem_read~input ;
+; Maximum fan-out                               ; 144             ;
+; Total fan-out                                 ; 1254            ;
+; Average fan-out                               ; 1.31            ;
++-----------------------------------------------+-----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                       ;
-+----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+---------------------+--------------+
-; |mp2                       ; 0 (0)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 276  ; 0            ; |mp2                ; work         ;
-+----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+---------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                               ;
++------------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                           ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 12x12 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                               ; Library Name ;
++------------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------+--------------+
+; |cache_writelogic                                    ; 144 (16)          ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 406  ; 0            ; |cache_writelogic                                                 ; work         ;
+;    |mux4:module_instant_loop[0].writelogic_highbyte| ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |cache_writelogic|mux4:module_instant_loop[0].writelogic_highbyte ; work         ;
+;    |mux4:module_instant_loop[0].writelogic_lowbyte|  ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |cache_writelogic|mux4:module_instant_loop[0].writelogic_lowbyte  ; work         ;
+;    |mux4:module_instant_loop[1].writelogic_highbyte| ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |cache_writelogic|mux4:module_instant_loop[1].writelogic_highbyte ; work         ;
+;    |mux4:module_instant_loop[1].writelogic_lowbyte|  ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |cache_writelogic|mux4:module_instant_loop[1].writelogic_lowbyte  ; work         ;
+;    |mux4:module_instant_loop[2].writelogic_highbyte| ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |cache_writelogic|mux4:module_instant_loop[2].writelogic_highbyte ; work         ;
+;    |mux4:module_instant_loop[2].writelogic_lowbyte|  ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |cache_writelogic|mux4:module_instant_loop[2].writelogic_lowbyte  ; work         ;
+;    |mux4:module_instant_loop[3].writelogic_highbyte| ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |cache_writelogic|mux4:module_instant_loop[3].writelogic_highbyte ; work         ;
+;    |mux4:module_instant_loop[3].writelogic_lowbyte|  ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |cache_writelogic|mux4:module_instant_loop[3].writelogic_lowbyte  ; work         ;
+;    |mux4:module_instant_loop[4].writelogic_highbyte| ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |cache_writelogic|mux4:module_instant_loop[4].writelogic_highbyte ; work         ;
+;    |mux4:module_instant_loop[4].writelogic_lowbyte|  ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |cache_writelogic|mux4:module_instant_loop[4].writelogic_lowbyte  ; work         ;
+;    |mux4:module_instant_loop[5].writelogic_highbyte| ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |cache_writelogic|mux4:module_instant_loop[5].writelogic_highbyte ; work         ;
+;    |mux4:module_instant_loop[5].writelogic_lowbyte|  ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |cache_writelogic|mux4:module_instant_loop[5].writelogic_lowbyte  ; work         ;
+;    |mux4:module_instant_loop[6].writelogic_highbyte| ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |cache_writelogic|mux4:module_instant_loop[6].writelogic_highbyte ; work         ;
+;    |mux4:module_instant_loop[6].writelogic_lowbyte|  ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |cache_writelogic|mux4:module_instant_loop[6].writelogic_lowbyte  ; work         ;
+;    |mux4:module_instant_loop[7].writelogic_highbyte| ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |cache_writelogic|mux4:module_instant_loop[7].writelogic_highbyte ; work         ;
+;    |mux4:module_instant_loop[7].writelogic_lowbyte|  ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0         ; 0    ; 0            ; |cache_writelogic|mux4:module_instant_loop[7].writelogic_lowbyte  ; work         ;
++------------------------------------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+-----------+------+--------------+-------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |mp2|cpu:cpu_inst|cpu_control:control|state                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
-+-------------------+-------------+-------------+-------------+-----------+-----------+-----------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-------------------+-----------------+----------------+----------+-------------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
-; Name              ; state.trap3 ; state.trap2 ; state.trap1 ; state.jsr ; state.lea ; state.jmp ; state.sti4 ; state.sti3 ; state.sti2 ; state.sti1 ; state.stb2 ; state.stb1 ; state.str2 ; state.str1 ; state.ldi4 ; state.ldi3 ; state.ldi2 ; state.ldi1 ; state.ldb2 ; state.ldb1 ; state.ldr2 ; state.ldr1 ; state.calc_addr_b ; state.calc_addr ; state.br_taken ; state.br ; state.s_shf ; state.s_not ; state.s_and ; state.s_add ; state.decode ; state.fetch3 ; state.fetch2 ; state.fetch1 ;
-+-------------------+-------------+-------------+-------------+-----------+-----------+-----------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-------------------+-----------------+----------------+----------+-------------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
-; state.fetch1      ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 0            ;
-; state.fetch2      ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 1            ; 1            ;
-; state.fetch3      ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 1            ; 0            ; 1            ;
-; state.decode      ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 1            ; 0            ; 0            ; 1            ;
-; state.s_add       ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 1           ; 0            ; 0            ; 0            ; 1            ;
-; state.s_and       ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 1           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.s_not       ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 1           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.s_shf       ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 1           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.br          ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 1        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.br_taken    ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 1              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.calc_addr   ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 1               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.calc_addr_b ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldr1        ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldr2        ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldb1        ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldb2        ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldi1        ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldi2        ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldi3        ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.ldi4        ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.str1        ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.str2        ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.stb1        ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.stb2        ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.sti1        ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.sti2        ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.sti3        ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.sti4        ; 0           ; 0           ; 0           ; 0         ; 0         ; 0         ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.jmp         ; 0           ; 0           ; 0           ; 0         ; 0         ; 1         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.lea         ; 0           ; 0           ; 0           ; 0         ; 1         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.jsr         ; 0           ; 0           ; 0           ; 1         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.trap1       ; 0           ; 0           ; 1           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.trap2       ; 0           ; 1           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-; state.trap3       ; 1           ; 0           ; 0           ; 0         ; 0         ; 0         ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0               ; 0              ; 0        ; 0           ; 0           ; 0           ; 0           ; 0            ; 0            ; 0            ; 1            ;
-+-------------------+-------------+-------------+-------------+-----------+-----------+-----------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-------------------+-----------------+----------------+----------+-------------+-------------+-------------+-------------+--------------+--------------+--------------+--------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                               ;
-+--------------------------------------------------------------------+---------------------------------------------+
-; Register name                                                      ; Reason for Removal                          ;
-+--------------------------------------------------------------------+---------------------------------------------+
-; cpu:cpu_inst|cpu_datapath:datapath|ir:IR|data[9,12..15]            ; Stuck at GND due to stuck port clock_enable ;
-; cpu:cpu_inst|cpu_datapath:datapath|register:cc|data[0]             ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_datapath:datapath|ir:IR|data[10]                  ; Stuck at GND due to stuck port clock_enable ;
-; cpu:cpu_inst|cpu_datapath:datapath|register:cc|data[1]             ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_datapath:datapath|ir:IR|data[11]                  ; Stuck at GND due to stuck port clock_enable ;
-; cpu:cpu_inst|cpu_datapath:datapath|register:cc|data[2]             ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_datapath:datapath|ir:IR|data[0..8]                ; Stuck at GND due to stuck port clock_enable ;
-; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[15]           ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_datapath:datapath|register:MAR|data[0]            ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[0,8,9,12..14] ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_datapath:datapath|register:pc|data[0..15]         ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[1..7,10,11]   ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state.fetch3                      ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state.br_taken                    ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state.ldr2                        ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state.ldb2                        ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state.ldi4                        ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state.sti2                        ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state.trap3                       ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~2                           ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~3                           ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~4                           ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~5                           ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~6                           ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~7                           ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~8                           ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~9                           ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~10                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~11                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~12                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~13                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~14                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~15                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~16                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~17                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~18                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~19                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~20                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~21                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~22                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~23                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~24                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~25                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~26                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~27                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~28                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~29                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~30                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~31                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~32                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state~33                          ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state.decode                      ; Stuck at GND due to stuck port data_in      ;
-; cpu:cpu_inst|cpu_control:control|state.ldi2                        ; Stuck at GND due to stuck port data_in      ;
-; cpu:cpu_inst|cpu_control:control|state.sti3                        ; Stuck at GND due to stuck port data_in      ;
-; cpu:cpu_inst|cpu_control:control|state.s_add                       ; Stuck at GND due to stuck port data_in      ;
-; cpu:cpu_inst|cpu_control:control|state.s_and                       ; Stuck at GND due to stuck port data_in      ;
-; cpu:cpu_inst|cpu_control:control|state.s_not                       ; Stuck at GND due to stuck port data_in      ;
-; cpu:cpu_inst|cpu_control:control|state.s_shf                       ; Stuck at GND due to stuck port data_in      ;
-; cpu:cpu_inst|cpu_control:control|state.br                          ; Stuck at GND due to stuck port data_in      ;
-; cpu:cpu_inst|cpu_control:control|state.calc_addr                   ; Stuck at GND due to stuck port data_in      ;
-; cpu:cpu_inst|cpu_control:control|state.calc_addr_b                 ; Stuck at GND due to stuck port data_in      ;
-; cpu:cpu_inst|cpu_control:control|state.str1                        ; Stuck at GND due to stuck port data_in      ;
-; cpu:cpu_inst|cpu_control:control|state.stb1                        ; Stuck at GND due to stuck port data_in      ;
-; cpu:cpu_inst|cpu_control:control|state.jmp                         ; Stuck at GND due to stuck port data_in      ;
-; cpu:cpu_inst|cpu_control:control|state.lea                         ; Stuck at GND due to stuck port data_in      ;
-; cpu:cpu_inst|cpu_control:control|state.jsr                         ; Stuck at GND due to stuck port data_in      ;
-; cpu:cpu_inst|cpu_control:control|state.trap1                       ; Stuck at GND due to stuck port data_in      ;
-; cpu:cpu_inst|cpu_control:control|state.fetch1                      ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state.fetch2                      ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state.ldr1                        ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state.ldb1                        ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state.ldi1                        ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state.ldi3                        ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state.str2                        ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state.stb2                        ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state.sti1                        ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state.sti4                        ; Lost fanout                                 ;
-; cpu:cpu_inst|cpu_control:control|state.trap2                       ; Lost fanout                                 ;
-; Total Number of Removed Registers = 118                            ;                                             ;
-+--------------------------------------------------------------------+---------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                   ;
-+---------------------------------------------------+--------------------------------+----------------------------------------------------------+
-; Register name                                     ; Reason for Removal             ; Registers Removed due to This Register                   ;
-+---------------------------------------------------+--------------------------------+----------------------------------------------------------+
-; cpu:cpu_inst|cpu_control:control|state.decode     ; Stuck at GND                   ; cpu:cpu_inst|cpu_control:control|state.s_add,            ;
-;                                                   ; due to stuck port data_in      ; cpu:cpu_inst|cpu_control:control|state.s_and,            ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_control:control|state.s_not,            ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_control:control|state.s_shf,            ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_control:control|state.br,               ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_control:control|state.calc_addr,        ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_control:control|state.calc_addr_b,      ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_control:control|state.jmp,              ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_control:control|state.lea,              ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_control:control|state.jsr,              ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_control:control|state.trap1,            ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_control:control|state.fetch2,           ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_control:control|state.sti1,             ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_control:control|state.sti4              ;
-; cpu:cpu_inst|cpu_datapath:datapath|ir:IR|data[9]  ; Stuck at GND                   ; cpu:cpu_inst|cpu_datapath:datapath|register:cc|data[0],  ;
-;                                                   ; due to stuck port clock_enable ; cpu:cpu_inst|cpu_datapath:datapath|register:cc|data[1],  ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_datapath:datapath|register:cc|data[2],  ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[9], ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[0], ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[8], ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_datapath:datapath|register:pc|data[0],  ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_datapath:datapath|register:pc|data[15], ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_datapath:datapath|register:pc|data[13], ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_datapath:datapath|register:pc|data[12]  ;
-; cpu:cpu_inst|cpu_control:control|state.ldi2       ; Stuck at GND                   ; cpu:cpu_inst|cpu_control:control|state.ldr1,             ;
-;                                                   ; due to stuck port data_in      ; cpu:cpu_inst|cpu_control:control|state.ldb1,             ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_control:control|state.ldi1,             ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_control:control|state.str2              ;
-; cpu:cpu_inst|cpu_datapath:datapath|ir:IR|data[5]  ; Stuck at GND                   ; cpu:cpu_inst|cpu_datapath:datapath|register:MAR|data[0], ;
-;                                                   ; due to stuck port clock_enable ; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[5], ;
-;                                                   ;                                ; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[7]  ;
-; cpu:cpu_inst|cpu_control:control|state.sti3       ; Stuck at GND                   ; cpu:cpu_inst|cpu_control:control|state.ldi3,             ;
-;                                                   ; due to stuck port data_in      ; cpu:cpu_inst|cpu_control:control|state.stb2              ;
-; cpu:cpu_inst|cpu_datapath:datapath|ir:IR|data[15] ; Stuck at GND                   ; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[15] ;
-;                                                   ; due to stuck port clock_enable ;                                                          ;
-; cpu:cpu_inst|cpu_datapath:datapath|ir:IR|data[12] ; Stuck at GND                   ; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[12] ;
-;                                                   ; due to stuck port clock_enable ;                                                          ;
-; cpu:cpu_inst|cpu_datapath:datapath|ir:IR|data[13] ; Stuck at GND                   ; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[13] ;
-;                                                   ; due to stuck port clock_enable ;                                                          ;
-; cpu:cpu_inst|cpu_datapath:datapath|ir:IR|data[14] ; Stuck at GND                   ; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[14] ;
-;                                                   ; due to stuck port clock_enable ;                                                          ;
-; cpu:cpu_inst|cpu_datapath:datapath|ir:IR|data[10] ; Stuck at GND                   ; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[10] ;
-;                                                   ; due to stuck port clock_enable ;                                                          ;
-; cpu:cpu_inst|cpu_datapath:datapath|ir:IR|data[11] ; Stuck at GND                   ; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[11] ;
-;                                                   ; due to stuck port clock_enable ;                                                          ;
-; cpu:cpu_inst|cpu_datapath:datapath|ir:IR|data[4]  ; Stuck at GND                   ; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[4]  ;
-;                                                   ; due to stuck port clock_enable ;                                                          ;
-; cpu:cpu_inst|cpu_datapath:datapath|ir:IR|data[3]  ; Stuck at GND                   ; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[3]  ;
-;                                                   ; due to stuck port clock_enable ;                                                          ;
-; cpu:cpu_inst|cpu_datapath:datapath|ir:IR|data[2]  ; Stuck at GND                   ; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[2]  ;
-;                                                   ; due to stuck port clock_enable ;                                                          ;
-; cpu:cpu_inst|cpu_datapath:datapath|ir:IR|data[1]  ; Stuck at GND                   ; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[1]  ;
-;                                                   ; due to stuck port clock_enable ;                                                          ;
-; cpu:cpu_inst|cpu_datapath:datapath|ir:IR|data[6]  ; Stuck at GND                   ; cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[6]  ;
-;                                                   ; due to stuck port clock_enable ;                                                          ;
-+---------------------------------------------------+--------------------------------+----------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -486,73 +298,32 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 ALUTs      ; 0 ALUTs              ; 16 ALUTs               ; Yes        ; |mp2|cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[0]      ;
-; 4:1                ; 15 bits   ; 30 ALUTs      ; 30 ALUTs             ; 0 ALUTs                ; Yes        ; |mp2|cpu:cpu_inst|cpu_datapath:datapath|register:pc|data[10]      ;
-; 5:1                ; 8 bits    ; 24 ALUTs      ; 0 ALUTs              ; 24 ALUTs               ; Yes        ; |mp2|cpu:cpu_inst|cpu_datapath:datapath|register:MDR|data[11]     ;
-; 4:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu_inst|cpu_datapath:datapath|mux4:mdrOutModifier|Mux15 ;
-; 4:1                ; 15 bits   ; 30 ALUTs      ; 30 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu_inst|cpu_datapath:datapath|mux4:regfilemux|Mux3      ;
-; 3:1                ; 10 bits   ; 20 ALUTs      ; 20 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu_inst|cpu_datapath:datapath|mux4:alumux|Mux3          ;
-; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:cpu_inst|cpu_datapath:datapath|alu:alu_inst|ShiftLeft0   ;
-; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:cpu_inst|cpu_datapath:datapath|alu:alu_inst|ShiftLeft0   ;
-; 4:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; No         ; |mp2|cpu:cpu_inst|cpu_datapath:datapath|mux4:alumux|Mux10         ;
-; 5:1                ; 3 bits    ; 9 ALUTs       ; 6 ALUTs              ; 3 ALUTs                ; No         ; |mp2|cpu:cpu_inst|cpu_datapath:datapath|mux4:alumux|Mux14         ;
-; 12:1               ; 11 bits   ; 88 ALUTs      ; 22 ALUTs             ; 66 ALUTs               ; No         ; |mp2|cpu:cpu_inst|cpu_control:control|Selector10                  ;
-; 12:1               ; 4 bits    ; 32 ALUTs      ; 8 ALUTs              ; 24 ALUTs               ; No         ; |mp2|cpu:cpu_inst|cpu_control:control|Selector29                  ;
-; 12:1               ; 2 bits    ; 16 ALUTs      ; 4 ALUTs              ; 12 ALUTs               ; No         ; |mp2|cpu:cpu_inst|cpu_control:control|Selector27                  ;
-; 13:1               ; 2 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu_inst|cpu_datapath:datapath|alu:alu_inst|Selector5    ;
-; 14:1               ; 2 bits    ; 18 ALUTs      ; 18 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu_inst|cpu_datapath:datapath|alu:alu_inst|Selector14   ;
-; 15:1               ; 2 bits    ; 20 ALUTs      ; 18 ALUTs             ; 2 ALUTs                ; No         ; |mp2|cpu:cpu_inst|cpu_datapath:datapath|alu:alu_inst|Selector1    ;
-; 16:1               ; 2 bits    ; 20 ALUTs      ; 20 ALUTs             ; 0 ALUTs                ; No         ; |mp2|cpu:cpu_inst|cpu_datapath:datapath|alu:alu_inst|Selector10   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|register:pc ;
-+----------------+-------+--------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                               ;
-+----------------+-------+--------------------------------------------------------------------+
-; width          ; 16    ; Signed Integer                                                     ;
-+----------------+-------+--------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux4:pcmux ;
-+----------------+-------+-------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                              ;
-+----------------+-------+-------------------------------------------------------------------+
-; width          ; 16    ; Signed Integer                                                    ;
-+----------------+-------+-------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|plus2:pcPlus2 ;
-+----------------+-------+----------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                 ;
-+----------------+-------+----------------------------------------------------------------------+
-; width          ; 16    ; Signed Integer                                                       ;
-+----------------+-------+----------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|adder:br_adder ;
-+----------------+-------+-----------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                  ;
-+----------------+-------+-----------------------------------------------------------------------+
-; width          ; 16    ; Signed Integer                                                        ;
-+----------------+-------+-----------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |cache_writelogic|mux4:module_instant_loop[0].writelogic_lowbyte|Mux15  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |cache_writelogic|mux4:module_instant_loop[0].writelogic_highbyte|Mux14 ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |cache_writelogic|mux4:module_instant_loop[1].writelogic_lowbyte|Mux15  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |cache_writelogic|mux4:module_instant_loop[1].writelogic_highbyte|Mux14 ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |cache_writelogic|mux4:module_instant_loop[2].writelogic_lowbyte|Mux11  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |cache_writelogic|mux4:module_instant_loop[2].writelogic_highbyte|Mux12 ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |cache_writelogic|mux4:module_instant_loop[3].writelogic_lowbyte|Mux15  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |cache_writelogic|mux4:module_instant_loop[3].writelogic_highbyte|Mux10 ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |cache_writelogic|mux4:module_instant_loop[4].writelogic_lowbyte|Mux15  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |cache_writelogic|mux4:module_instant_loop[4].writelogic_highbyte|Mux8  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |cache_writelogic|mux4:module_instant_loop[5].writelogic_lowbyte|Mux15  ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |cache_writelogic|mux4:module_instant_loop[5].writelogic_highbyte|Mux14 ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |cache_writelogic|mux4:module_instant_loop[6].writelogic_lowbyte|Mux9   ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |cache_writelogic|mux4:module_instant_loop[6].writelogic_highbyte|Mux12 ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |cache_writelogic|mux4:module_instant_loop[7].writelogic_lowbyte|Mux9   ;
+; 3:1                ; 8 bits    ; 16 ALUTs      ; 16 ALUTs             ; 0 ALUTs                ; No         ; |cache_writelogic|mux4:module_instant_loop[7].writelogic_highbyte|Mux12 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux2:addrmux ;
+; Parameter Settings for User Entity Instance: mux4:module_instant_loop[0].writelogic_highbyte ;
 +----------------+-------+---------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                ;
 +----------------+-------+---------------------------------------------------------------------+
@@ -561,88 +332,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|adj:offset9_adjuster ;
-+----------------+-------+-----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                        ;
-+----------------+-------+-----------------------------------------------------------------------------+
-; width          ; 9     ; Signed Integer                                                              ;
-+----------------+-------+-----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|adj:offset11_adjuster ;
-+----------------+-------+------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                         ;
-+----------------+-------+------------------------------------------------------------------------------+
-; width          ; 11    ; Signed Integer                                                               ;
-+----------------+-------+------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux2:storemux ;
-+----------------+-------+----------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                 ;
-+----------------+-------+----------------------------------------------------------------------+
-; width          ; 3     ; Signed Integer                                                       ;
-+----------------+-------+----------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux2:drmux ;
-+----------------+-------+-------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                              ;
-+----------------+-------+-------------------------------------------------------------------+
-; width          ; 3     ; Signed Integer                                                    ;
-+----------------+-------+-------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|adj:offset6_adjuster ;
-+----------------+-------+-----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                        ;
-+----------------+-------+-----------------------------------------------------------------------------+
-; width          ; 6     ; Signed Integer                                                              ;
-+----------------+-------+-----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux4:regfilemux ;
-+----------------+-------+------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                   ;
-+----------------+-------+------------------------------------------------------------------------+
-; width          ; 16    ; Signed Integer                                                         ;
-+----------------+-------+------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +---------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux4:alumux ;
-+----------------+-------+--------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                               ;
-+----------------+-------+--------------------------------------------------------------------+
-; width          ; 16    ; Signed Integer                                                     ;
-+----------------+-------+--------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|register:cc ;
-+----------------+-------+--------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                               ;
-+----------------+-------+--------------------------------------------------------------------+
-; width          ; 3     ; Signed Integer                                                     ;
-+----------------+-------+--------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux4:marmux ;
+; Parameter Settings for User Entity Instance: mux4:module_instant_loop[0].writelogic_lowbyte ;
 +----------------+-------+--------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                               ;
 +----------------+-------+--------------------------------------------------------------------+
@@ -652,7 +343,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|register:MAR ;
+; Parameter Settings for User Entity Instance: mux4:module_instant_loop[1].writelogic_highbyte ;
 +----------------+-------+---------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                ;
 +----------------+-------+---------------------------------------------------------------------+
@@ -661,18 +352,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux4:mdrInModifier ;
-+----------------+-------+---------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------+
-; width          ; 16    ; Signed Integer                                                            ;
-+----------------+-------+---------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +---------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux2:mdrmux ;
+; Parameter Settings for User Entity Instance: mux4:module_instant_loop[1].writelogic_lowbyte ;
 +----------------+-------+--------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                               ;
 +----------------+-------+--------------------------------------------------------------------+
@@ -682,7 +363,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|register:MDR ;
+; Parameter Settings for User Entity Instance: mux4:module_instant_loop[2].writelogic_highbyte ;
 +----------------+-------+---------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                ;
 +----------------+-------+---------------------------------------------------------------------+
@@ -691,82 +372,331 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: cpu:cpu_inst|cpu_datapath:datapath|mux4:mdrOutModifier ;
-+----------------+-------+----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------+
-; width          ; 16    ; Signed Integer                                                             ;
-+----------------+-------+----------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4:module_instant_loop[2].writelogic_lowbyte ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu:cpu_inst|cpu_datapath:datapath|mux4:mdrOutModifier" ;
-+----------+-------+----------+------------------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                              ;
-+----------+-------+----------+------------------------------------------------------+
-; b[15..8] ; Input ; Info     ; Stuck at GND                                         ;
-; c[15..8] ; Input ; Info     ; Stuck at GND                                         ;
-; d        ; Input ; Info     ; Stuck at GND                                         ;
-+----------+-------+----------+------------------------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4:module_instant_loop[3].writelogic_highbyte ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu:cpu_inst|cpu_datapath:datapath|mux4:mdrInModifier" ;
-+----------+-------+----------+-----------------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                             ;
-+----------+-------+----------+-----------------------------------------------------+
-; b[15..8] ; Input ; Info     ; Stuck at GND                                        ;
-; c[7..0]  ; Input ; Info     ; Stuck at GND                                        ;
-; d        ; Input ; Info     ; Stuck at GND                                        ;
-+----------+-------+----------+-----------------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4:module_instant_loop[3].writelogic_lowbyte ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu:cpu_inst|cpu_datapath:datapath|mux4:marmux" ;
-+----------+-------+----------+----------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                      ;
-+----------+-------+----------+----------------------------------------------+
-; d[15..9] ; Input ; Info     ; Stuck at GND                                 ;
-; d[0]     ; Input ; Info     ; Stuck at GND                                 ;
-+----------+-------+----------+----------------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4:module_instant_loop[4].writelogic_highbyte ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu:cpu_inst|cpu_datapath:datapath|mux4:alumux" ;
-+----------+-------+----------+----------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                      ;
-+----------+-------+----------+----------------------------------------------+
-; d[15..4] ; Input ; Info     ; Stuck at GND                                 ;
-+----------+-------+----------+----------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4:module_instant_loop[4].writelogic_lowbyte ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu:cpu_inst|cpu_datapath:datapath|mux2:drmux" ;
-+------+-------+----------+-------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                         ;
-+------+-------+----------+-------------------------------------------------+
-; b    ; Input ; Info     ; Stuck at VCC                                    ;
-+------+-------+----------+-------------------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4:module_instant_loop[5].writelogic_highbyte ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu:cpu_inst|cpu_datapath:datapath|adj:offset11_adjuster" ;
-+------+-------+----------+------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                    ;
-+------+-------+----------+------------------------------------------------------------+
-; lsse ; Input ; Info     ; Stuck at VCC                                               ;
-+------+-------+----------+------------------------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4:module_instant_loop[5].writelogic_lowbyte ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "cpu:cpu_inst|cpu_datapath:datapath|adj:offset9_adjuster" ;
-+------+-------+----------+-----------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                   ;
-+------+-------+----------+-----------------------------------------------------------+
-; lsse ; Input ; Info     ; Stuck at VCC                                              ;
-+------+-------+----------+-----------------------------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4:module_instant_loop[6].writelogic_highbyte ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4:module_instant_loop[6].writelogic_lowbyte ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4:module_instant_loop[7].writelogic_highbyte ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux4:module_instant_loop[7].writelogic_lowbyte ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4:module_instant_loop[7].writelogic_lowbyte"                                                                                             ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..8]" will be connected to GND. ;
+; b    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "b[15..8]" will be connected to GND. ;
+; c    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "c[15..8]" will be connected to GND. ;
+; d    ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
+; f    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "f[15..8]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4:module_instant_loop[7].writelogic_highbyte"                                                                                            ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..8]" will be connected to GND. ;
+; b    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "b[15..8]" will be connected to GND. ;
+; c    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "c[15..8]" will be connected to GND. ;
+; d    ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
+; f    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "f[15..8]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4:module_instant_loop[6].writelogic_lowbyte"                                                                                             ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..8]" will be connected to GND. ;
+; b    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "b[15..8]" will be connected to GND. ;
+; c    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "c[15..8]" will be connected to GND. ;
+; d    ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
+; f    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "f[15..8]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4:module_instant_loop[6].writelogic_highbyte"                                                                                            ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..8]" will be connected to GND. ;
+; b    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "b[15..8]" will be connected to GND. ;
+; c    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "c[15..8]" will be connected to GND. ;
+; d    ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
+; f    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "f[15..8]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4:module_instant_loop[5].writelogic_lowbyte"                                                                                             ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..8]" will be connected to GND. ;
+; b    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "b[15..8]" will be connected to GND. ;
+; c    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "c[15..8]" will be connected to GND. ;
+; d    ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
+; f    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "f[15..8]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4:module_instant_loop[5].writelogic_highbyte"                                                                                            ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..8]" will be connected to GND. ;
+; b    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "b[15..8]" will be connected to GND. ;
+; c    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "c[15..8]" will be connected to GND. ;
+; d    ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
+; f    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "f[15..8]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4:module_instant_loop[4].writelogic_lowbyte"                                                                                             ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..8]" will be connected to GND. ;
+; b    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "b[15..8]" will be connected to GND. ;
+; c    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "c[15..8]" will be connected to GND. ;
+; d    ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
+; f    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "f[15..8]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4:module_instant_loop[4].writelogic_highbyte"                                                                                            ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..8]" will be connected to GND. ;
+; b    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "b[15..8]" will be connected to GND. ;
+; c    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "c[15..8]" will be connected to GND. ;
+; d    ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
+; f    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "f[15..8]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4:module_instant_loop[3].writelogic_lowbyte"                                                                                             ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..8]" will be connected to GND. ;
+; b    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "b[15..8]" will be connected to GND. ;
+; c    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "c[15..8]" will be connected to GND. ;
+; d    ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
+; f    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "f[15..8]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4:module_instant_loop[3].writelogic_highbyte"                                                                                            ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..8]" will be connected to GND. ;
+; b    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "b[15..8]" will be connected to GND. ;
+; c    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "c[15..8]" will be connected to GND. ;
+; d    ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
+; f    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "f[15..8]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4:module_instant_loop[2].writelogic_lowbyte"                                                                                             ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..8]" will be connected to GND. ;
+; b    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "b[15..8]" will be connected to GND. ;
+; c    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "c[15..8]" will be connected to GND. ;
+; d    ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
+; f    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "f[15..8]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4:module_instant_loop[2].writelogic_highbyte"                                                                                            ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..8]" will be connected to GND. ;
+; b    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "b[15..8]" will be connected to GND. ;
+; c    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "c[15..8]" will be connected to GND. ;
+; d    ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
+; f    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "f[15..8]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4:module_instant_loop[1].writelogic_lowbyte"                                                                                             ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..8]" will be connected to GND. ;
+; b    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "b[15..8]" will be connected to GND. ;
+; c    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "c[15..8]" will be connected to GND. ;
+; d    ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
+; f    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "f[15..8]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4:module_instant_loop[1].writelogic_highbyte"                                                                                            ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..8]" will be connected to GND. ;
+; b    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "b[15..8]" will be connected to GND. ;
+; c    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "c[15..8]" will be connected to GND. ;
+; d    ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
+; f    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "f[15..8]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4:module_instant_loop[0].writelogic_lowbyte"                                                                                             ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..8]" will be connected to GND. ;
+; b    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "b[15..8]" will be connected to GND. ;
+; c    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "c[15..8]" will be connected to GND. ;
+; d    ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
+; f    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "f[15..8]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux4:module_instant_loop[0].writelogic_highbyte"                                                                                            ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..8]" will be connected to GND. ;
+; b    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "b[15..8]" will be connected to GND. ;
+; c    ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "c[15..8]" will be connected to GND. ;
+; d    ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
+; f    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (8 bits) it drives; bit(s) "f[15..8]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decoder3:decoder3_inst"                                                                                                                                                       ;
++--------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                                                                                                               ;
++--------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; decodedvalue ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (9 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++--------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -784,23 +714,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
-    Info: Processing started: Thu Feb 16 23:23:31 2017
+    Info: Processing started: Fri Feb 17 19:03:42 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mp2 -c mp2
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
-Info (12021): Found 1 design units, including 1 entities, in source file cache_datapath.sv
-    Info (12023): Found entity 1: cache_datapath
-Info (12021): Found 1 design units, including 1 entities, in source file cache_control.sv
-    Info (12023): Found entity 1: cache_control
-Info (12021): Found 1 design units, including 1 entities, in source file cache.sv
-    Info (12023): Found entity 1: cache
-Info (12021): Found 1 design units, including 1 entities, in source file mp2.sv
-    Info (12023): Found entity 1: mp2
-Info (12021): Found 1 design units, including 1 entities, in source file cpu_datapath.sv
-    Info (12023): Found entity 1: cpu_datapath
-Info (12021): Found 1 design units, including 1 entities, in source file cpu_control.sv
-    Info (12023): Found entity 1: cpu_control
-Info (12021): Found 1 design units, including 1 entities, in source file cpu.sv
-    Info (12023): Found entity 1: cpu
+Info (12021): Found 1 design units, including 1 entities, in source file cache_writelogic.sv
+    Info (12023): Found entity 1: cache_writelogic
+Info (12021): Found 1 design units, including 1 entities, in source file decoder3.sv
+    Info (12023): Found entity 1: decoder3
+Info (12021): Found 1 design units, including 1 entities, in source file mux8.sv
+    Info (12023): Found entity 1: mux8
+Info (12021): Found 1 design units, including 1 entities, in source file way.sv
+    Info (12023): Found entity 1: way
+Info (12021): Found 1 design units, including 1 entities, in source file array.sv
+    Info (12023): Found entity 1: array
 Info (12021): Found 1 design units, including 0 entities, in source file lc3b_types.sv
     Info (12022): Found design unit 1: lc3b_types (SystemVerilog)
 Info (12021): Found 1 design units, including 1 entities, in source file adj.sv
@@ -825,326 +751,21 @@ Info (12021): Found 1 design units, including 1 entities, in source file cccomp.
     Info (12023): Found entity 1: cccomp
 Info (12021): Found 1 design units, including 1 entities, in source file mux4.sv
     Info (12023): Found entity 1: mux4
-Info (12127): Elaborating entity "mp2" for the top level hierarchy
-Info (12128): Elaborating entity "cpu" for hierarchy "cpu:cpu_inst"
-Info (12128): Elaborating entity "cpu_control" for hierarchy "cpu:cpu_inst|cpu_control:control"
-Info (12128): Elaborating entity "cpu_datapath" for hierarchy "cpu:cpu_inst|cpu_datapath:datapath"
-Info (12128): Elaborating entity "register" for hierarchy "cpu:cpu_inst|cpu_datapath:datapath|register:pc"
-Info (12128): Elaborating entity "mux4" for hierarchy "cpu:cpu_inst|cpu_datapath:datapath|mux4:pcmux"
-Info (12128): Elaborating entity "plus2" for hierarchy "cpu:cpu_inst|cpu_datapath:datapath|plus2:pcPlus2"
-Info (12128): Elaborating entity "adder" for hierarchy "cpu:cpu_inst|cpu_datapath:datapath|adder:br_adder"
-Info (12128): Elaborating entity "mux2" for hierarchy "cpu:cpu_inst|cpu_datapath:datapath|mux2:addrmux"
-Info (12128): Elaborating entity "adj" for hierarchy "cpu:cpu_inst|cpu_datapath:datapath|adj:offset9_adjuster"
-Info (12128): Elaborating entity "adj" for hierarchy "cpu:cpu_inst|cpu_datapath:datapath|adj:offset11_adjuster"
-Info (12128): Elaborating entity "ir" for hierarchy "cpu:cpu_inst|cpu_datapath:datapath|ir:IR"
-Info (12128): Elaborating entity "mux2" for hierarchy "cpu:cpu_inst|cpu_datapath:datapath|mux2:storemux"
-Info (12128): Elaborating entity "adj" for hierarchy "cpu:cpu_inst|cpu_datapath:datapath|adj:offset6_adjuster"
-Info (12128): Elaborating entity "regfile" for hierarchy "cpu:cpu_inst|cpu_datapath:datapath|regfile:regfile_inst"
-Info (12128): Elaborating entity "alu" for hierarchy "cpu:cpu_inst|cpu_datapath:datapath|alu:alu_inst"
-Info (12128): Elaborating entity "gencc" for hierarchy "cpu:cpu_inst|cpu_datapath:datapath|gencc:gencc_inst"
-Info (12128): Elaborating entity "register" for hierarchy "cpu:cpu_inst|cpu_datapath:datapath|register:cc"
-Info (12128): Elaborating entity "cccomp" for hierarchy "cpu:cpu_inst|cpu_datapath:datapath|cccomp:cccomp_inst"
-Info (12128): Elaborating entity "cache" for hierarchy "cache:cache_inst"
-Info (12128): Elaborating entity "cache_control" for hierarchy "cache:cache_inst|cache_control:control"
-Warning (10034): Output port "mem_resp" at cache_control.sv(12) has no driver
-Warning (10034): Output port "pmem_read" at cache_control.sv(16) has no driver
-Warning (10034): Output port "pmem_write" at cache_control.sv(17) has no driver
-Warning (12158): Entity "cache_control" contains only dangling pins
-Info (12128): Elaborating entity "cache_datapath" for hierarchy "cache:cache_inst|cache_datapath:datapath"
-Warning (10034): Output port "mem_rdata" at cache_datapath.sv(13) has no driver
-Warning (10034): Output port "pmem_address" at cache_datapath.sv(17) has no driver
-Warning (10034): Output port "pmem_wdata" at cache_datapath.sv(19) has no driver
-Warning (12158): Entity "cache_datapath" contains only dangling pins
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276006): RAM logic "cpu:cpu_inst|cpu_datapath:datapath|regfile:regfile_inst|data" is uninferred due to "logic" being set as ramstyle synthesis attribute
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "pmem_read" is stuck at GND
-    Warning (13410): Pin "pmem_write" is stuck at GND
-    Warning (13410): Pin "pmem_address[0]" is stuck at GND
-    Warning (13410): Pin "pmem_address[1]" is stuck at GND
-    Warning (13410): Pin "pmem_address[2]" is stuck at GND
-    Warning (13410): Pin "pmem_address[3]" is stuck at GND
-    Warning (13410): Pin "pmem_address[4]" is stuck at GND
-    Warning (13410): Pin "pmem_address[5]" is stuck at GND
-    Warning (13410): Pin "pmem_address[6]" is stuck at GND
-    Warning (13410): Pin "pmem_address[7]" is stuck at GND
-    Warning (13410): Pin "pmem_address[8]" is stuck at GND
-    Warning (13410): Pin "pmem_address[9]" is stuck at GND
-    Warning (13410): Pin "pmem_address[10]" is stuck at GND
-    Warning (13410): Pin "pmem_address[11]" is stuck at GND
-    Warning (13410): Pin "pmem_address[12]" is stuck at GND
-    Warning (13410): Pin "pmem_address[13]" is stuck at GND
-    Warning (13410): Pin "pmem_address[14]" is stuck at GND
-    Warning (13410): Pin "pmem_address[15]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[0]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[1]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[2]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[3]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[4]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[5]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[6]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[7]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[8]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[9]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[10]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[11]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[12]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[13]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[14]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[15]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[16]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[17]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[18]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[19]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[20]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[21]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[22]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[23]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[24]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[25]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[26]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[27]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[28]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[29]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[30]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[31]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[32]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[33]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[34]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[35]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[36]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[37]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[38]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[39]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[40]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[41]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[42]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[43]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[44]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[45]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[46]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[47]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[48]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[49]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[50]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[51]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[52]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[53]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[54]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[55]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[56]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[57]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[58]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[59]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[60]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[61]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[62]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[63]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[64]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[65]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[66]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[67]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[68]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[69]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[70]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[71]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[72]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[73]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[74]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[75]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[76]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[77]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[78]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[79]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[80]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[81]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[82]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[83]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[84]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[85]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[86]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[87]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[88]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[89]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[90]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[91]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[92]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[93]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[94]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[95]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[96]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[97]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[98]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[99]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[100]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[101]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[102]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[103]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[104]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[105]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[106]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[107]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[108]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[109]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[110]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[111]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[112]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[113]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[114]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[115]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[116]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[117]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[118]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[119]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[120]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[121]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[122]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[123]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[124]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[125]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[126]" is stuck at GND
-    Warning (13410): Pin "pmem_wdata[127]" is stuck at GND
-Info (17049): 86 registers lost all their fanouts during netlist optimizations.
+Info (12127): Elaborating entity "cache_writelogic" for the top level hierarchy
+Info (12128): Elaborating entity "decoder3" for hierarchy "decoder3:decoder3_inst"
+Info (12128): Elaborating entity "mux4" for hierarchy "mux4:module_instant_loop[0].writelogic_highbyte"
+Warning (12241): 17 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 130 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "pmem_resp"
-    Warning (15610): No output dependent on input pin "pmem_rdata[0]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[1]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[2]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[3]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[4]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[5]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[6]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[7]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[8]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[9]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[10]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[11]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[12]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[13]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[14]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[15]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[16]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[17]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[18]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[19]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[20]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[21]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[22]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[23]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[24]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[25]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[26]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[27]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[28]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[29]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[30]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[31]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[32]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[33]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[34]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[35]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[36]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[37]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[38]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[39]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[40]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[41]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[42]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[43]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[44]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[45]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[46]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[47]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[48]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[49]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[50]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[51]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[52]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[53]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[54]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[55]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[56]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[57]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[58]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[59]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[60]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[61]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[62]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[63]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[64]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[65]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[66]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[67]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[68]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[69]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[70]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[71]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[72]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[73]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[74]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[75]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[76]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[77]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[78]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[79]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[80]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[81]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[82]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[83]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[84]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[85]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[86]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[87]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[88]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[89]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[90]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[91]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[92]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[93]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[94]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[95]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[96]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[97]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[98]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[99]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[100]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[101]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[102]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[103]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[104]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[105]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[106]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[107]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[108]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[109]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[110]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[111]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[112]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[113]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[114]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[115]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[116]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[117]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[118]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[119]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[120]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[121]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[122]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[123]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[124]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[125]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[126]"
-    Warning (15610): No output dependent on input pin "pmem_rdata[127]"
-    Warning (15610): No output dependent on input pin "clk"
-Info (21057): Implemented 276 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 130 input pins
-    Info (21059): Implemented 146 output pins
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 286 warnings
-    Info: Peak virtual memory: 413 megabytes
-    Info: Processing ended: Thu Feb 16 23:23:36 2017
-    Info: Elapsed time: 00:00:05
+Info (21057): Implemented 550 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 278 input pins
+    Info (21059): Implemented 128 output pins
+    Info (21061): Implemented 144 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 447 megabytes
+    Info: Processing ended: Fri Feb 17 19:03:45 2017
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 

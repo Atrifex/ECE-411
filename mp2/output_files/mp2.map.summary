@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Thu Feb 16 23:23:35 2017
+Analysis & Synthesis Status : Successful - Fri Feb 17 19:03:45 2017
 Quartus II 32-bit Version : 13.1.4 Build 182 03/12/2014 SJ Full Version
 Revision Name : mp2
-Top-level Entity Name : mp2
+Top-level Entity Name : cache_writelogic
 Family : Stratix III
 Logic utilization : N/A
-    Combinational ALUTs : 0
+    Combinational ALUTs : 144
     Memory ALUTs : 0
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 276
+Total pins : 406
 Total virtual pins : 0
 Total block memory bits : 0
 DSP block 18-bit elements : 0

@@ -1,7 +1,7 @@
 module mux8 #(parameter width = 16) // creates a modular module so that yo can have variable size inputs
 (
-	input [2:0] sel, 							// selection bit
-	input [width - 1:0] a,b,c,d,e,f,g,h        	// the inputs to select from
+	input [2:0] sel, 									// selection bit
+	input [width - 1:0] a,b,c,d,e,f,g,h,      // the inputs to select from
 	output logic [width - 1:0] y 	            // selected output
 );
 

@@ -14,7 +14,7 @@ module way
     /* Way Output Signals */
     output logic d_out, v_out,
     output lc3b_c_tag tag_out,
-    output lc3b_cacheline data_out,
+    output lc3b_cacheline data_out
 );
 
 array #(1) dirty
@@ -44,7 +44,7 @@ array #(9) tag
     .dataout(tag_out)
 );
 
-array #(128) dirty
+array #(128) data
 (
     .clk,
     .write(load_TD),

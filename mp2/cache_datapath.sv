@@ -25,10 +25,19 @@ module cache_datapath
 
 /* Internal Signals */
 logic hit0, hit1, v_out0, v_out1;
+lc3b_cacheline writelogic_out;
 
 assign hit0 = (v_out0 & (mem_address[15:7] == tag0));
 assign hit1 = (v_out1 & (mem_address[15:7] == tag1));
 assign hit = hit0 | hit1;
+
+cache_writelogic writelogic
+(
+    .pmem_read, .mem_byte_enable,
+    .offset(mem_address[3:1]), .mem_wdata, .pmem_rdata, .cur_cacheline(pmem_wdata),
+    .output_cacheline(writelogic_out)
+);
+
 
 array #(1) lru
 (
@@ -46,7 +55,7 @@ way way0
 
     /* Way Input Signals */
     .load_d(load_d0), .load_v(load_v0), .load_TD(load_TD0), .index(mem_address[6:4]),
-    .d_in(d_in0), .v_in(v_in0), .tag_in(mem_address[15:7]), .data_in(write_logic_out),
+    .d_in(d_in0), .v_in(v_in0), .tag_in(mem_address[15:7]), .data_in(writelogic_out),
 
     /* Way Output Signals */
     .d_out(d_out0), .v_out(v_out0), .tag_out(tag0), .data_out(data_out0)
@@ -58,7 +67,7 @@ way way1
 
     /* Way Input Signals */
     .load_d(load_d1), .load_v(load_v1), .load_TD(load_TD1), .index(mem_address[6:4]),
-    .d_in(d_in1), .v_in(v_in1), .tag_in(mem_address[15:7]), .data_in(write_logic_out),
+    .d_in(d_in1), .v_in(v_in1), .tag_in(mem_address[15:7]), .data_in(writelogic_out),
 
     /* Way Output Signals */
     .d_out(d_out1), .v_out(v_out1), .tag_out(tag1), .data_out(data_out1)
@@ -94,7 +103,7 @@ mux4 #(16) pmemaddr_mux
     .a({mem_address[15:4], 4'h0}),
     .b({tag0, mem_address[6:4], 4'h0}),
     .c({tag1, mem_address[6:4], 4'h0}),
-    .d((16'h0000),
+    .d(16'h0000),
     .f(pmem_address)
 );
 

@@ -1,7 +1,7 @@
 module decoder3
 (
     input [2:0] encodedvalue,
-    ouput logic [7:0] decodedvalue
+    output logic [7:0] decodedvalue
 );
 
 
