@@ -25,11 +25,13 @@ module cache_datapath
 
 /* Internal Signals */
 logic hit0, hit1, v_out0, v_out1;
-lc3b_cacheline writelogic_out;
+lc3b_cacheline writelogic_out, data_out0, data_out1, wayselector_out;
+lc3b_c_tag tag0, tag1;
 
 assign hit0 = (v_out0 & (mem_address[15:7] == tag0));
 assign hit1 = (v_out1 & (mem_address[15:7] == tag1));
 assign hit = hit0 | hit1;
+assign pmem_wdata = wayselector_out;
 
 cache_writelogic writelogic
 (
