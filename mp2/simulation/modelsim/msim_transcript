@@ -252,62 +252,6 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 200 ns
-add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/lru/data
-add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way0/data/clk
-add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way0/data/write
-add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way0/data/index
-add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way0/data/datain
-add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way0/data/dataout
-add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way1/data/clk
-add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way1/data/write
-add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way1/data/index
-add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way1/data/datain
-add wave -position end  sim:/mp2_tb/dut/cache_inst/datapath/way1/data/dataout
-add wave -position end  sim:/mp2_tb/dut/cpu_inst/datapath/regfile_inst/data
-restart -f; 3000ns
-# Loading sv_std.std
-# Loading work.mp2_tb
-# Loading work.lc3b_types
-# Loading work.mp2_sv_unit
-# Loading work.mp2
-# Loading work.cpu_sv_unit
-# Loading work.cpu
-# Loading work.cpu_control_sv_unit
-# Loading work.cpu_control
-# Loading work.cpu_datapath_sv_unit
-# Loading work.cpu_datapath
-# Loading work.register
-# Loading work.mux4
-# Loading work.plus2
-# Loading work.adder
-# Loading work.mux2
-# Loading work.adj_sv_unit
-# Loading work.adj
-# Loading work.ir_sv_unit
-# Loading work.ir
-# Loading work.regfile_sv_unit
-# Loading work.regfile
-# Loading work.alu_sv_unit
-# Loading work.alu
-# Loading work.gencc_sv_unit
-# Loading work.gencc
-# Loading work.cccomp_sv_unit
-# Loading work.cccomp
-# Loading work.cache_sv_unit
-# Loading work.cache
-# Loading work.cache_control
-# Loading work.cache_datapath_sv_unit
-# Loading work.cache_datapath
-# Loading work.cache_writelogic_sv_unit
-# Loading work.cache_writelogic
-# Loading work.decoder3
-# Loading work.array_sv_unit
-# Loading work.array
-# Loading work.way_sv_unit
-# Loading work.way
-# Loading work.mux8
-# Loading work.physical_memory
-# invalid command name "3000ns"
 restart -f; run 3000ns
 # Loading sv_std.std
 # Loading work.mp2_tb
@@ -351,6 +295,3 @@ restart -f; run 3000ns
 # Loading work.way
 # Loading work.mux8
 # Loading work.physical_memory
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/rrthakk2/ece411/mp2/simulation/modelsim/wave.do
-do wave.do
-do wave.do

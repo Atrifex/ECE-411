@@ -95,7 +95,7 @@ begin : next_state_logic
     case (state)
         process_request: begin
             if(~(hit1 | hit0) & (mem_read ^ mem_write)) begin
-                if(d_in0 && d_in1)
+                if((d_in0 == 1 && lru_in == 0) || (d_in1 == 1 && lru_in == 1))
                     next_state = write_back;
                 else
                     next_state = fetch_cline;
