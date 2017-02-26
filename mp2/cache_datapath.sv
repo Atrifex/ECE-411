@@ -5,7 +5,7 @@ module cache_datapath
     input clk,
 
     /* Control signals */
-    input load_lru, lru_in, writeback_ctrlsig,
+    input load_lru, lru_in, pmemwdata_sel,
     input load_d0, load_v0, load_TD0, d_in0, v_in0,
     input load_d1, load_v1, load_TD1, d_in1, v_in1,
     input [1:0] pmemaddr_sel,
@@ -77,9 +77,9 @@ way way1
 
 mux2 #(128) wayselector_mux
 (
-    .sel(hit0 | writeback_ctrlsig),
-    .a(data_out1),
-    .b(data_out0),
+    .sel(pmemwdata_sel),
+    .a(data_out0),
+    .b(data_out1),
     .f(wayselector_out)
 );
 

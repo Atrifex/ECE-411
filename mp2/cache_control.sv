@@ -5,7 +5,7 @@ module cache_control
 
     /* Datapath controls */
     input lru_in, d_in0, d_in1, hit0, hit1,
-    output logic load_lru, lru_set, writeback_ctrlsig,
+    output logic load_lru, lru_set, pmemwdata_sel,
     output logic load_d0, load_v0, load_TD0, d_set0, v_set0,
     output logic load_d1, load_v1, load_TD1, d_set1, v_set1,
     output logic [1:0] pmemaddr_sel,
@@ -28,7 +28,7 @@ always_comb
 begin : state_actions
     /* Default output assignments */
     load_lru = 0; lru_set = 0;
-    writeback_ctrlsig = 0;
+    pmemwdata_sel = 0;
     load_d0 = 0; load_v0 = 0; load_TD0 = 0;
     d_set0 = 0; v_set0 = 0;
     load_d1 = 0; load_v1 = 0; load_TD1 = 0;
@@ -43,19 +43,23 @@ begin : state_actions
                 if(mem_write) begin
                     d_set0 = 1;
                     load_d0 = 1;
+	                 load_TD0 = 1;
                 end
                 lru_set = 1;
                 load_lru = 1;
                 mem_resp = 1;
+	             pmemwdata_sel = 0;
             end
             if(hit1 & (mem_read ^ mem_write)) begin
                 if(mem_write) begin
                     d_set1 = 1;
                     load_d1 = 1;
+	                 load_TD1 = 1;
                 end
                 lru_set = 0;
                 load_lru = 1;
                 mem_resp = 1;
+ 	             pmemwdata_sel = 1;
             end
         end
         fetch_cline: begin
@@ -76,7 +80,7 @@ begin : state_actions
         end
         write_back: begin
             pmem_write = 1;
-            writeback_ctrlsig = lru_in;
+            pmemwdata_sel = lru_in;
             if(lru_in == 0)
                 pmemaddr_sel = 2'b01;
             else

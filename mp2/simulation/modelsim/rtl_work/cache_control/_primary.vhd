@@ -10,7 +10,7 @@ entity cache_control is
         hit1            : in     vl_logic;
         load_lru        : out    vl_logic;
         lru_set         : out    vl_logic;
-        writeback_ctrlsig: out    vl_logic;
+        pmemwdata_sel   : out    vl_logic;
         load_d0         : out    vl_logic;
         load_v0         : out    vl_logic;
         load_TD0        : out    vl_logic;

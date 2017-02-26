@@ -5,7 +5,7 @@ entity cache_datapath is
         clk             : in     vl_logic;
         load_lru        : in     vl_logic;
         lru_in          : in     vl_logic;
-        writeback_ctrlsig: in     vl_logic;
+        pmemwdata_sel   : in     vl_logic;
         load_d0         : in     vl_logic;
         load_v0         : in     vl_logic;
         load_TD0        : in     vl_logic;
