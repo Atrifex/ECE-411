@@ -22,7 +22,7 @@ Z6 !s92 -sv -work work +incdir+/home/rrthakk2/ece411/mp2 -O0
 !s100 [ncd5?0@;jh7oMM3edAeQ3
 !s105 adder_sv_unit
 !s85 0
-!s108 1488092453.576352
+!s108 1488151406.913993
 !s107 /home/rrthakk2/ece411/mp2/adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/adder.sv|
 !s101 -O0
@@ -41,7 +41,7 @@ Z9 8/home/rrthakk2/ece411/mp2/adj.sv
 Z10 F/home/rrthakk2/ece411/mp2/adj.sv
 L0 6
 R4
-Z11 !s108 1488092454.287935
+Z11 !s108 1488151407.564069
 Z12 !s107 /home/rrthakk2/ece411/mp2/adj.sv|
 Z13 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/adj.sv|
 R5
@@ -90,7 +90,7 @@ Z15 8/home/rrthakk2/ece411/mp2/alu.sv
 Z16 F/home/rrthakk2/ece411/mp2/alu.sv
 L0 3
 R4
-Z17 !s108 1488092454.490352
+Z17 !s108 1488151407.704697
 Z18 !s107 /home/rrthakk2/ece411/mp2/alu.sv|
 Z19 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/alu.sv|
 R5
@@ -139,7 +139,7 @@ Z21 8/home/rrthakk2/ece411/mp2/array.sv
 Z22 F/home/rrthakk2/ece411/mp2/array.sv
 L0 3
 R4
-Z23 !s108 1488092454.128637
+Z23 !s108 1488151407.425659
 Z24 !s107 /home/rrthakk2/ece411/mp2/array.sv|
 Z25 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/array.sv|
 R5
@@ -188,7 +188,7 @@ Z27 8/home/rrthakk2/ece411/mp2/cache.sv
 Z28 F/home/rrthakk2/ece411/mp2/cache.sv
 L0 3
 R4
-Z29 !s108 1488092456.294067
+Z29 !s108 1488151409.024419
 Z30 !s107 /home/rrthakk2/ece411/mp2/cache.sv|
 Z31 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/cache.sv|
 R5
@@ -217,7 +217,7 @@ R6
 !s100 DD8[OMi05mzY=algS:BcS3
 !s105 cache_control_sv_unit
 !s85 0
-!s108 1488092452.826268
+!s108 1488151406.078730
 !s107 /home/rrthakk2/ece411/mp2/cache_control.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/cache_control.sv|
 !s101 -O0
@@ -236,7 +236,7 @@ Z33 8/home/rrthakk2/ece411/mp2/cache_datapath.sv
 Z34 F/home/rrthakk2/ece411/mp2/cache_datapath.sv
 L0 3
 R4
-Z35 !s108 1488092455.747566
+Z35 !s108 1488151408.736361
 Z36 !s107 /home/rrthakk2/ece411/mp2/cache_datapath.sv|
 Z37 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/cache_datapath.sv|
 R5
@@ -309,7 +309,7 @@ Z39 8/home/rrthakk2/ece411/mp2/cache_writelogic.sv
 Z40 F/home/rrthakk2/ece411/mp2/cache_writelogic.sv
 L0 3
 R4
-Z41 !s108 1488092453.941216
+Z41 !s108 1488151407.249403
 Z42 !s107 /home/rrthakk2/ece411/mp2/cache_writelogic.sv|
 Z43 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/cache_writelogic.sv|
 R5
@@ -358,7 +358,7 @@ Z45 8/home/rrthakk2/ece411/mp2/cccomp.sv
 Z46 F/home/rrthakk2/ece411/mp2/cccomp.sv
 L0 4
 R4
-Z47 !s108 1488092455.287640
+Z47 !s108 1488151408.309010
 Z48 !s107 /home/rrthakk2/ece411/mp2/cccomp.sv|
 Z49 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/cccomp.sv|
 R5
@@ -407,7 +407,7 @@ Z51 8/home/rrthakk2/ece411/mp2/cpu.sv
 Z52 F/home/rrthakk2/ece411/mp2/cpu.sv
 L0 3
 R4
-Z53 !s108 1488092456.080760
+Z53 !s108 1488151408.888312
 Z54 !s107 /home/rrthakk2/ece411/mp2/cpu.sv|
 Z55 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/cpu.sv|
 R5
@@ -432,7 +432,7 @@ Z57 8/home/rrthakk2/ece411/mp2/cpu_control.sv
 Z58 F/home/rrthakk2/ece411/mp2/cpu_control.sv
 L0 3
 R4
-Z59 !s108 1488092453.736881
+Z59 !s108 1488151407.084646
 Z60 !s107 /home/rrthakk2/ece411/mp2/cpu_control.sv|
 Z61 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/cpu_control.sv|
 R5
@@ -481,7 +481,7 @@ Z63 8/home/rrthakk2/ece411/mp2/cpu_datapath.sv
 Z64 F/home/rrthakk2/ece411/mp2/cpu_datapath.sv
 L0 3
 R4
-Z65 !s108 1488092455.448975
+Z65 !s108 1488151408.478272
 Z66 !s107 /home/rrthakk2/ece411/mp2/cpu_datapath.sv|
 Z67 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/cpu_datapath.sv|
 R5
@@ -558,7 +558,7 @@ R6
 !s100 Gmc<`<GjlgD1bBZn[NZe^2
 !s105 decoder3_sv_unit
 !s85 0
-!s108 1488092452.956003
+!s108 1488151406.277158
 !s107 /home/rrthakk2/ece411/mp2/decoder3.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/decoder3.sv|
 !s101 -O0
@@ -577,7 +577,7 @@ Z68 8/home/rrthakk2/ece411/mp2/gencc.sv
 Z69 F/home/rrthakk2/ece411/mp2/gencc.sv
 L0 3
 R4
-Z70 !s108 1488092454.700256
+Z70 !s108 1488151407.845325
 Z71 !s107 /home/rrthakk2/ece411/mp2/gencc.sv|
 Z72 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/gencc.sv|
 R5
@@ -626,7 +626,7 @@ Z74 8/home/rrthakk2/ece411/mp2/ir.sv
 Z75 F/home/rrthakk2/ece411/mp2/ir.sv
 L0 3
 R4
-Z76 !s108 1488092454.890317
+Z76 !s108 1488151407.996584
 Z77 !s107 /home/rrthakk2/ece411/mp2/ir.sv|
 Z78 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/ir.sv|
 R5
@@ -678,7 +678,7 @@ R6
 !i10b 1
 !s100 [mZdK>_jJ7mPi5?f^M`Zz3
 !s85 0
-!s108 1488092453.161598
+!s108 1488151406.514086
 !s107 /home/rrthakk2/ece411/mp2/lc3b_types.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/lc3b_types.sv|
 !s101 -O0
@@ -697,7 +697,7 @@ Z80 8/home/rrthakk2/ece411/mp2/mp2.sv
 Z81 F/home/rrthakk2/ece411/mp2/mp2.sv
 L0 3
 R4
-Z82 !s108 1488092456.470517
+Z82 !s108 1488151409.158323
 Z83 !s107 /home/rrthakk2/ece411/mp2/mp2.sv|
 Z84 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/mp2.sv|
 R5
@@ -750,7 +750,7 @@ R6
 !s100 [HEi0JW@L604ENN_`If_Q3
 !s105 mp2_tb_sv_unit
 !s85 0
-!s108 1488092456.640909
+!s108 1488151409.299997
 !s107 /home/rrthakk2/ece411/mp2/mp2_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/mp2_tb.sv|
 !s101 -O0
@@ -773,7 +773,7 @@ R6
 !s100 i6inzSO>PEUXf7fHN:JnZ3
 !s105 mux2_sv_unit
 !s85 0
-!s108 1488092453.484711
+!s108 1488151406.811229
 !s107 /home/rrthakk2/ece411/mp2/mux2.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/mux2.sv|
 !s101 -O0
@@ -796,7 +796,7 @@ R6
 !s100 GXE1A`oBUlR;mc>?FES6K1
 !s105 mux4_sv_unit
 !s85 0
-!s108 1488092453.651241
+!s108 1488151406.993793
 !s107 /home/rrthakk2/ece411/mp2/mux4.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/mux4.sv|
 !s101 -O0
@@ -819,7 +819,7 @@ R6
 !s100 ^L3dgco=80mND=[Z>iKK23
 !s105 mux8_sv_unit
 !s85 0
-!s108 1488092453.072366
+!s108 1488151406.404909
 !s107 /home/rrthakk2/ece411/mp2/mux8.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/mux8.sv|
 !s101 -O0
@@ -840,7 +840,7 @@ R4
 r1
 !s85 0
 31
-!s108 1488092456.774963
+!s108 1488151409.390912
 !s107 /home/rrthakk2/ece411/mp2/physical_memory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/physical_memory.sv|
 !s101 -O0
@@ -865,7 +865,7 @@ R6
 !s100 6]N^S`R1K7EaKUL]cO35e3
 !s105 plus2_sv_unit
 !s85 0
-!s108 1488092453.281396
+!s108 1488151406.617529
 !s107 /home/rrthakk2/ece411/mp2/plus2.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/plus2.sv|
 !s101 -O0
@@ -884,7 +884,7 @@ Z86 8/home/rrthakk2/ece411/mp2/regfile.sv
 Z87 F/home/rrthakk2/ece411/mp2/regfile.sv
 L0 3
 R4
-Z88 !s108 1488092455.078410
+Z88 !s108 1488151408.132071
 Z89 !s107 /home/rrthakk2/ece411/mp2/regfile.sv|
 Z90 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/regfile.sv|
 R5
@@ -937,7 +937,7 @@ R6
 !s100 H1SmWkCWN8z_3Ie@DinY@3
 !s105 register_sv_unit
 !s85 0
-!s108 1488092453.371274
+!s108 1488151406.720275
 !s107 /home/rrthakk2/ece411/mp2/register.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/register.sv|
 !s101 -O0
@@ -956,7 +956,7 @@ Z92 8/home/rrthakk2/ece411/mp2/way.sv
 Z93 F/home/rrthakk2/ece411/mp2/way.sv
 L0 3
 R4
-Z94 !s108 1488092455.598539
+Z94 !s108 1488151408.614291
 Z95 !s107 /home/rrthakk2/ece411/mp2/way.sv|
 Z96 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/rrthakk2/ece411/mp2|/home/rrthakk2/ece411/mp2/way.sv|
 R5
