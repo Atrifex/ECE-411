@@ -1,5 +1,5 @@
 Flow report for mp2
-Mon Feb 27 13:11:06 2017
+Mon Feb 27 15:24:28 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -40,24 +40,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Flow Summary                                                                ;
 +-------------------------------+---------------------------------------------+
-; Flow Status                   ; Successful - Mon Feb 27 13:11:05 2017       ;
+; Flow Status                   ; Successful - Mon Feb 27 15:24:28 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp2                                         ;
 ; Top-level Entity Name         ; mp2                                         ;
 ; Family                        ; Stratix III                                 ;
 ; Device                        ; EP3SE50F780C2                               ;
 ; Timing Models                 ; Final                                       ;
-; Logic utilization             ; N/A                                         ;
-;     Combinational ALUTs       ; 874                                         ;
-;     Memory ALUTs              ; 0                                           ;
-;     Dedicated logic registers ; 558                                         ;
-; Total registers               ; 558                                         ;
-; Total pins                    ; 276                                         ;
+; Logic utilization             ; 5 %                                         ;
+;     Combinational ALUTs       ; 1,420 / 38,000 ( 4 % )                      ;
+;     Memory ALUTs              ; 0 / 19,000 ( 0 % )                          ;
+;     Dedicated logic registers ; 848 / 38,000 ( 2 % )                        ;
+; Total registers               ; 848                                         ;
+; Total pins                    ; 276 / 488 ( 57 % )                          ;
 ; Total virtual pins            ; 0                                           ;
-; Total block memory bits       ; 2,192                                       ;
-; DSP block 18-bit elements     ; 0                                           ;
-; Total PLLs                    ; 0                                           ;
-; Total DLLs                    ; 0                                           ;
+; Total block memory bits       ; 2,192 / 5,455,872 ( < 1 % )                 ;
+; DSP block 18-bit elements     ; 0 / 384 ( 0 % )                             ;
+; Total PLLs                    ; 0 / 4 ( 0 % )                               ;
+; Total DLLs                    ; 0 / 4 ( 0 % )                               ;
 +-------------------------------+---------------------------------------------+
 
 
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/27/2017 13:10:56 ;
+; Start date & time ; 02/27/2017 15:22:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mp2                 ;
 +-------------------+---------------------+
@@ -77,10 +77,10 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 176831338140758.148822265622370 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 176831338140758.148823052530428 ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                              ; --            ; --          ; mp2_tb         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                              ; --            ; --          ; cache_tb       ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; cache_tb                        ; --            ; --          ; eda_simulation ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; mp2_tb                          ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl               ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog) ; <None>        ; --          ; --             ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                 ; --            ; --          ; eda_simulation ;
@@ -105,29 +105,41 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------+---------------+-------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 466 MB              ; 00:00:05                           ;
-; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:05                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:19     ; 1.0                     ; 466 MB              ; 00:00:06                           ;
+; Fitter                    ; 00:00:46     ; 1.2                     ; 819 MB              ; 00:00:32                           ;
+; Assembler                 ; 00:00:07     ; 1.0                     ; 433 MB              ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:09     ; 1.0                     ; 517 MB              ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:23     ; 1.0                     ; 396 MB              ; 00:00:04                           ;
+; Total                     ; 00:01:44     ; --                      ; --                  ; 00:00:50                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                     ;
-+----------------------+-------------------------------+--------------+--------------+----------------+
-; Module Name          ; Machine Hostname              ; OS Name      ; OS Version   ; Processor type ;
-+----------------------+-------------------------------+--------------+--------------+----------------+
-; Analysis & Synthesis ; eceb-2022-18.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
-+----------------------+-------------------------------+--------------+--------------+----------------+
++----------------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                          ;
++---------------------------+-------------------------------+--------------+--------------+----------------+
+; Module Name               ; Machine Hostname              ; OS Name      ; OS Version   ; Processor type ;
++---------------------------+-------------------------------+--------------+--------------+----------------+
+; Analysis & Synthesis      ; eceb-2022-18.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; Fitter                    ; eceb-2022-18.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; Assembler                 ; eceb-2022-18.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; TimeQuest Timing Analyzer ; eceb-2022-18.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
+; EDA Netlist Writer        ; eceb-2022-18.ews.illinois.edu ; CentOS Linux ; CentOS Linux ; x86_64         ;
++---------------------------+-------------------------------+--------------+--------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off mp2 -c mp2
+quartus_fit --read_settings_files=off --write_settings_files=off mp2 -c mp2
+quartus_asm --read_settings_files=off --write_settings_files=off mp2 -c mp2
+quartus_sta mp2 -c mp2
+quartus_eda --read_settings_files=off --write_settings_files=off mp2 -c mp2
 
 
 
