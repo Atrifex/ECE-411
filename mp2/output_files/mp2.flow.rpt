@@ -1,5 +1,5 @@
 Flow report for mp2
-Mon Feb 27 02:25:44 2017
+Mon Feb 27 02:55:07 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Flow Summary                                                                ;
 +-------------------------------+---------------------------------------------+
-; Flow Status                   ; Successful - Mon Feb 27 02:25:44 2017       ;
+; Flow Status                   ; Successful - Mon Feb 27 02:55:06 2017       ;
 ; Quartus II 32-bit Version     ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
 ; Revision Name                 ; mp2                                         ;
 ; Top-level Entity Name         ; mp2                                         ;
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/27/2017 02:25:36 ;
+; Start date & time ; 02/27/2017 02:54:59 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mp2                 ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 176831338140758.148818393603701 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 176831338140758.148818569905266 ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                              ; --            ; --          ; mp2_tb         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                              ; --            ; --          ; cache_tb       ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; cache_tb                        ; --            ; --          ; eda_simulation ;
@@ -110,8 +110,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 466 MB              ; 00:00:05                           ;
-; Total                ; 00:00:08     ; --                      ; --                  ; 00:00:05                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 460 MB              ; 00:00:05                           ;
+; Total                ; 00:00:07     ; --                      ; --                  ; 00:00:05                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

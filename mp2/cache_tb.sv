@@ -26,6 +26,7 @@ begin: TEST_SIGNALS
 	mem_address = 0;
 	mem_wdata = 0;
 
+	/********************* Way 0 Tests *********************/
 	// Read miss, clean, way 0, set 0
 	#5 
 		mem_read = 1;
@@ -107,9 +108,92 @@ begin: TEST_SIGNALS
 	#10 
 		mem_read = 0;
 
+	/********************* Way 1 Tests *********************/
+	// Read miss, clean, way 1, set 0
+	#10 
+		mem_address = {9'h2, 3'h0,3'h0,1'b0};
+		mem_read = 1;
+	wait(mem_resp == 1);
+	#10 
+		mem_read = 0;
+	
+	// Read hit, clean, way 1, set 0
+	#10 
+		mem_address = {9'h2, 3'h0,3'h1,1'b0};
+		mem_read = 1;
+	wait(mem_resp == 1);
+	#10 
+		mem_read = 0;
+		
+	// Write hit, clean, way 1, set 0, high byte
+	#10 
+		mem_address = {9'h2, 3'h0,3'h1,1'b0};
+		mem_wdata = 16'h600D;
+		mem_byte_enable = 2'b10;
+		mem_write = 1;
+	wait(mem_resp == 1);
+	#10 
+		mem_write = 0;
+	
+	// Write hit, way 1, set 0, low byte
+	#10 
+		mem_address = {9'h2, 3'h0,3'h1,1'b0};
+		mem_wdata = 16'h600D;
+		mem_byte_enable = 2'b01;
+		mem_write = 1;
+	wait(mem_resp == 1);
+	#10 
+		mem_write = 0;
+	
+	// Write miss, clean, way 1, set 1
+	#10 
+		mem_address = {9'h2, 3'h1,3'h0,1'b0};
+		mem_wdata = 16'h600D;
+		mem_byte_enable = 2'b11;
+		mem_write = 1;
+	wait(mem_resp == 1);
+	#10 
+		mem_write = 0;
+		
+	// Read hit, dirty, way 1, set 1
+	#10 
+		mem_address = {9'h2, 3'h1,3'h0,1'b0};
+		mem_read = 1;
+	wait(mem_resp == 1);
+	#10 
+		mem_read = 0;
+	
+	// Read miss, dirty, way 1, set 2
+	#10 
+		mem_address = {9'h2, 3'h2,3'h0,1'b0};
+		mem_read = 1;
+	wait(mem_resp == 1);
+	#10 
+		mem_read = 0;
+		
+	// Write miss, dirty, way 1, set 3
+	#10 
+		mem_address = {9'h2, 3'h3,3'h0,1'b0};
+		mem_wdata = 16'h600D;
+		mem_byte_enable = 2'b11;
+		mem_write = 1;
+	wait(mem_resp == 1);
+	#10 
+		mem_read = 0;
+		
+	// Write hit, dirty, way 1, set 3
+	#10 
+		mem_address = {9'h2, 3'h3,3'h1,1'b0};
+		mem_wdata = 16'h600D;
+		mem_byte_enable = 2'b11;
+		mem_write = 1;
+	wait(mem_resp == 1);
+	#10 
+		mem_read = 0;
+		
 end
 
-cache cache_inst
+cache DUT
 (
     .clk,
 
