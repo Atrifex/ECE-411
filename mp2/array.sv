@@ -16,7 +16,7 @@ initial
 begin
     for (int i = 0; i < $size(data); i++)
     begin
-        data[i] = 1'b0;
+        //data[i] = 1'b0;
     end
 end
 

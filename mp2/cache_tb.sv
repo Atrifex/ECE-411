@@ -1,4 +1,4 @@
-module mp2_tb;
+module cache_tb;
 
 timeunit 1ns;
 timeprecision 1ns;
@@ -12,20 +12,102 @@ logic [127:0] pmem_rdata;
 logic [127:0] pmem_wdata;
 logic mem_read, mem_write, mem_resp;
 logic [1:0] mem_byte_enable;
-logic [15:0] mem_address, mem_wdata, mem_rdata,
+logic [15:0] mem_address, mem_wdata, mem_rdata;
 
 /* Clock generator */
 initial clk = 0;
 always #5 clk = ~clk;
 
-initial begin: TEST SIGNALS
-mem_read = 0;
-mem_write = 0;
-mem_byte_enable = 0;
-mem_address = 0;
-mem_wdata = 0;
+initial 
+begin: TEST_SIGNALS
+	mem_read = 0;
+	mem_write = 0;
+	mem_byte_enable = 0;
+	mem_address = 0;
+	mem_wdata = 0;
 
+	// Read miss, clean, way 0, set 0
+	#5 
+		mem_read = 1;
+	wait(mem_resp == 1);
+	#10 
+		mem_read = 0;
+	
+	// Read hit, clean, way 0, set 0
+	#10 
+		mem_address = {9'h0, 3'h0,3'h1,1'b0};
+		mem_read = 1;
+	wait(mem_resp == 1);
+	#10 
+		mem_read = 0;
+		
+	// Write hit, clean, way 0, set 0, high byte
+	#10 
+		mem_address = {9'h0, 3'h0,3'h1,1'b0};
+		mem_wdata = 16'h600D;
+		mem_byte_enable = 2'b10;
+		mem_write = 1;
+	wait(mem_resp == 1);
+	#10 
+		mem_write = 0;
+	
+	// Write hit, way 0, set 0, low byte
+	#10 
+		mem_address = {9'h0, 3'h0,3'h1,1'b0};
+		mem_wdata = 16'h600D;
+		mem_byte_enable = 2'b01;
+		mem_write = 1;
+	wait(mem_resp == 1);
+	#10 
+		mem_write = 0;
+	
+	// Write miss, clean, way 0, set 1
+	#10 
+		mem_address = {9'h0, 3'h1,3'h0,1'b0};
+		mem_wdata = 16'h600D;
+		mem_byte_enable = 2'b11;
+		mem_write = 1;
+	wait(mem_resp == 1);
+	#10 
+		mem_write = 0;
+		
+	// Read hit, dirty, way 0, set 1
+	#10 
+		mem_address = {9'h0, 3'h1,3'h0,1'b0};
+		mem_read = 1;
+	wait(mem_resp == 1);
+	#10 
+		mem_read = 0;
+	
+	// Read miss, dirty, way 0, set 2
+	#10 
+		mem_address = {9'h0, 3'h2,3'h0,1'b0};
+		mem_read = 1;
+	wait(mem_resp == 1);
+	#10 
+		mem_read = 0;
+		
+	// Write miss, dirty, way 0, set 3
+	#10 
+		mem_address = {9'h0, 3'h3,3'h0,1'b0};
+		mem_wdata = 16'h600D;
+		mem_byte_enable = 2'b11;
+		mem_write = 1;
+	wait(mem_resp == 1);
+	#10 
+		mem_read = 0;
+		
+	// Write hit, dirty, way 0, set 3
+	#10 
+		mem_address = {9'h0, 3'h3,3'h1,1'b0};
+		mem_wdata = 16'h600D;
+		mem_byte_enable = 2'b11;
+		mem_write = 1;
+	wait(mem_resp == 1);
+	#10 
+		mem_read = 0;
 
+end
 
 cache cache_inst
 (
@@ -50,7 +132,4 @@ physical_memory memory
     .rdata(pmem_rdata)
 );
 
-
-
-
-endmodule : mp2_tb
+endmodule : cache_tb

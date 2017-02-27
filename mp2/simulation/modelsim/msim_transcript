@@ -188,12 +188,12 @@
 # Top level modules:
 # 	mp2
 # 
-# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/mp2_tb.sv}
+# vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/cache_tb.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module mp2_tb
+# -- Compiling module cache_tb
 # 
 # Top level modules:
-# 	mp2_tb
+# 	cache_tb
 # vlog -sv -work work +incdir+/home/rrthakk2/ece411/mp2 {/home/rrthakk2/ece411/mp2/physical_memory.sv}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module physical_memory
@@ -201,36 +201,11 @@
 # Top level modules:
 # 	physical_memory
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  mp2_tb
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mp2_tb 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs="+acc"  cache_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L stratixiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps cache_tb 
 # Loading sv_std.std
-# Loading work.mp2_tb
+# Loading work.cache_tb
 # Loading work.lc3b_types
-# Loading work.mp2_sv_unit
-# Loading work.mp2
-# Loading work.cpu_sv_unit
-# Loading work.cpu
-# Loading work.cpu_control_sv_unit
-# Loading work.cpu_control
-# Loading work.cpu_datapath_sv_unit
-# Loading work.cpu_datapath
-# Loading work.register
-# Loading work.mux4
-# Loading work.plus2
-# Loading work.adder
-# Loading work.mux2
-# Loading work.adj_sv_unit
-# Loading work.adj
-# Loading work.ir_sv_unit
-# Loading work.ir
-# Loading work.regfile_sv_unit
-# Loading work.regfile
-# Loading work.alu_sv_unit
-# Loading work.alu
-# Loading work.gencc_sv_unit
-# Loading work.gencc
-# Loading work.cccomp_sv_unit
-# Loading work.cccomp
 # Loading work.cache_sv_unit
 # Loading work.cache
 # Loading work.cache_control
@@ -243,7 +218,9 @@
 # Loading work.array
 # Loading work.way_sv_unit
 # Loading work.way
+# Loading work.mux2
 # Loading work.mux8
+# Loading work.mux4
 # Loading work.physical_memory
 # 
 # add wave *
@@ -252,35 +229,10 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 200 ns
-restart -f; run 10ns
+do cache_test.do
 # Loading sv_std.std
-# Loading work.mp2_tb
+# Loading work.cache_tb
 # Loading work.lc3b_types
-# Loading work.mp2_sv_unit
-# Loading work.mp2
-# Loading work.cpu_sv_unit
-# Loading work.cpu
-# Loading work.cpu_control_sv_unit
-# Loading work.cpu_control
-# Loading work.cpu_datapath_sv_unit
-# Loading work.cpu_datapath
-# Loading work.register
-# Loading work.mux4
-# Loading work.plus2
-# Loading work.adder
-# Loading work.mux2
-# Loading work.adj_sv_unit
-# Loading work.adj
-# Loading work.ir_sv_unit
-# Loading work.ir
-# Loading work.regfile_sv_unit
-# Loading work.regfile
-# Loading work.alu_sv_unit
-# Loading work.alu
-# Loading work.gencc_sv_unit
-# Loading work.gencc
-# Loading work.cccomp_sv_unit
-# Loading work.cccomp
 # Loading work.cache_sv_unit
 # Loading work.cache
 # Loading work.cache_control
@@ -293,5 +245,27 @@ restart -f; run 10ns
 # Loading work.array
 # Loading work.way_sv_unit
 # Loading work.way
+# Loading work.mux2
 # Loading work.mux8
+# Loading work.mux4
+# Loading work.physical_memory
+do cache_test.do
+# Loading sv_std.std
+# Loading work.cache_tb
+# Loading work.lc3b_types
+# Loading work.cache_sv_unit
+# Loading work.cache
+# Loading work.cache_control
+# Loading work.cache_datapath_sv_unit
+# Loading work.cache_datapath
+# Loading work.cache_writelogic_sv_unit
+# Loading work.cache_writelogic
+# Loading work.decoder3
+# Loading work.array_sv_unit
+# Loading work.array
+# Loading work.way_sv_unit
+# Loading work.way
+# Loading work.mux2
+# Loading work.mux8
+# Loading work.mux4
 # Loading work.physical_memory

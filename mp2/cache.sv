@@ -10,7 +10,7 @@ module cache
     input lc3b_mem_wmask mem_byte_enable,                               // datapath
     input lc3b_word mem_address, mem_wdata,                             // datapath
     // outputs
-    output mem_resp,                                                    // control
+    output logic mem_resp,                                              // control
     output lc3b_word mem_rdata,                                         // datapath
 
     /******* Signals between Cache and Physical Memory *******/
@@ -18,7 +18,7 @@ module cache
     input pmem_resp,                                                    // control
     input lc3b_cacheline pmem_rdata,                                    // datapath
     // outputs
-    output pmem_read, pmem_write,                                       // control
+    output logic pmem_read, pmem_write,                                 // control
     output lc3b_word pmem_address,                                      // datapath
     output lc3b_cacheline pmem_wdata                                    // datapath
 );
