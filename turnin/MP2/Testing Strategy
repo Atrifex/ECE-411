@@ -1,0 +1,30 @@
+Verification is one of the most important parts of the design process. Due to this, a design must be put through various tests to make sure that it functions properly. My testing strategy consists of 2 phases. The first phase is a visual verification phase. During this phase, I made sure that all of the modules in the cache datapath and mp2 top-level module were connected correctly. I used the RTL viewer functionality that is built into Quartus to do this. This simple visual check allowed me verify that the design did not have have any connection related issues. Through the use of visual verification, I was able to fix few simple bugs and speed up the testing process.
+
+Once the visual verification phase had ended, the code based verification phase began. Since I had already tested the LC3b extensively during mp1, I decided to test the cache separately through the use of a testbench (cache_tb.sv). This allowed me to modify signals as I needed to and test very specific situations. As I started to write the testbench, I realized that testing a partially used cache would allow me to test many of the edge cases that exist. To give the illusion of a partially used cache, I commented out the line of code that initialized the cache arrays to 0 and then used a do file (cache_test.do) to load the cache arrays with preset values. My testbench consisted a total of 18 different tests. These tests are were carried out in the following order:
+        1. Read miss, clean, way 0, set 0
+        2. Read hit, clean, way 0, set 0
+        3. Write hit, clean, way 0, set 0, high byte
+        4. Write hit, way 0, set 0, low byte
+        5. Write miss, clean, way 0, set 1
+        6. Read hit, dirty, way 0, set 1
+        7. Read miss, dirty, way 0, set 2
+        8. Write miss, dirty, way 0, set 3
+        9. Write hit, dirty, way 0, set 3
+        10. Read miss, clean, way 1, set 0
+        11. Read hit, clean, way 1, set 0
+        12. Write hit, clean, way 1, set 0, high byte
+        13. Write hit, way 1, set 0, low byte
+        14. Write miss, clean, way 1, set 1
+        15. Read hit, dirty, way 1, set 1
+        16. Read miss, dirty, way 1, set 2
+        17. Write miss, dirty, way 1, set 3
+        18. Write hit, dirty, way 1, set 3    
+
+I order to carry out these tests I also wrote a very simple LC3 program (memory.asm) to load the memory with a few data values. I then modified mem_read, mem_write, mem_address, mem_byte_enable, and mem_wdata directly while waiting for mem_resp. After executing the testbench I compared final values in the cache and memory to the theoretical results that I had calculated. I also checked to make sure that hits take one clock-cycle to process while misses go to physical memory. Since all of the values for the 18 tests matched the expected results, I believe that I can safely claim that my cache design is able to function perfectly.
+
+Locations of files used for testing: 
+Preset Values: mp2/simulation/modelsim/cache_presets/
+cache_test.do: mp2/simulation/modelsim/
+memory.asm: mp2/testcode/
+cache_tb.sv: mp2/
+
