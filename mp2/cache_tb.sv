@@ -96,7 +96,7 @@ begin: TEST_SIGNALS
 		mem_write = 1;
 	wait(mem_resp == 1);
 	#10 
-		mem_read = 0;
+		mem_write = 0;
 		
 	// Write hit, dirty, way 0, set 3
 	#10 
@@ -106,7 +106,7 @@ begin: TEST_SIGNALS
 		mem_write = 1;
 	wait(mem_resp == 1);
 	#10 
-		mem_read = 0;
+		mem_write = 0;
 
 	/********************* Way 1 Tests *********************/
 	// Read miss, clean, way 1, set 0
@@ -179,7 +179,7 @@ begin: TEST_SIGNALS
 		mem_write = 1;
 	wait(mem_resp == 1);
 	#10 
-		mem_read = 0;
+		mem_write = 0;
 		
 	// Write hit, dirty, way 1, set 3
 	#10 
@@ -189,7 +189,7 @@ begin: TEST_SIGNALS
 		mem_write = 1;
 	wait(mem_resp == 1);
 	#10 
-		mem_read = 0;
+		mem_write = 0;
 		
 end
 

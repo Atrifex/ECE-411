@@ -229,48 +229,8 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 200 ns
-run cache_test.do
-# Invalid time value: cache_test.do
-do cache_test.do
-# Loading sv_std.std
-# Loading work.cache_tb
-# Loading work.lc3b_types
-# Loading work.cache_sv_unit
-# Loading work.cache
-# Loading work.cache_control
-# Loading work.cache_datapath_sv_unit
-# Loading work.cache_datapath
-# Loading work.cache_writelogic_sv_unit
-# Loading work.cache_writelogic
-# Loading work.decoder3
-# Loading work.array_sv_unit
-# Loading work.array
-# Loading work.way_sv_unit
-# Loading work.way
-# Loading work.mux2
-# Loading work.mux8
-# Loading work.mux4
-# Loading work.physical_memory
-do cache_test.do
-# Loading sv_std.std
-# Loading work.cache_tb
-# Loading work.lc3b_types
-# Loading work.cache_sv_unit
-# Loading work.cache
-# Loading work.cache_control
-# Loading work.cache_datapath_sv_unit
-# Loading work.cache_datapath
-# Loading work.cache_writelogic_sv_unit
-# Loading work.cache_writelogic
-# Loading work.decoder3
-# Loading work.array_sv_unit
-# Loading work.array
-# Loading work.way_sv_unit
-# Loading work.way
-# Loading work.mux2
-# Loading work.mux8
-# Loading work.mux4
-# Loading work.physical_memory
+do cache_
+# Cannot open macro file: cache_
 do cache_test.do
 # Loading sv_std.std
 # Loading work.cache_tb
