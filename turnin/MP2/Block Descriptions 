@@ -1,0 +1,22 @@
+In MP2, we designed a 2-way set associative cache to reduce the memory latency in the LC3 design. The modules that were used in this datapath of cache are listed and explained below:
+
+way module:
+The way module was created as a wrapper around all of the arrays associated with a given way. This module takes in the inputs of clk, load_d, load_v, load_TD, index, d_in, v_in, tag_in, and data_in. Its outputs are d_out, v_out, tag_out, and data_out. It takes the inputs and relays them directly to the submodules within it and takes the output from those arrays and brings them into the datapath of the cache. The main purpose of this module is to reduce the clutter in the datapath module and modularly bundle together related components.
+
+cache_writelogic module:
+The cache_writelogic module is used to pick the input value into the cache data arrays. The inputs into this module are pmem_read, mem_byte_enable, offset, mem_wdata, pmem_rdata, and cur_cacheline. The output is output_cacheline. The module consists of 16 4 to 1 muxes and one 3 to 8 decoder module. The offset is passed into the decoder module which decodes the value and selects one of the 8 output words. mem_byte_enable, pmem_read, and the output from the decoder are used combinationaly to set the select signals for all of the muxes. The 16 muxes get the 16 different bytes from pmem_rdata and the cur_cacheline and the muxes alternate between the low and high bytes of the mem_wdata. Through the use of the control signals described earlier, this module is able to splice and pass the inputs as required to produce a desirable cache line input to the data arrays.   
+
+decoder3 module:
+The decoder3 module is a 3 to 8 decoder that is used as a submodule within the cache_writelogic module. It takes in a 3 bit input and produces a 8 bit output. The output consists of a single bit that has been set to 1. The location of this bit is specified by the 3 bit input. The output from this module was used as a part of combinational control logic within the cache_writelogic module to select the word being written to.
+
+wayselector_mux:
+The wayselector_mux is a 2 to 1 mux which is used to pick between the data outputs from the 2 ways. The pmemwdata_sel signal from the the control unit selects between these two values.
+
+mem_rdata_mux:
+The mem_rdata_mux is a 8 to 1 mux which is used to select the word from within the cache line that needs to be sent to the CPU. Bits [3:1] of the mem_address are used to choose this word.
+
+pmemaddr_mux:
+The mem_rdata_mux is a 4 to 1 mux which is used to select the address that will be sent to the physical memory. By default, the mem_address is directly relayed to the physical memory. However, when there is a miss that requires a write-back, the address needs to be a concatenation of the stored tag bits, index bits, and 4 zeros. The pmemaddr_sel signal from the the control unit is used to select between these 3 values.
+
+  
+
